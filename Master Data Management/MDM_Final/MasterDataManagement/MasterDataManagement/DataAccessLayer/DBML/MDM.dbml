@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MasterDataManagement" Class="MDMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SqlExpress;Initial Catalog=MasterDataManagement;Integrated Security=True" SettingsObjectName="DataAccessLayer.Properties.Settings" SettingsPropertyName="MasterDataManagementConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BusinessMapping" Member="BusinessMappings">
+    <Type Name="BusinessMapping">
+      <Column Name="EntityType" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="EntityId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MappingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MappingString" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MappingDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SourceSystemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsEnabledFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDefaultMapping" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LastUpdatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="SourceSystem_BusinessMapping" Member="SourceSystem" ThisKey="SourceSystemID" OtherKey="SystemId" Type="SourceSystem" IsForeignKey="true" />
+      <Association Name="User_BusinessMapping" Member="User" ThisKey="LastUpdatedBy" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CommodityType" Member="CommodityTypes">
+    <Type Name="CommodityType">
+      <Column Name="CommodityTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CommodityTypeName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CommodityClass" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Version" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsCurrentVersion" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CommodityType_MarketCommodityMap" Member="MarketCommodityMaps" ThisKey="CommodityTypeId" OtherKey="CommodityTypeId" Type="MarketCommodityMap" />
+      <Association Name="User_CommodityType" Member="User" ThisKey="LastUpdatedBy" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Currency" Member="Currencies">
+    <Type Name="Currency">
+      <Column Name="CurrencyId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CurrencyName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LastUpdatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Currency_Market" Member="Markets" ThisKey="CurrencyId" OtherKey="CurrencyId" Type="Market" />
+      <Association Name="User_Currency" Member="User" ThisKey="LastUpdatedBy" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Location" Member="Locations">
+    <Type Name="Location">
+      <Column Name="LocationId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LocationName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LastUpdatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Location_Market" Member="Markets" ThisKey="LocationId" OtherKey="LocationId" Type="Market" />
+      <Association Name="User_Location" Member="User" ThisKey="LastUpdatedBy" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Market" Member="Markets">
+    <Type Name="Market">
+      <Column Name="MarketId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MarketName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Version" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsCurrentVersion" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LocationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CurrencyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Market_MarketCommodityMap" Member="MarketCommodityMaps" ThisKey="MarketId" OtherKey="MarketId" Type="MarketCommodityMap" />
+      <Association Name="Currency_Market" Member="Currency" ThisKey="CurrencyId" OtherKey="CurrencyId" Type="Currency" IsForeignKey="true" />
+      <Association Name="Location_Market" Member="Location" ThisKey="LocationId" OtherKey="LocationId" Type="Location" IsForeignKey="true" />
+      <Association Name="User_Market" Member="User" ThisKey="LastUpdatedBy" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MarketCommodityMap" Member="MarketCommodityMaps">
+    <Type Name="MarketCommodityMap">
+      <Column Name="MarketCommodityMapId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MarketId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CommodityTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CommodityType_MarketCommodityMap" Member="CommodityType" ThisKey="CommodityTypeId" OtherKey="CommodityTypeId" Type="CommodityType" IsForeignKey="true" />
+      <Association Name="Market_MarketCommodityMap" Member="Market" ThisKey="MarketId" OtherKey="MarketId" Type="Market" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SourceSystem" Member="SourceSystems">
+    <Type Name="SourceSystem">
+      <Column Name="SystemId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SystemName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="SourceSystem_BusinessMapping" Member="BusinessMappings" ThisKey="SystemId" OtherKey="SourceSystemID" Type="BusinessMapping" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoginId" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateOfJoining" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="User_BusinessMapping" Member="BusinessMappings" ThisKey="UserId" OtherKey="LastUpdatedBy" Type="BusinessMapping" />
+      <Association Name="User_CommodityType" Member="CommodityTypes" ThisKey="UserId" OtherKey="LastUpdatedBy" Type="CommodityType" />
+      <Association Name="User_Currency" Member="Currencies" ThisKey="UserId" OtherKey="LastUpdatedBy" Type="Currency" />
+      <Association Name="User_Location" Member="Locations" ThisKey="UserId" OtherKey="LastUpdatedBy" Type="Location" />
+      <Association Name="User_Market" Member="Markets" ThisKey="UserId" OtherKey="LastUpdatedBy" Type="Market" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B985ED72-6443-4932-B74C-E3D385ABF105}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MasterDataManagementUI</RootNamespace>
+    <AssemblyName>MasterDataManagementUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit">
+      <HintPath>..\..\Lib\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit">
+      <HintPath>..\..\Lib\WPFToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AdminUserHome.xaml.cs">
+      <DependentUpon>AdminUserHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessMapping\AddEntityMapping.xaml.cs">
+      <DependentUpon>AddEntityMapping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessMapping\DeleteEntityMapping.xaml.cs">
+      <DependentUpon>DeleteEntityMapping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessMapping\EditEntityMapping.xaml.cs">
+      <DependentUpon>EditEntityMapping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessMapping\EntityMappingHome.xaml.cs">
+      <DependentUpon>EntityMappingHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\CommodityTypePOCOConverter.cs" />
+    <Compile Include="Converters\CurrencyPOCOConverter.cs" />
+    <Compile Include="Converters\LocationPOCOConverter.cs" />
+    <Compile Include="Converters\MarketCommodityMapPOCOConverter.cs" />
+    <Compile Include="Converters\MarketPOCOConverter.cs" />
+    <Compile Include="GenericSearchCriteria.cs" />
+    <Compile Include="Market\CreateMarket.xaml.cs">
+      <DependentUpon>CreateMarket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Market\DataSource.cs" />
+    <Compile Include="Market\UpdateDataSource.cs" />
+    <Compile Include="StringLengthValidationRule.cs" />
+    <Compile Include="UIEntities\CommodityTypeUI.cs" />
+    <Compile Include="UIEntities\CurrencyUI.cs" />
+    <Compile Include="UIEntities\LocationUI.cs" />
+    <Compile Include="UIEntities\MarketCommodityMapUI.cs" />
+    <Compile Include="UIEntities\MarketUI.cs" />
+    <Compile Include="UserManagement\AddUserWindow.xaml.cs">
+      <DependentUpon>AddUserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\AdminHomePage.xaml.cs">
+      <DependentUpon>AdminHomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\ChangePasswordWindow.xaml.cs">
+      <DependentUpon>ChangePasswordWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\DeleteUser.xaml.cs">
+      <DependentUpon>DeleteUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\EditUser.xaml.cs">
+      <DependentUpon>EditUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\EditWindowDetails.xaml.cs">
+      <DependentUpon>EditWindowDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\ResetPasswordWindow2.xaml.cs">
+      <DependentUpon>ResetPasswordWindow2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\ResetWindowPassword.xaml.cs">
+      <DependentUpon>ResetWindowPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\UserHomePage.xaml.cs">
+      <DependentUpon>UserHomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\UserProfile.xaml.cs">
+      <DependentUpon>UserProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Validations\EntityMappingBusinessValidation.cs" />
+    <Compile Include="Validations\EntityMappingUIValidation.cs" />
+    <Page Include="AdminUserHome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BusinessMapping\AddEntityMapping.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BusinessMapping\DeleteEntityMapping.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BusinessMapping\EditEntityMapping.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BusinessMapping\EntityMappingHome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CommodityType\CreateCommodityType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CommodityType\DeleteCommodityType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CommodityType\UpdateCommodityType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Currency\CreateCurrency.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Currency\DeleteCurrency.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Currency\UpdateCurrency.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Market\CreateMarket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\BureauBlack.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\BureauBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ExpressionDark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ExpressionLight.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\LinkButtonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ShinyBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ShinyRed.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\TabControlStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Themes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Location\CreateLocation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Location\DeleteLocation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Location\UpdateLocation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BusinessUserHome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommodityType\CreateCommodityType.xaml.cs">
+      <DependentUpon>CreateCommodityType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CommodityType\DeleteCommodityType.xaml.cs">
+      <DependentUpon>DeleteCommodityType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CommodityType\UpdateCommodityType.xaml.cs">
+      <DependentUpon>UpdateCommodityType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Currency\CreateCurrency.xaml.cs">
+      <DependentUpon>CreateCurrency.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Currency\DeleteCurrency.xaml.cs">
+      <DependentUpon>DeleteCurrency.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Currency\UpdateCurrency.xaml.cs">
+      <DependentUpon>UpdateCurrency.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Location\CreateLocation.xaml.cs">
+      <DependentUpon>CreateLocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Location\DeleteLocation.xaml.cs">
+      <DependentUpon>DeleteLocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Location\UpdateLocation.xaml.cs">
+      <DependentUpon>UpdateLocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessUserHome.xaml.cs">
+      <DependentUpon>BusinessUserHome.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Market\DeleteMarket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Market\UpdateMarket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\WhistlerBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserManagement\AddUserWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserManagement\AdminHomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserManagement\ChangePasswordWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserManagement\DeleteUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserManagement\EditUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserManagement\EditWindowDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LoginWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserManagement\ResetPasswordWindow2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserManagement\ResetWindowPassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserManagement\UserHomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserManagement\UserProfile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Market\DeleteMarket.xaml.cs">
+      <DependentUpon>DeleteMarket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Market\UpdateMarket.xaml.cs">
+      <DependentUpon>UpdateMarket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\backgroundForMDM.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonContracts\CommonContracts.csproj">
+      <Project>{90F68912-F365-43D2-95B7-ADE7FD412D65}</Project>
+      <Name>CommonContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{201F7E24-BC4D-49C3-882D-05FAA84775D1}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MultiSelectComboBox\MultiSelectComboBox\MultiComboBox.csproj">
+      <Project>{6E683FFD-0F53-4225-B34C-88EF47F7D062}</Project>
+      <Name>MultiComboBox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\market.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\user.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\adminuser.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

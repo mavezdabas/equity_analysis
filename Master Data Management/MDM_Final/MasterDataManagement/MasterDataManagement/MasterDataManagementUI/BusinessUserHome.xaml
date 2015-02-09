@@ -1,0 +1,274 @@
+﻿<Window x:Class="MasterDataManagementUI.BusinessUserHome"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:toolkit ="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"  FontSize="14" Background="Aqua" BorderBrush="AliceBlue"  BorderThickness="3"
+        Title="BusinessUserHome" Height="550" Width="525" WindowStartupLocation="CenterScreen" 
+        WindowStyle="ThreeDBorderWindow" WindowState="Maximized" Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/TabControlStyles.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/Styles/LinkButtonStyle.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Style="{StaticResource gridBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.025*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <Image x:Name="userImage" Grid.Row="0" Grid.Column="0" Source="/MasterDataManagementUI;component/Images/user.jpg" HorizontalAlignment="Left"></Image>
+        <TextBlock Text="Master Data Management" Grid.Row="0" Grid.Column="1" FontFamily="Arial" FontSize="26" FontStretch="SemiExpanded" FontStyle="Normal" FontWeight="Bold" Foreground="#FF092169" HorizontalAlignment="Center"></TextBlock>
+        <Button Content="User Profile" Grid.Row="1" Style="{StaticResource LinkButton}" Click="Load_MyProfile" HorizontalAlignment="Left"></Button>
+        <TabControl Margin="5" Grid.Row="2" Style="{DynamicResource ResourceKey=styleTabControl}" x:Name="BusinessUserTab" SelectionChanged="TabControl_SelectionChanged">
+           
+            <TabItem Header="Search" Style="{DynamicResource ResourceKey=styleTabItemLeft}" x:Name="TabSearch">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="0.1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="0.3*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <toolkit:AutoCompleteBox Grid.Column="1" Margin="10" x:Name="autoTxtGenericSearch"/>
+                        <Button Content="Search" Grid.Column="2" Margin="10" x:Name="BtnSearch" Click="BtnSearch_Click"/>
+                    </Grid>
+                    <DataGrid Grid.Row="1" Name="dgSearch" ItemsSource="{Binding}" IsReadOnly="True" AlternatingRowBackground="AliceBlue" AlternationCount="2" MouseDoubleClick="dgSearch_MouseDoubleClick">
+                        <DataGrid.Background>
+                            <ImageBrush ImageSource="/MasterDataManagementUI;component/Images/download.jpg" Opacity=".5"/>
+                        </DataGrid.Background>
+                    </DataGrid>
+                    
+                </Grid>
+            </TabItem>
+            <TabItem Header="Market" Style="{DynamicResource ResourceKey=styleTabItemDefault}" Name="TabMarket">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="0.1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="0.3*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <toolkit:AutoCompleteBox Grid.Column="1" Margin="10" x:Name="autoTxtMarketSearch"/>
+                        <Button Content="Search" Grid.Column="2" Margin="10" x:Name="BtnMarketSearch" Click="BtnMarketSearch_Click"/>
+                    </Grid>
+                    <!--<DataGrid Grid.Row="1" Name="dgMarket" ItemsSource="{Binding}" IsReadOnly="True" SelectionChanged="dgMarket_SelectionChanged" AlternatingRowBackground="AliceBlue" AlternationCount="2"></DataGrid>-->
+                    <DataGrid Grid.Row="1" Name="dgMarket" ItemsSource="{Binding}" IsReadOnly="True" SelectionChanged="dgMarket_SelectionChanged" AutoGenerateColumns="False"  AlternatingRowBackground="AliceBlue" AlternationCount="2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Market Name" Binding="{Binding MarketName}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Location Name" Binding="{Binding LocationName}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Currency Name" Binding="{Binding Currency}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Start Date" Binding="{Binding StartDate}"></DataGridTextColumn>
+
+                            <DataGridTextColumn Header="End Date" Binding="{Binding EndDate}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Commodity Names" Binding="{Binding CommodityNames}"></DataGridTextColumn>
+                            <!--<DataGridTextColumn Header="Version" Binding="{Binding Version}"></DataGridTextColumn>-->
+                            <!--<DataGridTextColumn Header="Is Current Version" Binding="{Binding IsCurrentVersion}"></DataGridTextColumn>-->
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Add" Grid.Column="0" Margin="20" x:Name="BtnMarketAdd" Click="BtnMarketAdd_Click"/>
+                        <Button Content="Update" Grid.Column="1" Margin="20" x:Name="BtnMarketUpdate" Click="BtnMarketUpdate_Click"/>
+                        <Button Content="Delete" Grid.Column="2" Margin="20" x:Name="BtnMarketDelete" Click="BtnMarketDelete_Click"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Commodity" Style="{DynamicResource ResourceKey=styleTabItemDefault}" Name="TabCommodity" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="0.1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="0.3*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <toolkit:AutoCompleteBox Grid.Column="1" Margin="10" x:Name="autoTxtCommoditySearch"/>
+                        <Button Content="Search" Grid.Column="2" Margin="10" x:Name="BtnCommoditySearch" Click="BtnCommoditySearch_Click"/>
+                    </Grid>
+                    <!--<DataGrid Grid.Row="1" Name="dgCommodity" ItemsSource="{Binding}" IsReadOnly="True" SelectionChanged="dgCommodity_SelectionChanged" AlternatingRowBackground="AliceBlue"  AlternationCount="2"></DataGrid>-->
+                    <DataGrid Grid.Row="1" Name="dgCommodity" ItemsSource="{Binding}" IsReadOnly="True" SelectionChanged="dgCommodity_SelectionChanged" AutoGenerateColumns="False" AlternatingRowBackground="AliceBlue" AlternationCount="2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Commodity Name" Binding="{Binding CommodityTypeName}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Commodity Class" Binding="{Binding CommodityClass}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Start Date" Binding="{Binding StartDate}"></DataGridTextColumn>
+                            <DataGridTextColumn Header=" End Date" Binding="{Binding EndDate}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Add" Grid.Column="0" Margin="20" x:Name="BtnCommodityAdd" Click="BtnCommodityAdd_Click"/>
+                        <Button Content="Update" Grid.Column="1" Margin="20" x:Name="BtnCommodityUpdate" Click="BtnCommodityUpdate_Click"/>
+                        <Button Content="Delete" Grid.Column="2" Margin="20" x:Name="BtnCommodityDelete" Click="BtnCommodityDelete_Click"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Location" Style="{DynamicResource ResourceKey=styleTabItemDefault}" Name="TabLocation">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="0.1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="0.3*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <toolkit:AutoCompleteBox Grid.Column="1" Margin="10" x:Name="autoTxtLocationSearch"/>
+                        <Button Content="Search" Grid.Column="2" Margin="10" x:Name="BtnLocationSearch" Click="BtnLocationSearch_Click"/>
+                    </Grid>
+                    <DataGrid Grid.Row="1" Name="dgLocation" ItemsSource="{Binding}" IsReadOnly="True" AlternatingRowBackground="AliceBlue" AlternationCount="2" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Location Name" Binding="{Binding LocationName}"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Add" Grid.Column="0" Margin="20" x:Name="BtnLocationAdd" IsEnabled="False" Click="BtnLocationAdd_Click"/>
+                        <Button Content="Update" Grid.Column="1" Margin="20" x:Name="BtnLocationUpdate" IsEnabled="False" Click="BtnLocationUpdate_Click"/>
+                        <Button Content="Delete" Grid.Column="2" Margin="20" x:Name="BtnLocationDelete" IsEnabled="False" Click="BtnLocationDelete_Click"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Currency" Style="{DynamicResource ResourceKey=styleTabItemRight}" Name="TabCurrency">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="0.1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="0.3*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <toolkit:AutoCompleteBox Grid.Column="1" Margin="10" x:Name="autoTxtCurrencySearch"/>
+                        <Button Content="Search" Grid.Column="2" Margin="10" x:Name="BtnCurrencySearch" Click="BtnCurrencySearch_Click"/>
+                    </Grid>
+                    <DataGrid Grid.Row="1" Name="dgCurrency" ItemsSource="{Binding}" IsReadOnly="True" AlternatingRowBackground="AliceBlue" AlternationCount="2" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Currency Name" Binding="{Binding CurrencyName}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}"></DataGridTextColumn>
+                            
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Add" Grid.Column="0" Margin="20" x:Name="BtnCurrencyAdd" IsEnabled="False" Click="BtnCurrencyAdd_Click"/>
+                        <Button Content="Update" Grid.Column="1" Margin="20" x:Name="BtnCurrencyUpdate" IsEnabled="False" Click="BtnCurrencyUpdate_Click"/>
+                        <Button Content="Delete" Grid.Column="2" Margin="20" x:Name="BtnCurrencyDelete" IsEnabled="False" Click="BtnCurrencyDelete_Click"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="EntityMapping" Style="{DynamicResource ResourceKey=styleTabItemRight}" Name="TabEntityMapping">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition Height="0.1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="0.3*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <toolkit:AutoCompleteBox Grid.Column="0" Margin="0" x:Name="autoTxtMappingSearch"/>
+                        <Button Content="Search" Grid.Column="1" Margin="0" x:Name="BtnMappingSearch" Click="BtnMappingSearch_Click"/>
+
+                    </Grid>
+                    <Grid Grid.Row="1" Height="24" Margin="0,0,0,181">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <RadioButton Grid.Row="1" Grid.Column="0" Name="commodityRadioButton" Content="Commodity" Checked="commodityRadioButton_Checked" FontSize="15"></RadioButton>
+                        <RadioButton Grid.Row="1" Grid.Column="1" Name="marketRadioButton" Content="Market" Checked="marketRadioButton_Checked" FontSize="15"></RadioButton>
+                        <RadioButton Grid.Row="1" Grid.Column="2" Name="allRadioButton" Content="All" Checked="allRadioButton_Checked" FontSize="15"></RadioButton>
+                        </Grid>
+
+                    <DataGrid Grid.Row="1" Name="dgEntityMapping" ItemsSource="{Binding}" SelectionChanged="dgEntityMapping_SelectionChanged_1" Height="394" Margin="0,1,0,15" Grid.RowSpan="2" AutoGenerateColumns="False" ColumnWidth="*">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Mapping String" Binding="{Binding MappingString}"/>
+                            <DataGridTextColumn Header="MappingDescription" Binding="{Binding MappingDescription}"/>
+                            <DataGridTextColumn Header="EntityName" Binding="{Binding EntityName}"/>
+                            <DataGridTextColumn Header="EntityType" Binding="{Binding EntityType}"/>
+                            <DataGridTextColumn Header="SourceSystem" Binding="{Binding SourceSystemName}"/>
+                            <DataGridTextColumn Header="IsDefaultMapping" Binding="{Binding IsDefaultMapping}"/>
+                            <!--<DataGridTextColumn Header="IsEnabled" Binding="{Binding IsEnabledFlag}"/>
+                            <DataGridTextColumn Header="LastUpdatedBy" Binding="{Binding LastUpdatedBy}"/>
+                            <DataGridTextColumn Header="LastUpdatedDate" Binding="{Binding LastUpdatedDate}"/>-->
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <Grid Grid.Row="2" Height="40" Margin="0,186,0,0" Grid.RowSpan="2">
+                        <Grid.RowDefinitions>
+                          
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                       
+                        <Button Content="Add" Margin="10,0,10,10" x:Name="BtnMappingAdd" Click="BtnMappingAdd_Click" FontSize="15"/>
+                        <Button Content="Update" Grid.Column="1" Margin="10,1,10,10" x:Name="BtnMappingUpdate" Click="BtnMappingUpdate_Click"  FontSize="15"/>
+                        <Button Content="Delete" Grid.Column="2" Margin="10,1,10,10" x:Name="BtnMappingDelete" Click="BtnMappingDelete_Click"  FontSize="15"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
