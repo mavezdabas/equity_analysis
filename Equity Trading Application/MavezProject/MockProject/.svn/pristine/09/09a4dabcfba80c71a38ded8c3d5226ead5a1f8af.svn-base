@@ -1,0 +1,241 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using DataAccessLayer;
+using ExecutionTraderMainWindow.Model;
+using ExecutionTraderMainWindow.Helpers;
+using System.Windows.Input;
+using ExecutionTraderMainWindow.Commands;
+using System.Collections.ObjectModel;
+
+namespace ExecutionTraderMainWindow.ViewModel
+{
+    public class EditBlockViewModel : ViewModelBase
+    {
+        private BlockModel selectedBlock { get; set; }
+        public BlockModel selectedBlockBackup { get; set; }
+        
+        private Action<string> popup;
+        private Func<string, string, bool> confirm;
+
+        ExecutionTraderDAL dalobj;
+        public event RequestCloseEventHandler RequestCloseDialog;
+
+        public BlockModel SelectedBlock
+        {
+            get
+            { return selectedBlock; }
+            set
+            {
+                selectedBlock = value;
+                RaisePropertyChanged("SelectedBlock");
+            }
+        }
+
+        private ObservableCollection<BlockModel> selectedBlockList { get; set; }
+
+        public ObservableCollection<BlockModel> SelectedBlockList
+        {
+            get
+            { return selectedBlockList; }
+            set
+            {
+                selectedBlockList = value;
+                RaisePropertyChanged("SelectedBlockList");
+            }
+        }
+
+
+        private ObservableCollection<OrderModel> ordersOfSelectedBlock;
+        public ObservableCollection<OrderModel> OrdersOfSelectedBlock
+        {
+            get
+            { return ordersOfSelectedBlock; }
+            set
+            {
+                ordersOfSelectedBlock = value;
+                RaisePropertyChanged("OrdersOfSelectedBlock");
+            }
+        }
+
+        public OrderModel SelectedOrder { get; set; }
+
+
+
+        private ICommand deleteCommand;
+
+        public ICommand DeleteOrderCommand
+        {
+            get
+            {
+                if (deleteCommand == null)
+                    deleteCommand = new RelayCommand(p => DeleteOrder());
+                return deleteCommand;
+            }
+        }
+
+        private ICommand saveBlockCommand;
+        public ICommand SaveBlockCommand
+        {
+            get
+            {
+                if (saveBlockCommand == null)
+                    saveBlockCommand = new RelayCommand(p => SaveBlock());
+                return saveBlockCommand;
+            }
+        }
+
+        private void SaveBlock()
+        {
+            if (SaveMessageBox())
+            {
+
+                dalobj = new ExecutionTraderDAL();
+                dalobj.SaveBlockDatabase(Converter.ConvertBlockModelToBlock(SelectedBlock));
+                if (RequestCloseDialog != null)
+                    RequestCloseDialog(new RequestCloseEventArgs(true));
+            }
+        }
+
+        private bool SaveMessageBox()
+        {
+            if (confirm("Do you want To Save Changes?", "Confirm"))
+                return true;
+            else return false;
+        }
+
+
+
+        private ICommand changePriceMessageBoxShowCommand;
+        public ICommand ChangePriceMessageBoxShowCommand
+        {
+            get
+            {
+                if (saveBlockCommand == null)
+                    changePriceMessageBoxShowCommand = new RelayCommand(p => ConfirmLimitPrice());
+                return changePriceMessageBoxShowCommand;
+            }
+        }
+
+        private void ConfirmLimitPrice()
+        {
+            if (selectedBlock.Orders.First().Side == "Buy")
+            {
+
+                if (selectedBlockBackup.LimitPrice < selectedBlock.LimitPrice)
+                {
+                    selectedBlockBackup.LimitPrice = selectedBlock.LimitPrice;
+                    popup("Warning!!  New Limit Price is greater than current Limit Price");
+                    
+                }
+                else if (selectedBlockBackup.StopPrice > selectedBlock.StopPrice)
+                {
+                    selectedBlockBackup.StopPrice = selectedBlock.StopPrice;
+                    popup("Warning!! New Stop Price is less than current Stop Price");
+                    
+                }
+
+                selectedBlockBackup.LimitPrice = selectedBlock.LimitPrice;
+                selectedBlockBackup.StopPrice = selectedBlock.StopPrice;
+            }
+            else
+            {
+                if (selectedBlockBackup.LimitPrice > selectedBlock.LimitPrice)
+                {
+                    selectedBlockBackup.LimitPrice = selectedBlock.LimitPrice;
+                    popup("Warning!! New Limit Price is less than current Limit Price");
+                    
+                }
+                else  if (selectedBlockBackup.StopPrice < selectedBlock.StopPrice)
+                {
+                    selectedBlockBackup.StopPrice = selectedBlock.StopPrice;
+                    popup("Warning!! New Stop Price is greater than current Stop Price");
+                    
+                }
+                selectedBlockBackup.StopPrice = selectedBlock.StopPrice;
+                selectedBlockBackup.LimitPrice = selectedBlock.LimitPrice;
+            }
+
+        }
+
+        private void DeleteOrder()
+        {
+            if (RemoveOrderMessageBox())
+            {
+                //Database Changes
+                dalobj = new ExecutionTraderDAL();
+                OrderModel selectedOrderToRemove = new OrderModel();
+                selectedOrderToRemove = SelectedOrder;
+                var blockId = selectedOrderToRemove.BlockId.Value;
+
+                selectedOrderToRemove.BlockId = null;
+                dalobj = new ExecutionTraderDAL();
+
+                selectedOrderToRemove.BlockId = null;
+                BlockModel tempModel = new BlockModel();
+                tempModel = SelectedBlock;
+                SelectedBlockList.Remove(SelectedBlock);
+                SelectedBlock = tempModel;
+
+                SelectedBlock.OpenQuantity = SelectedBlock.OpenQuantity - SelectedOrder.OpenQuantity;
+                SelectedBlock.ExecutedQuantity = SelectedBlock.ExecutedQuantity - SelectedOrder.AllocatedQuantity;
+                SelectedBlock.TotalQuantity = SelectedBlock.TotalQuantity - SelectedOrder.TotalQuantity;
+
+                SelectedBlock.Orders.Remove(SelectedOrder);
+
+                SelectedBlockList.Add(SelectedBlock);
+                OrdersOfSelectedBlock = new ObservableCollection<OrderModel>(SelectedBlock.Orders);
+                dalobj.RemoveOrderFromBlock(Converter.ConvertOrderModelToOrder(selectedOrderToRemove));
+
+                BlockModel deletedOrdersBlock = new BlockModel();
+                deletedOrdersBlock = Converter.ConvertBlockToBlockModel(dalobj.GetBlockByBlockID(blockId));
+                if (deletedOrdersBlock.Orders.Count() == 0)
+                {
+                    dalobj.DeleteBlock(Converter.ConvertBlockModelToBlock(deletedOrdersBlock));
+                    if (RequestCloseDialog != null)
+                        RequestCloseDialog(new RequestCloseEventArgs(true));
+                }
+            }
+        }
+
+        private bool RemoveOrderMessageBox()
+        {
+            if (confirm("Sure you want to remove the order?", "Confirm?"))
+                return true;
+            else return false;
+        }
+
+        public EditBlockViewModel(Action<string> popup, Func<string, string, bool> confirm,BlockModel selectedBlock)
+        {
+            this.popup = popup;
+            this.confirm = confirm;
+
+            this.SelectedBlock = selectedBlock;
+            this.selectedBlockBackup = new BlockModel();
+            this.selectedBlockBackup.LimitPrice = this.SelectedBlock.LimitPrice;
+            this.selectedBlockBackup.StopPrice = this.SelectedBlock.StopPrice;
+            OrdersOfSelectedBlock = new ObservableCollection<OrderModel>(SelectedBlock.Orders);
+            SelectedBlockList = new ObservableCollection<BlockModel>();
+            SelectedBlockList.Add(SelectedBlock);
+        }
+
+        private ICommand cancelCommand;
+        public ICommand CancelCommand
+        {
+            get
+            {
+                if (cancelCommand == null)
+                    cancelCommand = new RelayCommand(p => DoCancel());
+                return cancelCommand;
+            }
+        }
+
+        private void DoCancel()
+        {
+            if (RequestCloseDialog != null)
+                RequestCloseDialog(new RequestCloseEventArgs(false));
+        }
+
+    }
+}

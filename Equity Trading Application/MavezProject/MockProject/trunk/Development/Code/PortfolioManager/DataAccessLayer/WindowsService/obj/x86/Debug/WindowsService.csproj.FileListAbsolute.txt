@@ -1,0 +1,32 @@
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\AutoMapper.Net4.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\WindowsService.exe.config
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\WindowsService.exe
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\WindowsService.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\EquityTradingService.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\DataAccessLayer.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\AutoMapper.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\EquityTradingService.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\DataAccessLayer.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\AutoMapper.xml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\obj\x86\Debug\WindowsService.ProjectInstaller.resources
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\obj\x86\Debug\WindowsService.exe
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\obj\x86\Debug\WindowsService.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\AutoMapper.Net4.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\WindowsService.exe.config
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\WindowsService.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\WindowsService.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\EquityTradingService.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\DataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\AutoMapper.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\EquityTradingService.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\bin\Debug\AutoMapper.xml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\obj\x86\Debug\WindowsService.ProjectInstaller.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\obj\x86\Debug\WindowsService.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\WindowsService\obj\x86\Debug\WindowsService.pdb

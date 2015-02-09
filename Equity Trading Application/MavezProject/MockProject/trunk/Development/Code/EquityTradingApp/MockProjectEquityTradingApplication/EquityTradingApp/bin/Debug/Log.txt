@@ -1,0 +1,14 @@
+2014-04-07 16:53:30,085 [8] DEBUG EquityTradingApp.ViewModels.LoginWindowViewModel - Message
+2014-04-07 16:55:05,156 [8] DEBUG EquityTradingApp.ViewModels.LoginWindowViewModel - Message
+2014-04-07 16:55:42,122 [8] DEBUG EquityTradingApp.ViewModels.LoginWindowViewModel - Exception of type 'System.Exception' was thrown.
+2014-04-08 16:13:59,304 [8] DEBUG EquityTradingApp.ViewModels.LoginWindowViewModel - Exception of type 'System.Exception' was thrown.
+2014-04-08 16:14:24,635 [10] DEBUG EquityTradingApp.ViewModels.LoginWindowViewModel - Exception of type 'System.Exception' was thrown.
+2014-04-08 16:15:15,689 [9] DEBUG EquityTradingApp.ViewModels.LoginWindowViewModel - An error occurred while receiving the HTTP response to http://localhost:8732/AutoAllocationService/SecurityConfigurationDetails/. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+2014-04-08 16:16:40,875 [10] DEBUG EquityTradingApp.ViewModels.LoginWindowViewModel - An error occurred while receiving the HTTP response to http://localhost:8732/AutoAllocationService/SecurityConfigurationDetails/. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+2014-04-08 16:38:23,621 [10] DEBUG EquityTradingApp.ViewModels.LoginWindowViewModel - Value cannot be null.
+Parameter name: key
+2014-04-08 16:42:22,434 [9] DEBUG EquityTradingApp.ViewModels.LoginWindowViewModel - Value cannot be null.
+Parameter name: key
+2014-04-14 12:25:56,112 [1] DEBUG EquityTradingApp.ViewModels.LoginWindowViewModel - Object reference not set to an instance of an object.
+2014-04-14 12:26:00,618 [1] DEBUG EquityTradingApp.ViewModels.LoginWindowViewModel - Object reference not set to an instance of an object.
+2014-04-14 15:43:27,406 [8] DEBUG EquityTradingApp.ViewModels.LoginWindowViewModel - Object reference not set to an instance of an object.

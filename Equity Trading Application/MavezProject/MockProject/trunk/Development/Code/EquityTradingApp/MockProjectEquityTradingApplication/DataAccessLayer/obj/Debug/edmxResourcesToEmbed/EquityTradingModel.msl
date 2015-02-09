@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EquityTradingDBModelStoreContainer" CdmEntityContainer="EquityTradingDBEntities">
+    <EntitySetMapping Name="AllocationMethods">
+      <EntityTypeMapping TypeName="EquityTradingDBModel.AllocationMethod">
+        <MappingFragment StoreEntitySet="AllocationMethod">
+          <ScalarProperty Name="MethodName" ColumnName="MethodName" />
+          <ScalarProperty Name="MethodID" ColumnName="MethodID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blocks">
+      <EntityTypeMapping TypeName="EquityTradingDBModel.Block">
+        <MappingFragment StoreEntitySet="Blocks">
+          <ScalarProperty Name="OpenQuantity" ColumnName="OpenQuantity" />
+          <ScalarProperty Name="ExecutedQuantity" ColumnName="ExecutedQuantity" />
+          <ScalarProperty Name="TotalQuatity" ColumnName="TotalQuatity" />
+          <ScalarProperty Name="StopPrice" ColumnName="StopPrice" />
+          <ScalarProperty Name="LimitPrice" ColumnName="LimitPrice" />
+          <ScalarProperty Name="BlockStatus" ColumnName="BlockStatus" />
+          <ScalarProperty Name="BlockSide" ColumnName="BlockSide" />
+          <ScalarProperty Name="SecurityID" ColumnName="SecurityID" />
+          <ScalarProperty Name="TraderID" ColumnName="TraderID" />
+          <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="EquityTradingDBModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExecutedBlocks">
+      <EntityTypeMapping TypeName="EquityTradingDBModel.ExecutedBlock">
+        <MappingFragment StoreEntitySet="ExecutedBlocks">
+          <ScalarProperty Name="TransactionTime" ColumnName="TransactionTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TransactionPrice" ColumnName="TransactionPrice" />
+          <ScalarProperty Name="ExecutedQuantity" ColumnName="ExecutedQuantity" />
+          <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+          <ScalarProperty Name="ExecutedBlockID" ColumnName="ExecutedBlockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderAllocations">
+      <EntityTypeMapping TypeName="EquityTradingDBModel.OrderAllocation">
+        <MappingFragment StoreEntitySet="OrderAllocations">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="TransactionPrice" ColumnName="TransactionPrice" />
+          <ScalarProperty Name="TransactionFee" ColumnName="TransactionFee" />
+          <ScalarProperty Name="AllocatedQuantity" ColumnName="AllocatedQuantity" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+          <ScalarProperty Name="ExecutionID" ColumnName="ExecutionID" />
+          <ScalarProperty Name="AllocationID" ColumnName="AllocationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="EquityTradingDBModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="TransactionTime" ColumnName="TransactionTime" />
+          <ScalarProperty Name="TransactionPrice" ColumnName="TransactionPrice" />
+          <ScalarProperty Name="BookTime" ColumnName="BookTime" />
+          <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="PortfolioID" ColumnName="PortfolioID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Notify" ColumnName="Notify" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="LimitPrice" ColumnName="LimitPrice" />
+          <ScalarProperty Name="StopPrice" ColumnName="StopPrice" />
+          <ScalarProperty Name="AllocatedQuantity" ColumnName="AllocatedQuantity" />
+          <ScalarProperty Name="OpenQuantity" ColumnName="OpenQuantity" />
+          <ScalarProperty Name="TotalQuantity" ColumnName="TotalQuantity" />
+          <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+          <ScalarProperty Name="TraderID" ColumnName="TraderID" />
+          <ScalarProperty Name="OrderQualifier" ColumnName="OrderQualifier" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="Side" ColumnName="Side" />
+          <ScalarProperty Name="SecurityID" ColumnName="SecurityID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Portfolios">
+      <EntityTypeMapping TypeName="EquityTradingDBModel.Portfolio">
+        <MappingFragment StoreEntitySet="Portfolio">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="PortfolioName" ColumnName="PortfolioName" />
+          <ScalarProperty Name="PortfolioID" ColumnName="PortfolioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProposedBlocks">
+      <EntityTypeMapping TypeName="EquityTradingDBModel.ProposedBlock">
+        <MappingFragment StoreEntitySet="ProposedBlocks">
+          <ScalarProperty Name="TotalQuantity" ColumnName="TotalQuantity" />
+          <ScalarProperty Name="StopPrice" ColumnName="StopPrice" />
+          <ScalarProperty Name="LimitPrice" ColumnName="LimitPrice" />
+          <ScalarProperty Name="BlockSide" ColumnName="BlockSide" />
+          <ScalarProperty Name="SecurityID" ColumnName="SecurityID" />
+          <ScalarProperty Name="ProposedBlockID" ColumnName="ProposedBlockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Securities">
+      <EntityTypeMapping TypeName="EquityTradingDBModel.Security">
+        <MappingFragment StoreEntitySet="Securities">
+          <ScalarProperty Name="MarketPrice" ColumnName="MarketPrice" />
+          <ScalarProperty Name="ExecutionQuantity" ColumnName="ExecutionQuantity" />
+          <ScalarProperty Name="LastTradedPrice" ColumnName="LastTradedPrice" />
+          <ScalarProperty Name="SecuritySymbol" ColumnName="SecuritySymbol" />
+          <ScalarProperty Name="SecurityName" ColumnName="SecurityName" />
+          <ScalarProperty Name="SecurityID" ColumnName="SecurityID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SecurityConfigurationDetails">
+      <EntityTypeMapping TypeName="EquityTradingDBModel.SecurityConfigurationDetail">
+        <MappingFragment StoreEntitySet="SecurityConfigurationDetails">
+          <ScalarProperty Name="SecurityConfigurationID" ColumnName="SecurityConfigurationID" />
+          <ScalarProperty Name="SecurityID" ColumnName="SecurityID" />
+          <ScalarProperty Name="FullyExecutedOrderProbability" ColumnName="FullyExecutedOrderProbability" />
+          <ScalarProperty Name="MaxExecutionInterval" ColumnName="MaxExecutionInterval" />
+          <ScalarProperty Name="MaxExecutionNumber" ColumnName="MaxExecutionNumber" />
+          <ScalarProperty Name="MaxPriceSpread" ColumnName="MaxPriceSpread" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="EquityTradingDBModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="EquityTradingDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="EquityTradingDBModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

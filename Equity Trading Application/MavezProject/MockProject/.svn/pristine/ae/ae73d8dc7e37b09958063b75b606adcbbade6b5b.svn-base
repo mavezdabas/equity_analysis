@@ -1,0 +1,92 @@
+﻿<Window x:Class="MasterDataManagementUI.Currency.CreateCurrency"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MasterDataManagement.UIEntities"
+        xmlns:vali="clr-namespace:MasterDataManagementUI"
+        Title="Create Currency" Height="300" Width="300" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" ResizeMode="NoResize">
+    <Window.Resources>
+       
+            <ControlTemplate x:Key="CTextBlockTemplate" TargetType="Label">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{TemplateBinding Content}" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBlock Text="*" HorizontalAlignment="Left" Foreground="Red" Grid.Column="1" VerticalAlignment="Center" Width="64" Grid.ColumnSpan="2" />
+                </Grid>
+            </ControlTemplate>
+       
+        <local:CurrencyUI x:Key="c" CurrencyName="" Description="" />
+        <Style TargetType="TextBox">
+            <Setter Property="Validation.ErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Right"
+                                       Foreground="Red" FontWeight="ExtraBold"
+                                       FontSize="20" Text="!"/>
+                            <Border BorderBrush="Blue" BorderThickness="2">
+                                <AdornedElementPlaceholder/>
+                            </Border>
+                        </DockPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip" 
+                            Value="{Binding RelativeSource={RelativeSource Self},
+                        Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+    
+    <Grid Name="GridCreateCurrency" Style="{StaticResource gridBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height=".2*" />
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="CREATE CURRENCY" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Grid.Row="1" Content="Currency Name"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15" Template="{StaticResource CTextBlockTemplate}"/>
+        <Label Grid.Row="2" Content="Description"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15" Template="{StaticResource CTextBlockTemplate}"/>
+        
+        <TextBox x:Name="txtCurrencyName" Grid.Row="1" Grid.Column="1" Margin="20" TabIndex="1">
+            <TextBox.Text>
+                <Binding Path="CurrencyName">
+                    <Binding.ValidationRules>
+                        <vali:StringLengthValidationRule MinimumLength="2"
+                                                          MaximumLength="100"
+                                                          ErrorMessage="Invalid Data"/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox x:Name="txtCurrencyDescription" Grid.Row="2" Grid.Column="1" Margin="20" TabIndex="2">
+            <TextBox.Text>
+                <Binding Path="Description">
+                    <Binding.ValidationRules>
+                        <vali:StringLengthValidationRule MinimumLength="2"
+                                                          MaximumLength="100"
+                                                          ErrorMessage="Invalid Data"/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        
+        </TextBox>
+        <Button Content="Save" Grid.Row="4" Margin="20" x:Name="Save" Click="Save_Click" TabIndex="3" IsDefault="True" />
+        <Button Content="Cancel" Grid.Row="4"  Margin="20" Grid.Column="1" x:Name="Cancel" Click="Cancel_Click" TabIndex="4" IsCancel="True" />
+        <TextBlock Text="*Mandatory Fields"  Grid.Row="3" Grid.Column="0" FontSize="8" Foreground="Red"></TextBlock>
+    </Grid>
+</Window>

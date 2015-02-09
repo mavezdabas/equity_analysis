@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e32001bb-915a-4fb6-96ff-2eab6d17eb94" name="ahans@DLUDOTNETLAB11 2014-03-28 15:16:47" runUser="SAPIENT\ahans" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="1d8e7d6a-b1d4-4bee-bb22-b457cd09af5e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="ahans_DLUDOTNETLAB11 2014-03-28 15_16_47">
+      <DeploymentItem filename="C:\Users\ahans\Desktop\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-03-28T15:16:47.1176559+05:30" queuing="2014-03-28T15:16:47.1666608+05:30" start="2014-03-28T15:16:47.1876629+05:30" finish="2014-03-28T15:16:47.7387180+05:30" />
+  <ResultSummary outcome="Inconclusive">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="1" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetClientNameByIDTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="5ff5278b-ff5e-b1ea-fd2f-80355d69e6f4">
+      <Execution id="80fe9ec2-8415-4763-9427-968bab3828ad" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetClientNameByIDTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="5ff5278b-ff5e-b1ea-fd2f-80355d69e6f4" executionId="80fe9ec2-8415-4763-9427-968bab3828ad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="80fe9ec2-8415-4763-9427-968bab3828ad" testId="5ff5278b-ff5e-b1ea-fd2f-80355d69e6f4" testName="GetClientNameByIDTest" computerName="DLUDOTNETLAB11" duration="00:00:00.2256489" startTime="2014-03-28T15:16:47.1996641+05:30" endTime="2014-03-28T15:16:47.6047046+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="80fe9ec2-8415-4763-9427-968bab3828ad">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. Verify the correctness of this test method.</Message>
+          <StackTrace>   at TestPortfolio.PortfolioDALTest.GetClientNameByIDTest() in C:\Users\ahans\Desktop\DataAccessLayer\TestPortfolio\PortfolioDALTest.cs:line 139
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

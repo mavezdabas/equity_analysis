@@ -1,0 +1,78 @@
+﻿<Window x:Class="ExecutionTraderMainWindow.Views.EditBlockView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:ExecutionTraderMainWindow.ViewModel"
+        Title="EditBlockView" Height="600" Width="800" ResizeMode="NoResize" WindowState="Maximized">
+    <!--<Window.Resources>
+        <vm:EditBlockViewModel x:Key="EditBlock"/>
+    </Window.Resources>-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38*" />
+            <RowDefinition Height="254*" />
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Edit Block"
+               FontWeight="ExtraBlack" FontFamily="Britannic"
+               HorizontalAlignment="Center" VerticalAlignment="Center"
+               FontSize="25"/>
+
+        <DataGrid x:Name="EditBlockDataGrid" Grid.Row="1"
+                   ItemsSource="{Binding SelectedBlockList,Mode=OneWay}" Background="LightBlue"
+                  RowDetailsVisibilityMode="VisibleWhenSelected">
+
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <DataGrid Margin="50,0,0,0" x:Name="ObjectDetailsGrid" Height="500"
+                              ItemsSource="{Binding Orders}"
+                              Foreground="Blue" RowBackground="LightYellow" >
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Header="Action" DisplayIndex="6" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Remove Order" Command="{Binding DeleteCommand,Mode=OneWay}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Details">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Expander x:Name="MyExpander" Collapsed="ExpanderCollapse" Expanded="ExpanderExpanded" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="SaveButton" Content="SAVE" Grid.Column="0"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    FontFamily="Angsana New" FontSize="25"
+                    Height="40" Width="80"
+                    Foreground="YellowGreen" Background="Beige"/>
+
+
+            <Button x:Name="CancelButton" Content="CANCEL" Grid.Column="1"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    FontFamily="Angsana New" FontSize="25"
+                    Height="40" Width="80"
+                    Foreground="YellowGreen" Background="Beige"/>
+        </Grid>
+
+
+    </Grid>
+</Window>

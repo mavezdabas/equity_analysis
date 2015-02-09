@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="6218de7f-61c4-4fa0-8c7e-65b5f3bd9b21" name="ahans@DLUDOTNETLAB11 2014-03-28 16:26:39" runUser="SAPIENT\ahans" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="1d8e7d6a-b1d4-4bee-bb22-b457cd09af5e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="ahans_DLUDOTNETLAB11 2014-03-28 16_26_39">
+      <DeploymentItem filename="C:\Users\ahans\Desktop\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-03-28T16:26:39.5078530+05:30" queuing="2014-03-28T16:26:39.6528675+05:30" start="2014-03-28T16:26:39.6888711+05:30" finish="2014-03-28T16:26:40.1409163+05:30" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetPortfolioByIDTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="705dfc40-81be-6571-ca82-4fef62591d17">
+      <Execution id="a89b27da-d7d9-4dc0-b1a1-497d90b2e613" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetPortfolioByIDTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="705dfc40-81be-6571-ca82-4fef62591d17" executionId="a89b27da-d7d9-4dc0-b1a1-497d90b2e613" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="a89b27da-d7d9-4dc0-b1a1-497d90b2e613" testId="705dfc40-81be-6571-ca82-4fef62591d17" testName="GetPortfolioByIDTest" computerName="DLUDOTNETLAB11" duration="00:00:00.1670637" startTime="2014-03-28T16:26:39.6908713+05:30" endTime="2014-03-28T16:26:40.0649087+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a89b27da-d7d9-4dc0-b1a1-497d90b2e613">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;(null)&gt;. Actual:&lt;1&gt;. </Message>
+          <StackTrace>   at TestPortfolio.PortfolioDALTest.GetPortfolioByIDTest() in C:\Users\ahans\Desktop\DataAccessLayer\TestPortfolio\PortfolioDALTest.cs:line 211
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

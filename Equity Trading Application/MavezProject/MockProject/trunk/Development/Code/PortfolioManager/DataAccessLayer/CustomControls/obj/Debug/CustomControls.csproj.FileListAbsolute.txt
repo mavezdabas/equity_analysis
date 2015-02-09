@@ -1,0 +1,26 @@
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\bin\Debug\CustomControls.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\bin\Debug\CustomControls.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\ResolveAssemblyReference.cache
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\CustomControls_MarkupCompile.cache
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\CustomControls_MarkupCompile.lref
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\Themes\Generic.baml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\CustomControls.g.resources
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\CustomControls.Properties.Resources.resources
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\GenerateResource.read.1.tlog
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\GenerateResource.write.1.tlog
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\CustomControls.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\CustomControls.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\bin\Debug\CustomControls.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\bin\Debug\CustomControls.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\CustomControls_MarkupCompile.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\CustomControls_MarkupCompile.lref
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\Themes\Generic.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\CustomControls.g.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\CustomControls.Properties.Resources.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\CustomControls.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\CustomControls\obj\Debug\CustomControls.pdb

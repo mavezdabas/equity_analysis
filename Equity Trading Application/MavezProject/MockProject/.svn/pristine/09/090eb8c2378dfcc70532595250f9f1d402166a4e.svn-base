@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="465e8344-ad8d-4794-9151-fa6ddfb33f55" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8732/Design_Time_Addresses/AutoAllocationService/ExecuteBlockService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="87500e5f-c2c5-4dec-95ea-c73ca18b417d" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/AutoAllocationService/ExecuteBlockService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="85f08430-7b17-4cc0-b984-a16917a4fd01" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/AutoAllocationService/ExecuteBlockService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="1675cbae-0eeb-4db2-91ac-e05b823323ac" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/AutoAllocationService/ExecuteBlockService/mex" />
+    <MetadataFile FileName="DataAccessLayer.xsd" MetadataType="Schema" ID="d608938f-3b05-442c-a4ca-3dbd89f8c6bf" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/AutoAllocationService/ExecuteBlockService/mex" />
+    <MetadataFile FileName="AutoAllocationService.xsd" MetadataType="Schema" ID="330fb8d5-4df4-4299-85aa-9fc6fa3541e7" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/AutoAllocationService/ExecuteBlockService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

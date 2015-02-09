@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows.Data;
+
+namespace EquityTradingApplication.Helpers
+{
+    class ObjectToBoolConverter:IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            string s = "";
+            if (value != null)
+            {
+                s = value as string;
+                if (s != null)
+                {
+                    if (s.Equals("Market"))
+                    {
+                       
+                        return false;
+
+                    }
+                }
+            }
+                return true;
+
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

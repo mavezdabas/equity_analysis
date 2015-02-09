@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace DataAccessLayer
+{
+    public interface IPortfolioDAL
+    {
+        List<Order> GetAllOrders();
+        List<Order> GetAllOrdersByPortfolioID(int id);
+        List<Security> GetAllSecurities();
+        List<Client> GetAllClients();
+
+        Order GetOrderByID(int id);
+        void InsertOrder(Order orderToInsert);
+        void UpdateOrder(Order orderToUpdate);
+        void DeleteOrder(Order orderToDelete);
+
+      
+        Client GetClientByID(int id);
+        string GetClientNameByID(int id);
+        Client GetClientByName(string name);
+
+        Security GetSecurityByID(int id);
+        string GetSecurityNameByID(int id);
+        
+
+        Portfolio GetPortfolioByID(int id);
+        string GetPortfolioNameByID(int id);
+        Portfolio GetPortfolioByClientID(int id);
+
+        Status GetStatusByID(int id);
+        string GetStatusNameByID(int id);
+        int GetStatusIdByName(string name);
+
+        string GetSecurityNameBySymbol(string securitySymbol);
+        int GetSecurityIDByName(string name);
+        List<string> GetAllSecuritySymbols();
+        int GetOrderID();
+
+
+    }
+}

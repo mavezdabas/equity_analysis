@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="d316c9c3-5b4c-47c5-8c06-ed067ed77101" name="ahans@DLUDOTNETLAB11 2014-03-28 15:25:06" runUser="SAPIENT\ahans" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="1d8e7d6a-b1d4-4bee-bb22-b457cd09af5e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="ahans_DLUDOTNETLAB11 2014-03-28 15_25_06">
+      <DeploymentItem filename="C:\Users\ahans\Desktop\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-03-28T15:25:06.7566148+05:30" queuing="2014-03-28T15:25:06.8056197+05:30" start="2014-03-28T15:25:06.8136205+05:30" finish="2014-03-28T15:25:07.1856577+05:30" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetClientNameByIDTest1" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="f02e9f21-b64f-a6d3-984d-c51b20c8da47">
+      <Execution id="79ec2ef2-235d-4132-8664-e614fd4efcb3" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetClientNameByIDTest1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="f02e9f21-b64f-a6d3-984d-c51b20c8da47" executionId="79ec2ef2-235d-4132-8664-e614fd4efcb3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="79ec2ef2-235d-4132-8664-e614fd4efcb3" testId="f02e9f21-b64f-a6d3-984d-c51b20c8da47" testName="GetClientNameByIDTest1" computerName="DLUDOTNETLAB11" duration="00:00:00.1212621" startTime="2014-03-28T15:25:06.8756267+05:30" endTime="2014-03-28T15:25:07.1716563+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="79ec2ef2-235d-4132-8664-e614fd4efcb3">
+    </UnitTestResult>
+  </Results>
+</TestRun>

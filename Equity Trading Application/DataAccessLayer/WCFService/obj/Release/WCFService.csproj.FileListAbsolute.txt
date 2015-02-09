@@ -1,0 +1,8 @@
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WCFService\bin\Release\WCFService.dll.config
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WCFService\bin\Release\WCFService.dll
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WCFService\bin\Release\WCFService.pdb
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WCFService\bin\Release\DataAccessLayer.dll
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WCFService\bin\Release\DataAccessLayer.pdb
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WCFService\obj\Release\WCFService.csprojResolveAssemblyReference.cache
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WCFService\obj\Release\WCFService.dll
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WCFService\obj\Release\WCFService.pdb

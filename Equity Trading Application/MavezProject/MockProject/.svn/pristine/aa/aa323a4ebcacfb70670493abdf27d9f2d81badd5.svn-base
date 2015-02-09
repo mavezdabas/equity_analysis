@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.ServiceModel;
+using System.Text;
+using DataAccessLayer.DAL.ExecutionBrokerDAL;
+using System.Threading;
+
+namespace AutoAllocationService
+{
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "SecurityMarketPrice" in both code and config file together.
+    public class SecurityMarketPrice : ISecurityMarketPrice
+    {
+        public void GetMarketPrice()
+        {
+            SecuritiesDAL securityDAL = new SecuritiesDAL();
+            var callback = OperationContext.Current.GetCallbackChannel<IServiceCallback>();
+            callback.SendResult(securityDAL.GetSecuritiesMarketPrice());
+        }
+
+        private static readonly Random random = new Random();
+
+        private static double RandomNumberBetween(double minValue, double maxValue)
+        {
+            var next = random.NextDouble();
+            return minValue + (next * (maxValue - minValue));
+        }
+
+        public void BackgroundUpdate()
+        {
+            ThreadStart MP = new ThreadStart(CalculateMarketPrice);
+            Thread updateMarketPriceThread = new Thread(MP);
+            updateMarketPriceThread.IsBackground = true;
+            updateMarketPriceThread.Start();
+            while (true)
+            {
+                Thread.SpinWait(5000);
+            }
+        }
+
+        static void CalculateMarketPrice()
+        {
+            SecuritiesDAL securityDAL = new SecuritiesDAL();
+
+            foreach (var security in securityDAL.GetSecuritiesMarketPrice())
+            {
+                security.MarketPrice = security.LastTradedPrice.Value + (decimal)RandomNumberBetween(-3.0, 3.0);
+                securityDAL.UpdateSecurity(security);
+            }
+        }
+
+    }
+
+}

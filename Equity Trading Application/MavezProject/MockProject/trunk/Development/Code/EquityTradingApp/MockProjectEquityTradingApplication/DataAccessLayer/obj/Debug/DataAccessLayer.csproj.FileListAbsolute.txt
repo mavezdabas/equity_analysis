@@ -1,0 +1,17 @@
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\MockProjectEquityTradingApplication\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\MockProjectEquityTradingApplication\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\MockProjectEquityTradingApplication\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\MockProjectEquityTradingApplication\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\MockProjectEquityTradingApplication\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

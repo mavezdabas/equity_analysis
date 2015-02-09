@@ -1,0 +1,11 @@
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\bin\Release\WinServiceHostingWCFService.exe
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\bin\Release\WinServiceHostingWCFService.pdb
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\bin\Release\WCFService.dll
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\bin\Release\DataAccessLayer.dll
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\bin\Release\WCFService.pdb
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\bin\Release\DataAccessLayer.pdb
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Release\WinServiceHostingWCFService.csprojResolveAssemblyReference.cache
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Release\WinServiceHostingWCFService.ProjectInstaller.resources
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Release\WinServiceHostingWCFService.csproj.GenerateResource.Cache
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Release\WinServiceHostingWCFService.exe
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Release\WinServiceHostingWCFService.pdb

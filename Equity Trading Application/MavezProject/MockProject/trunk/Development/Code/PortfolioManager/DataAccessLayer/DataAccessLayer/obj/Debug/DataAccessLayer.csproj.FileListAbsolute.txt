@@ -1,0 +1,12 @@
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\DataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\DataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

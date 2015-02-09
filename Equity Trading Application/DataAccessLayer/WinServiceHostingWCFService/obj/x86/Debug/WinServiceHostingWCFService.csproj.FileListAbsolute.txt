@@ -1,0 +1,23 @@
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\bin\Debug\WinServiceHostingWCFService.exe
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\bin\Debug\WinServiceHostingWCFService.pdb
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\bin\Debug\WCFService.dll
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\bin\Debug\DataAccessLayer.dll
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\bin\Debug\WCFService.pdb
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\bin\Debug\DataAccessLayer.pdb
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Debug\WinServiceHostingWCFService.csprojResolveAssemblyReference.cache
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Debug\WinServiceHostingWCFService.ProjectInstaller.resources
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Debug\WinServiceHostingWCFService.csproj.GenerateResource.Cache
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Debug\WinServiceHostingWCFService.exe
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Debug\WinServiceHostingWCFService.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WinServiceHostingWCFService\bin\Debug\WinServiceHostingWCFService.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WinServiceHostingWCFService\bin\Debug\WinServiceHostingWCFService.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WinServiceHostingWCFService\bin\Debug\WCFService.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WinServiceHostingWCFService\bin\Debug\DataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WinServiceHostingWCFService\bin\Debug\WCFService.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WinServiceHostingWCFService\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Debug\WinServiceHostingWCFService.ProjectInstaller.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Debug\WinServiceHostingWCFService.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WinServiceHostingWCFService\obj\x86\Debug\WinServiceHostingWCFService.pdb

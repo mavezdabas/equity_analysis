@@ -1,0 +1,6 @@
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb

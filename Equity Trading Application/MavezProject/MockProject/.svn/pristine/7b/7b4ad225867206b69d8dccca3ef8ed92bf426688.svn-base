@@ -1,0 +1,47 @@
+﻿<Window x:Class="MasterDataManagementUI.CommodityType.UpdateCommodityType"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Update Commodity Type" Height="300" Width="300" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Window.Resources>
+        <ControlTemplate x:Key="CTextBlockTemplate" TargetType="Label">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="{TemplateBinding Content}" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="*" HorizontalAlignment="Left" Foreground="Red" Grid.Column="1" VerticalAlignment="Center" Width="64" Grid.ColumnSpan="2" />
+            </Grid>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid x:Name="GridUpdateCommodity" Style="{StaticResource gridBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="UPDATE COMMODITY TYPE" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" />
+        <Label Grid.Row="1" Content="Commodity Type Name"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="7" Template="{StaticResource CTextBlockTemplate}"/>
+        <Label Grid.Row="2" Content="Commodity Class" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="7" Template="{StaticResource CTextBlockTemplate}"/>
+        <Label Grid.Row="3" Content="Start Date"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="7" />
+        <Label Grid.Row="4" Content="End Date"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="7" />
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding CommodityTypeName}" Name="Txt_CreateCommodityTypeName" Margin="10" IsReadOnly="True" TabIndex="1" />
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding CommodityClass}" Name="Txt_CreateCommodityClass" Margin="10" TabIndex="2" />
+        
+        <TextBlock Text="*Mandatory Fields"  Grid.Row="5" Grid.Column="0" FontSize="8" Foreground="Red"></TextBlock>
+        <Button Content="Save" Grid.Row="6" Margin="10"  x:Name="Save" Click="Save_Click" TabIndex="5" IsDefault="True" />
+        <Button Content="Cancel" Grid.Row="6"  Margin="10" Grid.Column="1" Click="Cancel_Click" x:Name="Cancel" TabIndex="6" IsCancel="True" />
+        <DatePicker Height="25" HorizontalAlignment="Center" Margin="7" Name="datePicker1" VerticalAlignment="Center" Width="129" Grid.Column="1" Grid.Row="3" SelectedDate="{Binding StartDate}" TabIndex="3" IsEnabled="False" />
+        <DatePicker Height="25" HorizontalAlignment="Center" Margin="7" Name="datePicker2" VerticalAlignment="Center" Width="129" Grid.Column="1" Grid.Row="4" SelectedDate="{Binding EndDate}" TabIndex="4" />
+    </Grid>
+</Window>

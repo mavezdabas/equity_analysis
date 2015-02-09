@@ -1,0 +1,188 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using DataAccessLayer;
+using System.Windows.Input;
+using EquityTradingApplication.Commands;
+using EquityTradingApplication.Helpers;
+using AutoMapper;
+using System.Windows.Controls;
+using System.Text.RegularExpressions;
+
+namespace EquityTradingApplication.ViewModels
+{
+    public class ForgotPasswordViewModel:ViewModelBase
+    {
+         public event EquityTradingApplication.Helpers.CustomEventHelper.RequestCloseEventHandler RequestCloseDialog;
+
+         private ExceptionHandler ex;
+        private IUserDAL dalObject;
+    //    public event Action RequestCloseDialog;
+        private IModelDialogService dialogService;
+        string message= null;
+
+        public ForgotPasswordViewModel(string userName)
+        {
+            Mapper.CreateMap<UserModel, User>();
+            dalObject = new UserDAL();
+            dialogService = new ModelDialogService();
+            UserName = userName;
+            
+        }
+
+
+
+        private string userName;
+
+        public string UserName
+        {
+            get { return userName; }
+            set { userName = value;
+            RaisePropertyChanged("UserName");
+            }
+        }
+        
+
+
+
+      //  private string password;
+
+        public string Password
+        {
+            get;
+            set;
+        }
+
+
+        private ICommand resetPasswordCommand;
+
+        public ICommand ResetPasswordCommand
+        {
+            get {
+                if (resetPasswordCommand == null)
+                    resetPasswordCommand = new RelayCommand(p=>SetReset(p),p=>Reset(p));
+                return resetPasswordCommand; }
+          
+        }
+
+        private bool SetReset(object obj)
+        {
+            try
+            {
+                var pwd = obj as PasswordBox;
+                String value = pwd.Password;
+
+                if (string.IsNullOrEmpty(value) || string.IsNullOrEmpty(UserName)
+                    )
+                    return false;
+
+                else if (!Regex.IsMatch(value.ToString(), "[a-zA-z]"))
+                {
+                    return false;
+                }
+
+                else if (!Regex.IsMatch(value.ToString(), "[0-9]"))
+                {
+                    return false;
+                }
+
+                else if (value.ToString().Length < 6)
+                {
+                    return false;
+                }
+
+                else if (value.ToString().Length > 12)
+                    return false;
+
+                return true;
+            }
+            catch (Exception)
+            {
+                ex = new ExceptionHandler(codes.GenericException);
+              
+            }
+            return true;
+        }
+
+
+        //public bool EnableButton(String value)
+        //{
+        //    if (string.IsNullOrEmpty(value))
+        //        return false;
+
+        //    else if (!Regex.IsMatch(value.ToString(), "[a-zA-z]"))
+        //    {
+        //        return false;
+        //    }
+
+        //    else if (!Regex.IsMatch(value.ToString(), "[0-9]"))
+        //    {
+        //        return false;
+        //    }
+
+        //    else if (value.ToString().Length < 6)
+        //    {
+        //        return false;
+        //    }
+
+        //    else
+        //    {
+        //        if (value.ToString().Length > 12)
+        //            return false;
+        //    }
+
+        //    return true;
+        //}
+
+        private void Reset(object obj)
+        {
+            try
+            {
+                var pwd = obj as PasswordBox;
+                Password = pwd.Password;
+                var users = dalObject.GetAllUsers();
+
+                if (!string.IsNullOrEmpty(Password))
+                {
+                    foreach (var item in users)
+                    {
+                        if (item.UserName == UserName)
+                        {
+
+                            item.Password = Password;
+                            dalObject.UpdatePassword(item);
+                            message = "Your Password has been reset!";
+                            if (RequestCloseDialog != null)
+                                RequestCloseDialog(new EquityTradingApplication.Helpers.CustomEventHelper.RequestCloseEventArgs(false));
+                        }
+                        else
+                        {
+                            message = "The Username you entered does not exist!";
+                            // dialogService.MessageAlert("The Username you entered does not exist!");
+                        }
+                    }
+
+
+
+                }
+                else
+                {
+                    message = "Please enter your new password!";
+                }
+
+                if (message != null)
+                    dialogService.MessageAlert(message);
+            }
+            catch (Exception)
+            {
+
+                ex = new ExceptionHandler(codes.GenericException);
+            }
+        }
+        
+
+
+        
+    }
+}

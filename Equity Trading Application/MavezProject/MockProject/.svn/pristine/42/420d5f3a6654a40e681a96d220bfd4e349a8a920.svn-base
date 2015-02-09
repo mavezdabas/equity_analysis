@@ -1,0 +1,89 @@
+﻿<Window x:Class="ExecutionTraderMainWindow.Views.EditBlockView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:ExecutionTraderMainWindow.ViewModel"
+        Title="EditBlockView" Height="482" Width="1060" ResizeMode="NoResize" WindowState="Normal">
+    <!--<Window.Resources>
+        <vm:EditBlockViewModel x:Key="EditBlock"/>
+    </Window.Resources>-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65*" />
+            <RowDefinition Height="230*" />
+            <RowDefinition Height="148*" />
+        </Grid.RowDefinitions>
+
+        <!--<Label Grid.Row="0" Content="Edit Block"
+               FontWeight="ExtraBlack" FontFamily="Britannic"
+               HorizontalAlignment="Center" VerticalAlignment="Center"
+               FontSize="25"/>-->
+        <StackPanel>
+            <Button x:Name="HiddenChangePriceMessageBoxCommandRunner" Visibility="Hidden" Command="{Binding ChangePriceMessageBoxShowCommand,Mode=OneWay}"/>
+
+            <DataGrid Grid.Row="0" TargetUpdated="DataGrid_TargetUpdated" x:Name="EditBlockDataGrid"  Height="Auto"
+                   ItemsSource="{Binding SelectedBlockList,Mode=TwoWay}" Background="LightBlue"
+                  SelectedItem="{Binding SelectedBlock,Mode=TwoWay}" AutoGenerateColumns="False" 
+                      IsReadOnly="False" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="0">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Block ID" Binding="{Binding BlockId}" Width="110" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Side" Binding="{Binding BlockSide}" Width="110" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Symbol" Binding="{Binding security.SecuritySymbol}" Width="110" IsReadOnly="True" />
+                    <DataGridTextColumn Header="Status" Binding="{Binding BlockStatus }" Width="110" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Limit Price" Binding="{Binding LimitPrice,NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="110"  />
+                    <DataGridTextColumn Header="Stop Price" Binding="{Binding StopPrice,NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="110"/>
+                    <DataGridTextColumn Header="Total Quantity" Binding="{Binding TotalQuantity}" Width="110" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Executed Quantity" Binding="{Binding ExecutedQuantity}" Width="160" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Open Quantity" Binding="{Binding OpenQuantity}" Width="110" IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+        <Grid Grid.Row="2" Margin="0,66,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="SaveButton" Content="SAVE" Grid.Column="0"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    
+                    Height="40" Width="150"
+                    Command="{Binding SaveBlockCommand,Mode=OneWay}"
+                    />
+
+
+            <Button x:Name="CancelButton" Content="CANCEL" Grid.Column="1"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    
+                    Height="40" Width="150"
+                     Command="{Binding CancelCommand,Mode=OneWay}" />
+
+            <Button x:Name="HiddenRemoveOrderButton" Command="{Binding DeleteOrderCommand,Mode=OneWay}" Visibility="Hidden"/>
+        </Grid>
+        <DataGrid x:Name="OrdersGrid" RowHeight="30" HorizontalScrollBarVisibility="Visible" ItemsSource="{Binding OrdersOfSelectedBlock,Mode=TwoWay}" Background="White" AutoGenerateColumns="False" Foreground="Black" AlternatingRowBackground="Lavender" SelectedItem="{Binding SelectedOrder}" IsReadOnly="True" Margin="10,6,12,88" Grid.Row="1" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="OrderId" Binding="{Binding OrderId}" IsReadOnly="True" Width="110" />
+                <DataGridTextColumn x:Name="symbol" Header="Symbol" Binding="{Binding Security.SecuritySymbol}" IsReadOnly="True" Width="110" />
+                <DataGridTextColumn Header="Side" Binding="{Binding Side}" IsReadOnly="True" Width="110" />
+                <DataGridTextColumn Header="Order Type" Binding="{Binding OrderType}" IsReadOnly="True" Width="110" />
+                <DataGridTextColumn Header="Qualifier" Binding="{Binding OrderQualifier}" IsReadOnly="True" Width="110" />
+                <DataGridTextColumn Header="Status" Binding="{Binding Status.StatusName}" IsReadOnly="True" Width="110" />
+                <DataGridTextColumn Header="Account Type" Binding="{Binding AccountType}" IsReadOnly="True" Width="110" />
+                <DataGridTextColumn Header="Total Quantity" Binding="{Binding TotalQuantity}" IsReadOnly="True" Width="110" />
+                <DataGridTextColumn Header="Open Quantity" Binding="{Binding OpenQuantity}" IsReadOnly="True" Width="110" />
+                <DataGridTextColumn Header="Allocated Quantity" Binding="{Binding AllocatedQuantity}" IsReadOnly="True" Width="110" />
+                <DataGridTextColumn Header="Stop Price" Binding="{Binding StopPrice}" Width="110" />
+                <DataGridTextColumn Header="Limit Price" Binding="{Binding LimitPrice}" Width="110" />
+                <DataGridTextColumn Header="PortFolio Manager" Binding="{Binding Manager.Name}" IsReadOnly="True" Width="110" />
+                <DataGridTemplateColumn Header="Action">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Remove Order" Click="RemoveOrderClick"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

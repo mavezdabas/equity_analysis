@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows.Data;
+using System.Windows.Media;
+using EquityTradingApplication.Helpers;
+
+namespace EquityTradingApplication.Converters
+{
+    class ColourConverter:IValueConverter
+    {
+
+
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+
+            double dValue = System.Convert.ToDouble(value);
+            double dParameter = System.Convert.ToDouble(parameter);
+
+            return (dValue >= dParameter);    
+
+            //OrderViewModel order = value as OrderViewModel;
+            //if (order.SecurityName == "NASDAQ")
+            //    return Brushes.Black;
+
+            //var str = value as string;
+            //if (str == null) return Brushes.Black;
+
+            //if (str == "NASDAQ")
+            //    return Brushes.Black; 
+
+            //int intValue;
+            //if (!int.TryParse(str, out intValue)) return null;
+
+            //if (intValue <= 1) return Brushes.Red;
+            //else if (intValue <= 2) return Brushes.Yellow;
+            //return Brushes.Red;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

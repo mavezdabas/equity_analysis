@@ -1,0 +1,6 @@
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\DummyDataCreator\bin\Debug\DummyDataCreator.exe.config
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\DummyDataCreator\bin\Debug\DummyDataCreator.exe
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\DummyDataCreator\bin\Debug\DummyDataCreator.pdb
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\DummyDataCreator\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\DummyDataCreator\obj\x86\Debug\DummyDataCreator.exe
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\DummyDataCreator\obj\x86\Debug\DummyDataCreator.pdb

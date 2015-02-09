@@ -1,0 +1,6 @@
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\DataAccessLayer\bin\Release\DataAccessLayer.dll.config
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\DataAccessLayer\bin\Release\DataAccessLayer.dll
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\DataAccessLayer\obj\Release\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\DataAccessLayer\obj\Release\DataAccessLayer.dll
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\DataAccessLayer\obj\Release\DataAccessLayer.pdb

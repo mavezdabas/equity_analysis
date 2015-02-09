@@ -1,0 +1,308 @@
+﻿<Window x:Class="PortfolioManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:local="clr-namespace:PortfolioManager.Helpers"
+        xmlns:converter="clr-namespace:PortfolioManager.Converters"
+        xmlns:auto="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:chart="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized" ResizeMode="NoResize">
+
+    <Window.Resources>
+        <converter:BoolToVisibilityConverter x:Key="BoolToVisibility"></converter:BoolToVisibilityConverter>
+        <converter:PositiveNegativeIndicatorConverter x:Key="PositveNegative"></converter:PositiveNegativeIndicatorConverter>
+        <converter:PositiveNegativeAllSecurities x:Key="AllSecuritiesConverter"></converter:PositiveNegativeAllSecurities>
+
+        <Style TargetType="DataGridRow">
+            <Setter Property="IsSelected" Value="{Binding IsSelected,Mode=TwoWay}" />
+        </Style>
+
+
+    </Window.Resources>
+    <Grid>
+        <TabControl>
+            <TabItem Header="Symbol Search">
+                <Grid Name="Grid" ShowGridLines="False"  Background="LightGray">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3.5*"/>
+                        <RowDefinition Height="1.9*"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Grid Name="topGrid" ShowGridLines="False" Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.2*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Name="profitabilityGrid" ShowGridLines="False" Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.7*"/>
+                                <RowDefinition Height="0.7*" />
+                                <RowDefinition Height="0.7*"/>
+                                <RowDefinition Height="0.7*" />
+                                <RowDefinition Height="0.7*"/>
+                                <RowDefinition Height="0.75*" />
+                                <RowDefinition Height="0.9*" />
+                                <RowDefinition  />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Name="epsLabel" Content="EPS" HorizontalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="20" Grid.Row="0" Grid.Column="0" ></Label>
+                            <Label Name="peRatioLabel" Content="P/E Ratio" HorizontalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="20" Grid.Row="1" Grid.Column="0" ></Label>
+                            <Label Name="change" Content="Change" HorizontalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="20" Grid.Row="2" Grid.Column="0" ></Label>
+                            <Label Name="changePercent" Content="Change %" HorizontalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="20" Grid.Row="3" Grid.Column="0" ></Label>
+                            <Label Name="high" Content="High" HorizontalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="20" Grid.Row="4" Grid.Column="0" ></Label>
+                            <Label Name="low" Content="Low" HorizontalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="20" Grid.Row="5" Grid.Column="0" ></Label>
+                            <Label Name="stockExchange" Content="Exchange" HorizontalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="20" Grid.Row="6" Grid.Column="0" ></Label>
+                            <Label Name="previousClose" Content="Prev.Close" HorizontalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="20" Grid.Row="7" Grid.Column="0" ></Label>
+
+                            <TextBox Name="epsLabelValue" Text="{Binding EPS}" HorizontalAlignment="Center" FontWeight="Bold" Width="100" Foreground="Black" FontSize="20" Grid.Row="0" Grid.Column="1" Margin="5" Background="LightBlue"></TextBox>
+                            <TextBox Name="peRatioLabelValue" Text="{Binding PERatio}" HorizontalAlignment="Center" FontWeight="Bold" Width="100" Foreground="Black" FontSize="20" Grid.Row="1" Grid.Column="1" Margin="5" ></TextBox>
+                            <TextBox Name="changeLabelValue" Text="{Binding Change}" HorizontalAlignment="Center" FontWeight="Bold" Width="100" Foreground="{Binding Path=Change, Converter={StaticResource PositveNegative}}" FontSize="20" Grid.Row="2" Grid.Column="1" Margin="5" ></TextBox>
+                            <TextBox Name="changePercentLabelValue" Text="{Binding ChangePercent}" HorizontalAlignment="Center" FontWeight="Bold" Width="100" Foreground="{Binding Path=ChangePercent, Converter={StaticResource PositveNegative}}" FontSize="20" Grid.Row="3" Grid.Column="1" Margin="5"></TextBox>
+                            <TextBox Name="highLabelValue" Text="{Binding High}" HorizontalAlignment="Center" FontWeight="Bold" Width="100" Foreground="Black" FontSize="20" Grid.Row="4" Grid.Column="1" Margin="5"></TextBox>
+                            <TextBox Name="lowPercentLabelValue" Text="{Binding Low}" HorizontalAlignment="Center" FontWeight="Bold" Width="100" Foreground="Black" FontSize="20" Grid.Row="5" Grid.Column="1" Margin="5" ></TextBox>
+                            <TextBox Name="stockExchangeLabelValue" Text="{Binding StockExchange}" HorizontalAlignment="Center" FontWeight="Bold" Width="100" Foreground="Black" FontSize="20" Grid.Row="6" Grid.Column="1" Margin="7" ></TextBox>
+                            <TextBox Name="previousCloseLabelValue" Text="{Binding PreviousClose}" HorizontalAlignment="Center" FontWeight="Bold" Width="100" Foreground="Black" FontSize="20" Grid.Row="7" Grid.Column="1" Margin="10" ></TextBox>
+
+                        </Grid>
+
+                        <Grid Name="mainGrid" ShowGridLines="False" Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.15*"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Orientation="Horizontal" Grid.Row="0" Name="searchPanel">
+
+                                <auto:AutoCompleteBox Name="tBoxSearch" Width="700" Text="{Binding SearchText,Mode=TwoWay}" ItemsSource="{Binding Symbols}" FontSize="25" Margin="10" FontWeight="Bold"></auto:AutoCompleteBox>
+
+                                <Button Name="btnSearch" Width="100" Margin="10" FontSize="20" Background="LightBlue" Command="{Binding SearchCommand}"  Content="Search"></Button>
+                            </StackPanel>
+
+                            <!--<DataGrid Name="dataGrid" Grid.Row="1" Background="LightGray" MouseLeftButtonDown="dataGrid_MouseLeftButtonDown" ItemsSource="{Binding ListToDisplay,Mode=TwoWay}" SelectedItem="{Binding SelectedOrder,Mode=TwoWay}" IsReadOnly="True" >
+
+
+                </DataGrid>-->
+                            <Grid Grid.Row="1">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.7*"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid Width="250" Height="125">
+                                    <Grid.Background>
+                                        <ImageBrush ImageSource="/Resources/glossyBack.png" Opacity="0.5"></ImageBrush>
+                                    </Grid.Background>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="0.5*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Name="currentPrice" Content="{Binding CurrentPrice}" Grid.Column="0" FontSize="48" FontWeight="Bold" Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" ></Label>
+
+                                    <TextBlock Name="symbol" VerticalAlignment="Top" Grid.Column="1" Margin="2" FontSize="20" FontWeight="Bold" Text="{Binding SymbolSearched}" HorizontalAlignment="Right">
+                                    </TextBlock>
+
+                                </Grid>
+
+                                <Grid Grid.Column="1" ShowGridLines="False">
+                                    <chart:Chart Canvas.Top="80"  Canvas.Left="10" Name="mcChart" Background="Black">
+                                        <chart:Chart.Series>
+                                            <chart:PieSeries Title="Experience" ItemsSource="{Binding ListForPieChart}"
+                                             IndependentValueBinding="{Binding Path=Name}"
+                                             DependentValueBinding="{Binding Path=Value}">
+                                            </chart:PieSeries>
+                                        </chart:Chart.Series>
+                                    </chart:Chart>
+                                </Grid>
+                            </Grid>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid Name="graphAndChartGrid" ShowGridLines="False" Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border BorderBrush="LightBlue" BorderThickness="3">
+                            <Grid Name="graphGrid" Background="White">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="6*"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Name="graph" Background="{Binding BrushGraph}" Grid.Row="0" Margin="10">
+
+                                </Grid>
+
+                                <StackPanel Name="durationButtons" Orientation="Horizontal" Grid.Row="1">
+                                    <Button Name="oneDay" Content="1D" Command="{Binding OneDayCommand}"  Width="50" Margin="150,5,5,5" FontWeight="Bold" Background="LightBlue"></Button>
+                                    <Button Name="fiveDays" Content="5D" Command="{Binding FiveDayCommand}"   Width="50" Margin="5" FontWeight="Bold" Background="LightBlue"></Button>
+                                    <Button Name="threeMonths" Content="3M" Command="{Binding ThreeMonthCommand}" Width="50" Margin="5" FontWeight="Bold" Background="LightBlue"></Button>
+                                    <Button Name="sixMonths" Content="6M" Command="{Binding SixMonthCommand}" Width="50" Margin="5" FontWeight="Bold" Background="LightBlue"></Button>
+                                    <Button Name="oneYear" Content="1Y" Command="{Binding OneYearCommand}" Width="50" Margin="5" FontWeight="Bold" Background="LightBlue"></Button>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                        <Border BorderBrush="LightBlue" BorderThickness="3" Grid.Column="1">
+                            <Grid Name="chart" >
+
+                                <chart:Chart Name="stockChart"
+                                            Background="White" Foreground="Black" FontWeight="Bold">
+                                    <chart:Chart.Series>
+                                        <chart:ColumnSeries  Foreground="Black" Background="Black" 
+                                               ItemsSource="{Binding ListForCharts}" 
+                                               IndependentValueBinding="{Binding Path=NameOfStock}" 
+                                               DependentValueBinding="{Binding Path=NetPnL}">
+                                        </chart:ColumnSeries>
+                                    </chart:Chart.Series>
+                                </chart:Chart>
+
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Orders">
+                <UniformGrid>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="540"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Name="sPanel" Orientation="Horizontal" Margin="1">
+                            <Border BorderBrush="Black" BorderThickness="0.5" >
+                                <!--<TextBox Name="tBoxSearch" FontSize="20" FontWeight="Bold" Width="650" Margin="5"></TextBox>-->
+                                <auto:AutoCompleteBox Name="searchBox" Text="{Binding SearchTextOrder,Mode=TwoWay}" ItemsSource="{Binding Symbols}" FontSize="20" FontWeight="Bold" Width="650" Margin="5" Background="Transparent"></auto:AutoCompleteBox>
+
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="0.5">
+                                <Button Name="btSearch" Width="108" Command="{Binding SearchCommandOrder}" Background="Transparent" Margin="5" >
+                                    <Button.Triggers>
+                                        <EventTrigger RoutedEvent="Button.Click">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation
+                                    Storyboard.TargetName="btnSearch" 
+                                    Storyboard.TargetProperty="Opacity"
+                                    From="1.0" To="0.0" Duration="0:0:1" 
+                                    AutoReverse="True"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                    </Button.Triggers>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock FontSize="22" >Search</TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </Border>
+                        </StackPanel>
+
+
+                        <StackPanel Name="radioButtons" Orientation="Horizontal" Grid.Row="1">
+                            <RadioButton Name="rBtnNew" Content="New" Margin="5" Width="600" HorizontalAlignment="Left" Command="{Binding NewCommand}"/>
+                            <!--IsChecked="{Binding Path=SelectedRadioButton, Converter={StaticResource radioBtnConverter} ,ConverterParameter={x:Static local:Radio.New}}"-->
+                            <RadioButton Name="rbtnOpen" Content="Open" Margin="5" Width="700" HorizontalAlignment="Center" Command="{Binding OpenCommand}"/>
+                            <!--IsChecked="{Binding Path=SelectedRadioButton, Converter={StaticResource radioBtnConverter} ,ConverterParameter={x:Static local:Radio.Open}}"-->
+                            <RadioButton Name="rbtnAll" Content="All" Margin="5" Width="100" HorizontalAlignment="Right" Command="{Binding AllCommand}"/>
+                            <!--IsChecked="{Binding Path=SelectedRadioButton, Converter={StaticResource radioBtnConverter} ,ConverterParameter={x:Static local:Radio.All}}"-->
+                        </StackPanel>
+
+                        <DataGrid Name="ordersGrid" Grid.Row="2" MouseLeftButtonDown="dataGrid_MouseLeftButtonDown" ItemsSource="{Binding ListToDisplay}"  SelectedItem="{Binding SelectedItem,Mode=TwoWay}" IsReadOnly="True" >
+                            <DataGrid.Resources>
+                                <Style TargetType="DataGridRow">
+                                    <Setter Property="IsSelected"
+                                         Value="{Binding IsSelected}" />
+                                </Style>
+                            </DataGrid.Resources>
+
+                            <!--<DataGrid.Columns>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Width="25" Height="25" Command="{Binding DataContext.ViewOrderCommand,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}">
+
+                                            </Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTextColumn Header="Order ID" Binding="{Binding OrderID,Mode=TwoWay}" Foreground="Black" />
+                                <DataGridTextColumn Header="Security Name" Binding="{Binding SecurityName,Mode=TwoWay}" Foreground="Black" />
+                                <DataGridTextColumn Header="Symbol" Binding="{Binding Symbol,Mode=TwoWay}" Foreground="Black" />
+                                <DataGridTextColumn Header="Side" Binding="{Binding Side,Mode=TwoWay}" Foreground="Black" />
+                                <DataGridTextColumn Header="Order Status" Binding="{Binding StatusName,Mode=TwoWay}" Foreground="Black" />
+                                <DataGridTextColumn Header="Market Price" Binding="{Binding MarketPrice,Mode=TwoWay}" Foreground="Black" />
+                                <DataGridTextColumn Header="PnL Position" Binding="{Binding Position,Mode=TwoWay}" FontSize="15"/>-->
+
+
+                            <!--<DataGridTemplateColumn>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <CheckBox Name="checkBox" Width="50" Margin="20,5,-15,0" IsChecked="{Binding Path=IsSelected, Mode=TwoWay,
+                                               RelativeSource={RelativeSource FindAncestor,
+                                                 AncestorType={x:Type DataGridRow}}}"  />
+
+                                        </Grid>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>-->
+
+                            <!--</DataGrid.Columns>-->
+                        </DataGrid>
+
+                        <Grid Name="buttonsGrid" ShowGridLines="True" Grid.Row="3">
+                            <StackPanel Orientation="Horizontal">
+                                <Button Name="btnCreate" Content="CREATE" Height="50" Width="100" Margin="50,20,20,20" FontWeight="Bold" Background="LightGreen" Command="{Binding CreateCommand}"></Button>
+                                <Button Name="btnUpdate" Content="UPDATE" Height="50" Width="100" Margin="50,20,20,20" FontWeight="Bold" Background="LightBlue"  Command="{Binding UpdateCommand}"></Button>
+                                <Button Name="btnDelete" Content="DELETE" Height="50" Width="100" Margin="50,20,20,20" FontWeight="Bold"  Background="Red"  Command="{Binding DeleteCommand}"></Button>
+                                <Button Name="btnSend" Content="SEND" Height="50" Width="100" Margin="650,20,20,20" FontWeight="Bold"  Background="LightCoral" Command="{Binding SendCommand}" ></Button>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </UniformGrid>
+
+            </TabItem>
+
+            <TabItem Name="ALLSecurities" Header="AllSecurities">
+
+                <DataGrid Name="All" FontSize="15" IsReadOnly="True" ItemsSource="{Binding AllSecurities}" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name,Mode=TwoWay}" Foreground="Black"  />
+                        <DataGridTextColumn Header="Symbol" Binding="{Binding Symbol,Mode=TwoWay}" Foreground="Black" />
+                        <DataGridTextColumn Header="MarketPrice" Binding="{Binding MarketPrice,Mode=TwoWay}" Foreground="Black" />
+                        <DataGridTextColumn Header="PreviousClose" Binding="{Binding PreviousClose,Mode=TwoWay}" Foreground="Black" />
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume,Mode=TwoWay}" Foreground="Black" />
+                        <DataGridTextColumn Header="Change" Binding="{Binding Change,Mode=TwoWay}" FontWeight="Bold">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Foreground" Value="{Binding Path=Change,Converter={StaticResource AllSecuritiesConverter}}">
+                                                    
+                                    </Setter>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="ChangePercent" Binding="{Binding ChangePercent,Mode=TwoWay}" Foreground="Black" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</Window>

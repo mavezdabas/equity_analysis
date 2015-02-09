@@ -1,0 +1,22 @@
+﻿<Window x:Class="EquityTradingApplication.View.CreateOrderView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:createEquityOrderViewModel="clr-namespace:EquityTradingApplication.ViewModels"
+        xmlns:local="clr-namespace:EquityTradingApplication.content"
+        xmlns:customControl="clr-namespace:CustomControls;assembly=CustomControls"
+        Title="CreateEquityOrder" Height="543" Width="425">
+    <!--<Window.Resources>
+        <createEquityOrderViewModel:CreateOrderViewModel x:Key="createOrderDataContext"></createEquityOrderViewModel:CreateOrderViewModel>
+    </Window.Resources>-->
+    <Window.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="/Contents/ApplicationStyles.xaml"></ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <local:OrderUserControl WindowName="Create Order"></local:OrderUserControl>
+     </Grid>
+</Window>

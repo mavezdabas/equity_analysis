@@ -1,0 +1,12 @@
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\BrokerSystem\bin\Release\BrokerSystem.exe.config
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\BrokerSystem\bin\Release\BrokerSystem.exe
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\BrokerSystem\bin\Release\BrokerSystem.pdb
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Release\MainWindow.baml
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Release\MainWindow.g.cs
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Release\App.g.cs
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Release\BrokerSystem_MarkupCompile.cache
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Release\BrokerSystem.g.resources
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Release\BrokerSystem.Properties.Resources.resources
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Release\BrokerSystem.csproj.GenerateResource.Cache
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Release\BrokerSystem.exe
+C:\Users\abc\Documents\Visual Studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Release\BrokerSystem.pdb

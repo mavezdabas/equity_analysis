@@ -1,0 +1,155 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.ComponentModel;
+using System.Collections.ObjectModel;
+using EquityTradingApplication.Helpers;
+using OxyPlot;
+using OxyPlot.Axes;
+using System.Windows;
+using System.Windows.Input;
+using EquityTradingApplication.Commands;
+
+namespace EquityTradingApplication.ViewModels
+{
+   public class GraphViewModel:INotifyPropertyChanged
+    {
+        public event EquityTradingApplication.Helpers.CustomEventHelper.RequestCloseEventHandler RequestCloseDialog;
+        
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public ObservableCollection<StockInfo> measurements { get; set; }
+
+        private string searchText;
+        public string SearchText
+        {
+            get { return searchText; }
+            set { searchText = value;
+            OnPropertyChanged("SearchText");
+              
+            }
+        }
+
+        private PlotModel graph;
+        public PlotModel Graph
+        {
+            get { return graph; }
+            set { graph = value; OnPropertyChanged("Graph"); }
+        }
+
+        public DateTime lastUpdate { get; set; }
+
+        public GraphViewModel()
+        {
+            SearchText = "G";
+
+            Graph = new PlotModel();
+            measurements = new ObservableCollection<StockInfo>();
+
+            SetUpModel();
+            LoadData();
+        }
+
+        private ICommand closeWindow;
+        public ICommand CloseWindow
+        {
+            get
+            {
+                if (closeWindow == null)
+                    closeWindow = new RelayCommand(p => Close());
+                return closeWindow;
+
+            }
+            set { closeWindow = value; }
+        }
+
+        private ICommand searchCommand;
+        public ICommand SearchCommand
+        {
+            get
+            {
+                if (searchCommand == null)
+                    searchCommand = new RelayCommand(p => Search());
+                return searchCommand;
+
+            }
+            set { closeWindow = value; }
+        }
+
+        private void Search()
+        {
+            
+            Graph.LegendTitle = SearchText;
+            LoadData();
+        }
+
+        private void Close()
+        {
+            if (RequestCloseDialog != null)
+                RequestCloseDialog(new EquityTradingApplication.Helpers.CustomEventHelper.RequestCloseEventArgs(false));
+        }
+
+        public void UpdateModel()
+        {
+            
+            List<StockInfo> measurements = DataForGraph.GetUpdateData(lastUpdate,SearchText);
+            var dataPerDetector = measurements.GroupBy(m => m.Id).OrderBy(m => m.Key).ToList();
+
+            foreach (var data in dataPerDetector)
+            {
+                OxyPlot.Series.LineSeries lineSeries = Graph.Series[data.Key] as OxyPlot.Series.LineSeries;
+                if (lineSeries != null)
+                {
+                    data.ToList()
+                    .ForEach(d => lineSeries.Points.Add(new DataPoint(OxyPlot.Axes.DateTimeAxis.ToDouble(d.Time), d.MarketPrice)));
+                }
+            }
+            lastUpdate = DateTime.Now;
+        }
+
+        private void SetUpModel()
+        {
+            Graph.LegendTitle = SearchText;
+            Graph.LegendOrientation = LegendOrientation.Horizontal;
+            Graph.LegendPlacement = LegendPlacement.Outside;
+            Graph.LegendPosition = LegendPosition.TopRight;
+            Graph.LegendBackground = OxyColor.FromAColor(200, OxyColors.White);
+            Graph.LegendBorder = OxyColors.Black;
+
+            var dateAxis = new OxyPlot.Axes.DateTimeAxis(AxisPosition.Bottom, "Time", "HH:mm:ss") { MajorGridlineStyle = LineStyle.Solid, MinorGridlineStyle = LineStyle.Dot, IntervalLength = 80 };
+            Graph.Axes.Add(dateAxis);
+            var valueAxis = new OxyPlot.Axes.LinearAxis(AxisPosition.Left, 0) { MajorGridlineStyle = LineStyle.Solid, MinorGridlineStyle = LineStyle.Dot, Title = "Market Price" };
+            Graph.Axes.Add(valueAxis);
+        }
+
+        public void LoadData()
+        {
+           
+            List<StockInfo> measurements = DataForGraph.GetData(SearchText);
+            var dataPerDetector = measurements.GroupBy(m => m.Id).ToList();
+
+            foreach (var data in dataPerDetector)
+            {
+                OxyPlot.Series.LineSeries lineSeries = new OxyPlot.Series.LineSeries()
+                {
+                    StrokeThickness = 2,
+                    MarkerSize = 3,
+                    MarkerStroke = OxyColors.Black,
+                    // MarkerType = markerTypes[data.Key],
+                    CanTrackerInterpolatePoints = false,
+                  //  Title = string.Format("Id {0}", data.Key),
+                    Smooth = false
+                };
+                data.ToList().ForEach(d => lineSeries.Points.Add(new DataPoint(OxyPlot.Axes.DateTimeAxis.ToDouble(d.Time), d.MarketPrice)));
+                Graph.Series.Add(lineSeries);
+            }
+            lastUpdate = DateTime.Now;
+        }
+    }
+}

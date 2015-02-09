@@ -1,0 +1,147 @@
+﻿<UserControl x:Class="EquityTradingApplication.content.OrderUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:AutoTextBox="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
+             xmlns:objectToBoolConverter="clr-namespace:EquityTradingApplication.Helpers"
+             xmlns:customControl="clr-namespace:CustomControls;assembly=CustomControls"
+             mc:Ignorable="d" Height="500" Width="400">
+    <UserControl.Resources>
+        <objectToBoolConverter:ObjectToBoolConverter x:Key="boolConverter"></objectToBoolConverter:ObjectToBoolConverter>
+    </UserControl.Resources>
+    <Grid > 
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=WindowName}" 
+               HorizontalAlignment="Center" VerticalAlignment="Center"  
+                Margin="138,0,118,5" Grid.ColumnSpan="2" Width="144" Height="23"></Label>
+        <TextBlock x:Name="tBlockCompany" Text="{Binding PortfolioName}" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"
+                   Margin="118,27,118,9" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+        <TextBlock x:Name="tBlockOrderId" Text="Order ID" Grid.Row="2"/>
+        <TextBlock x:Name="tBlockSymbol" Text="Symbol" Grid.Row="3" Margin="10,5,10,4" />
+        
+        <TextBlock x:Name="tBlockSecurityName" Text="Security Name" Grid.Row="4" Grid.Column="0"/>
+        <TextBlock x:Name="tBlockSide" Text="Side" Grid.Row="5" Grid.Column="0"/>
+        <TextBlock x:Name="tBlockOrderType" Text="Order Type" Grid.Row="6" Grid.Column="0"/>
+        <TextBlock x:Name="tBlockOrderQualifier" Text="Order Qualifier" Grid.Row="7" Grid.Column="0"/>
+        <TextBlock x:Name="tBlockTrader" Text="Trader" Grid.Row="8" Grid.Column="0"/>
+        <TextBlock x:Name="tBlockAccountType" Text="Account Type" Grid.Row="9" Grid.Column="0"/>
+        <TextBlock x:Name="tBlockQuantity" Text="Quantity" Grid.Row="10" Grid.Column="0"/>
+        <TextBlock x:Name="tBlockStopPrice" Text="Stop Price" Grid.Row="11" Grid.Column="0"/>
+        <TextBlock x:Name="tBlockLimitPrice" Text="Limit Price" Grid.Row="12" Grid.Column="0"/>
+        <TextBlock x:Name="tBlockStatus" Text="Status" Grid.Row="13" Grid.Column="0"/>
+        <TextBlock x:Name="tBlockNotes" Text="Notes" Grid.Row="14" Grid.Column="0"/>
+        <TextBlock x:Name="tBlockNotify" Text="Notify" Grid.Row="15" Grid.Column="0"/>
+        
+        <TextBox x:Name="tBoxOrderId" Grid.Row="2" Grid.Column="1" Text="{Binding OrderId, Mode=OneWay}" IsReadOnly="True" /> 
+        <Grid Grid.Column="1" Grid.Row="3" Margin="10,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="11*" />
+                <RowDefinition Height="10*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="55*" />
+                <ColumnDefinition Width="75*" />
+            </Grid.ColumnDefinitions>
+            
+            <AutoTextBox:AutoCompleteBox x:Name="tBoxSymbol" ItemsSource="{Binding SecuritySymbolList,UpdateSourceTrigger=LostFocus}" Text="{Binding SecuritySymbol,Mode=TwoWay}" IsEnabled="{Binding RelativeSource={RelativeSource AncestorType=UserControl} , Path=IsEnabledForUserControlNonEditableFields}"  Margin="0,0,10,0" Grid.RowSpan="2"  Grid.ColumnSpan="2"></AutoTextBox:AutoCompleteBox>
+            <Button x:Name="btnSymbolLookUp" Command="{Binding LookupCommand}" IsEnabled="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=IsEnabledForUserControlNonEditableFields}" Content="LookUp"  Grid.Column="2" Margin="1,1,10,0" Grid.RowSpan="2" ></Button>
+        </Grid>
+        <TextBox x:Name="tBoxSecurityName" Text="{Binding SecurityName}" IsReadOnly="True" Grid.Row="4" Grid.Column="1"></TextBox>
+        <Grid Grid.Row="5" Grid.Column="1" Margin="10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="11*" />
+                <RowDefinition Height="10*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <RadioButton Name="radioBuy" IsChecked="True"  Content="Buy" IsEnabled="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=IsEnabledForUserControlNonEditableFields}" Margin="10,0,10,1" Grid.RowSpan="2" ></RadioButton>
+            <RadioButton Name="radioSell"  IsChecked="{Binding IsSellSideSelected}" Command="{Binding SideSellCommand}" Content="Sell" IsEnabled="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=IsEnabledForUserControlNonEditableFields}" Margin="79,-1,14,2" Grid.RowSpan="2" Grid.ColumnSpan="2"></RadioButton>
+        </Grid>
+        <ComboBox Name="lstOrderType" ItemsSource="{Binding ListOrderTypes}" Text="{Binding OrderType}"  
+                  IsEnabled="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, 
+            Path=IsEnabledForUserControlEditableFields}" Grid.Row="6" Grid.Column="1" Margin="10,0,12,4" ></ComboBox>
+        <Grid Grid.Row="7" Grid.Column="1" Margin="10,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="12*" />
+                <RowDefinition Height="9*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <RadioButton Name="radioOrderQualifierGTC" IsChecked="True"  Content="GTC" IsEnabled="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=IsEnabledForUserControlEditableFields}" Margin="10,0,0,0" Grid.RowSpan="2"></RadioButton>
+            <RadioButton Name="radioOrderQualifierGTD" IsChecked="{Binding IsOrderQualifierGTDSelected}" Content="GTD" IsEnabled="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=IsEnabledForUserControlEditableFields}" Margin="79,0,20,0" Grid.RowSpan="2" Grid.ColumnSpan="2"></RadioButton>
+        </Grid>
+       
+        <ComboBox Name="lstTrader" ItemsSource="{Binding ListTraders}"  
+                  SelectedValue="{Binding SelectedTraderName}" Grid.Row="8" Grid.Column="1" Margin="10,0,10,5" IsEnabled="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=IsEnabledForUserControlEditableFields}"></ComboBox>
+        <Grid Grid.Row="9" Grid.Column="1" Margin="10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+           
+            <RadioButton Name="radioCash" IsChecked="True"  Content="Cash" IsEnabled="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=IsEnabledForUserControlNonEditableFields}" Margin="10,0,0,0"></RadioButton>
+            <RadioButton Name="radioMargin" Content="Margin" IsChecked="{Binding IsAccountTypeMarginSelected}" IsEnabled="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=IsEnabledForUserControlNonEditableFields}" Margin="79,0,6,0" Grid.ColumnSpan="2"></RadioButton>
+        </Grid>
+       
+        
+        <customControl:NumericTextBox x:Name="tBoxQuantity"  
+                                      Text="{Binding OpenQuantity}" 
+                                      IsReadOnly="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, 
+            Path=IsReadOnlyForEditableFieldsForOpenOrder}" Grid.Row="10" Grid.Column="1"></customControl:NumericTextBox>
+
+        <customControl:DecimalTextBox x:Name="tBoxStopPrice"  Grid.Row="11" Grid.Column="1" IsEnabled="{Binding ElementName=lstOrderType, Path=SelectedItem, Mode=TwoWay, Converter={StaticResource boolConverter}}"  IsReadOnly="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=IsReadOnlyForEditableField}" Text="{Binding StopPrice}" ></customControl:DecimalTextBox>
+        <customControl:DecimalTextBox x:Name="tBoxLimitPrice" 
+                                      IsEnabled="{Binding ElementName=lstOrderType, 
+            Path=SelectedItem, Mode=TwoWay, Converter={StaticResource boolConverter}}"  
+                                      IsReadOnly="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, 
+            Path=IsReadOnlyForEditableField}" Text="{Binding LimitPrice}" Grid.Row="12" Grid.Column="1" ></customControl:DecimalTextBox>
+        <TextBox Name="tBoxStatus" Text="{Binding Status,Mode=OneWay}" IsReadOnly="True" Grid.Row="13" Grid.Column="1"></TextBox>
+
+        <TextBox x:Name="tBoxNotes" Text="{Binding Notes}" Grid.Row="14" Grid.Column="1" 
+                 IsReadOnly="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, 
+              Path=IsReadOnlyForEditableFieldsForOpenOrder}" ></TextBox>
+        <CheckBox Name="chkNotify" Command="{Binding CheckBoxSelectedCommand}" IsEnabled="True"  Grid.Row="15" Grid.Column="1" Margin="20,6,166,8"></CheckBox>
+        <Button Name="btnSaveOrder" Command="{Binding SaveCommand}" 
+                Content="{Binding RelativeSource={RelativeSource AncestorType=UserControl},Path=SaveButtonText}"  Grid.Row="16" Margin="34,15,33,12" Grid.RowSpan="2"></Button>
+        
+        <Button Name="btnCancelOrder" Command="{Binding CancelCommand}" Content="{Binding RelativeSource={RelativeSource AncestorType=UserControl},
+            Path=CancelButtonText}" Grid.Row="16" Grid.Column="1" Margin="33,15,32,12" Grid.RowSpan="2"></Button>
+
+
+
+
+    </Grid>
+
+</UserControl>

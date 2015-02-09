@@ -1,0 +1,181 @@
+﻿<Window x:Class="EquityTradingApplication.Views.PortfolioView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:EquityTradingApplication.Converters"
+        xmlns:auto="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
+        xmlns:sendBtn="clr-namespace:EquityTradingApplication.Helpers"
+        Title="PortfolioView" Height="600" Width="800" WindowState="Maximized" ResizeMode="NoResize">
+
+    <Window.Resources>
+        
+        <local:ColourConverter x:Key="colorConverter"/>
+
+        <sendBtn:SendExecutionBtnConverter x:Key="btnConverter"/>
+
+        <Style TargetType="Button">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+
+        <Style TargetType="RadioButton">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+
+        <Style TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Height" Value="20" />
+            <Setter Property="SeparatorBrush" Value="Black" />
+            <Setter Property="FontWeight" Value="Black" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                        <Grid>
+                            <Border x:Name="columnHeaderBorder" BorderThickness="1"	Padding="3,0,3,0" BorderBrush="Black">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/Resources/header.png"></ImageBrush>
+                                </Border.Background>
+                                <ContentPresenter/>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="PriceChangeStyle" TargetType="DataGridCell">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding MarketPrice, 
+                     Converter={StaticResource colorConverter}}" Value="True">
+                    <Setter Property="Foreground" Value="Green"></Setter>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding MarketPrice, 
+                     Converter={StaticResource colorConverter}}" Value="False">
+                    <Setter Property="Foreground" Value="Red"></Setter>
+
+                </DataTrigger>
+
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+
+            <UniformGrid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="740"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Name="searchPanel" Orientation="Horizontal" Margin="1">
+                        <Border BorderBrush="Black" BorderThickness="0.5" >
+                            <!--<TextBox Name="tBoxSearch" FontSize="20" FontWeight="Bold" Width="650" Margin="5"></TextBox>-->
+                            <auto:AutoCompleteBox Name="tBoxSearch" Text="{Binding SearchText,Mode=TwoWay}"  FontSize="20" FontWeight="Bold" Width="650" Margin="5"></auto:AutoCompleteBox>
+
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0.5">
+                            <Button Name="btnSearch" Width="108" Command="{Binding SearchCommand}" Background="Transparent" Margin="5" >
+                                <Button.Triggers>
+                                    <EventTrigger RoutedEvent="Button.Click">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation
+                                    Storyboard.TargetName="btnSearch" 
+                                    Storyboard.TargetProperty="Opacity"
+                                    From="1.0" To="0.0" Duration="0:0:1" 
+                                    AutoReverse="True"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </Button.Triggers>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="22" >Search</TextBlock>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+                    </StackPanel>
+
+
+                    <StackPanel Name="radioButtons" Orientation="Horizontal" Grid.Row="1">
+                        <RadioButton Name="rBtnNew" Content="New" Margin="5" Width="600" HorizontalAlignment="Left" Command="{Binding NewCommand}"></RadioButton>
+                        <RadioButton Name="rbtnOpen" Content="Open" Margin="5" Width="700" HorizontalAlignment="Center" Command="{Binding OpenCommand}" ></RadioButton>
+                        <RadioButton Name="rbtnAll" Content="All" Margin="5" Width="100" HorizontalAlignment="Right" Command="{Binding AllCommand}" ></RadioButton>
+                    </StackPanel>
+
+                    <DataGrid Name="dataGrid" CellStyle="{StaticResource PriceChangeStyle}" Grid.Row="2" MouseLeftButtonDown="dataGrid_MouseLeftButtonDown" ItemsSource="{Binding OrderViewList}" AutoGenerateColumns="False" SelectedItem="{Binding SelectedItem,Mode=TwoWay}" IsReadOnly="True" >
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridRow">
+                                <Setter Property="IsSelected"
+                    Value="{Binding IsSelected}" />
+                            </Style>
+                        </DataGrid.Resources>
+
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Width="25" Height="25" Command="{Binding DataContext.ViewOrderCommand,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Resources/search.png" Stretch="Uniform" />
+                                            </StackPanel>
+                                        </Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Order ID" Binding="{Binding OrderID,Mode=TwoWay}" Foreground="Black" />
+                            <!--<DataGridTextColumn Header="Security Name" Binding="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.SecurityName,Mode=TwoWay}"/>-->
+                            <DataGridTextColumn Header="Security Name" Binding="{Binding SecurityName,Mode=TwoWay}" Foreground="Black" />
+                            <DataGridTextColumn Header="Symbol" Binding="{Binding Symbol,Mode=TwoWay}" Foreground="Black" />
+                            <DataGridTextColumn Header="Side" Binding="{Binding Side,Mode=TwoWay}" Foreground="Black" />
+                            <DataGridTextColumn Header="Order Status" Binding="{Binding StatusName,Mode=TwoWay}" Foreground="Black" />
+                            <DataGridTextColumn Header="Market Price" Binding="{Binding MarketPrice,Mode=TwoWay}" Foreground="Black" />
+                            <DataGridTextColumn Header="PnL Position" Binding="{Binding Position,Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="Colour" Binding="{Binding CellColour,Mode=TwoWay}" Foreground="Black" />
+
+                            <!--<DataGridTemplateColumn>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <CheckBox Name="checkBox" Width="50" Margin="20,5,-15,0" IsChecked="{Binding Path=IsSelected, Mode=TwoWay,
+                                               RelativeSource={RelativeSource FindAncestor,
+                                                 AncestorType={x:Type DataGridRow}}}"  />
+
+                                        </Grid>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>-->
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <StackPanel Name="buttons" Orientation="Horizontal" Grid.Row="3" >
+                        <Button Name="btnCreate" Margin="5" Width="120" Background="Transparent" HorizontalAlignment="Left" Command="{Binding OpenCreateOrder}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Resources/add.png" Stretch="Uniform" />
+                                <TextBlock FontSize="17" Margin="5,0,0,0" >Create</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="btnDelete" Margin="5" Width="120" Background="Transparent" Command="{Binding DeleteCommand}" HorizontalAlignment="Center">
+
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Resources/delete.png" Stretch="Uniform" />
+                                <TextBlock FontSize="17" Margin="5,0,0,0" >Delete</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="btnGraph" Margin="5" Width="120" Background="Transparent" HorizontalAlignment="Center" Command="{Binding OpenGraph}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Resources/graph.png" Stretch="Uniform" />
+                                <TextBlock FontSize="17" Margin="5,0,0,0" >Graph</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="btnSendForExecution" Margin="950,5,5,5" Width="120" Command="{Binding SendCommand,Mode=OneWay}"  Background="Transparent" HorizontalAlignment="Right"
+                        IsEnabled="{Binding Path=SelectedItem,Converter={StaticResource btnConverter}}">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontSize="17" >Send</TextBlock>
+                                <Image Source="/Resources/arrowright.png" Stretch="Uniform" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+        </UniformGrid>
+</Window>

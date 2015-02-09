@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows.Data;
+using System.Windows.Media;
+using EquityTradingApplication.Helpers;
+using System.Windows;
+
+namespace EquityTradingApplication.Converters
+{
+    class ColourConverter:IValueConverter
+    {
+
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+
+            OrderViewModel order = (OrderViewModel)value;
+         
+            decimal dParameter = System.Convert.ToDecimal(parameter);
+            Console.WriteLine(dParameter.ToString());
+            return(order.MarketPrice>=order.LastTradedPrice);
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

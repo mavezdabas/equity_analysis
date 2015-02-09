@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using DataAccessLayer;
+
+namespace EquityTradingApplication.Helpers
+{
+    public class DataForGraph
+    {
+        static PortfolioDAL dalObject;
+        static Security security;
+
+        public static List<StockInfo> GetData(string SearchText)
+        {
+            dalObject = new PortfolioDAL();
+            security = new Security();
+            string securityName = dalObject.GetSecurityNameBySymbol(SearchText);
+
+            List<Security> securities = dalObject.GetAllSecurities();
+
+            foreach (var item in securities)
+            {
+                if (item.SecurityName == securityName)
+                    security = item;
+            }
+
+            var measurements = new List<StockInfo>();
+            var startDate = DateTime.Now;
+            var r = new Random();
+
+            for (int i = 0; i < 1; i++)
+            {
+                measurements.Add(new StockInfo() { Id = i, MarketPrice = (int)security.MarketPrice, Time = startDate.AddMinutes(1) });
+            }
+            measurements.Sort((m1, m2) => m1.Time.CompareTo(m2.Time));
+            return measurements;
+        }
+
+        public static List<StockInfo> GetUpdateData(DateTime dateTime,string SearchText)
+        {
+            var measurements = new List<StockInfo>();
+            var r = new Random();
+
+            for (int i = 0; i < 1; i++)
+            {
+                measurements.Add(new StockInfo() { Id = i, Time = dateTime.AddMinutes(1), MarketPrice = (int)security.MarketPrice + r.Next(-100, 100) });
+            }
+            return measurements;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+﻿<Window x:Class="PortfolioManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized" ResizeMode="NoResize">
+    <Grid Name="Grid" ShowGridLines="True"  Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3.5*"/>
+            <RowDefinition Height="1.9*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Name="topGrid" ShowGridLines="True" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Name="profitabilityGrid" ShowGridLines="True" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="0.1*" />
+                    <RowDefinition  />
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Name="epsLabel" Content="EPS" HorizontalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="20" Grid.Row="0" Grid.Column="0" ></Label>
+                <Label Name="peRatioLabel" Content="P/E Ratio" HorizontalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="20" Grid.Row="1" Grid.Column="0" ></Label>
+            </Grid>
+
+            <Grid Name="mainGrid" ShowGridLines="True" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="0" Name="searchPanel">
+                    <Border BorderBrush="Black" BorderThickness="1">
+                        <TextBox Name="tBoxSearch" Width="700" FontSize="25" Margin="10" FontWeight="Bold"></TextBox>
+                    </Border>
+                    <Button Name="btnSearch" Width="100" Margin="10" FontSize="20" Content="Search"></Button>
+                </StackPanel>
+
+                <DataGrid Name="dataGrid" Grid.Row="1">
+                    
+                    
+                </DataGrid>
+                
+            </Grid>
+
+        </Grid>
+
+        <Grid Name="graphAndChartGrid" ShowGridLines="True" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <Grid Name="buttonsGrid" ShowGridLines="True" Grid.Row="2">
+            <StackPanel Orientation="Horizontal">
+                <Button Name="btnCreate" Content="CREATE" Height="50" Width="100" Margin="100,20,20,20" FontWeight="Bold" Background="LightGreen"></Button>
+                <Button Name="btnUpdate" Content="UPDATE" Height="50" Width="100" Margin="400,20,20,20" FontWeight="Bold" Background="LightBlue"></Button>
+                <Button Name="btnDelete" Content="DELETE" Height="50" Width="100" Margin="400,20,20,20" FontWeight="Bold"  Background="Red"></Button>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>

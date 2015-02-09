@@ -1,0 +1,162 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Windows.Media.Animation;
+using ExecutionTraderMainWindow.Views;
+using ExecutionTraderMainWindow.ViewModel;
+using ExecutionTraderDataAccessLayer;
+
+
+namespace ExecutionTraderMainWindow
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        private Element current = new Element();
+        public MainWindow()
+        {
+            InitializeComponent();
+            this.Loaded += new RoutedEventHandler(MainWindow_Loaded);
+            
+        }
+        private void dataGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (sender != null)
+            {
+                DataGrid grid = sender as DataGrid;
+                if (grid != null && grid.SelectedItems != null && grid.SelectedItems.Count == 1)
+                {
+                    DataGridRow dgr = grid.ItemContainerGenerator.ContainerFromItem(grid.SelectedItem) as DataGridRow;
+                    if (dgr.IsMouseOver)
+                    {
+                        (dgr as DataGridRow).IsSelected = false;
+                    }
+                }
+            }
+        }
+        void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            border.Width = System.Windows.SystemParameters.PrimaryScreenWidth;
+        }
+
+        private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (this.current.InputElement != null)
+            {
+                this.current.X = Mouse.GetPosition((IInputElement)sender).X;
+                this.current.Y = Mouse.GetPosition((IInputElement)sender).Y;
+                // Ensure object receives all mouse events.
+                this.current.InputElement.CaptureMouse();
+            }
+
+        }
+
+
+
+        private void Canvas_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            if (this.current.InputElement != null)
+            {
+                this.current.IsDragging = false;
+                this.current.InputElement.ReleaseMouseCapture();
+                this.current.InputElement = null;
+            }
+        }
+
+
+
+        private void Canvas_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (this.current.InputElement != null)
+            {
+                // if mouse is down when its moving, then it's dragging current
+                if (e.LeftButton == MouseButtonState.Pressed)
+                    this.current.IsDragging = true;
+                if (this.current.IsDragging && current.InputElement != null)
+                {
+                    // Retrieve the current position of the mouse.
+                    var newX = Mouse.GetPosition((IInputElement)sender).X;
+                    var newY = Mouse.GetPosition((IInputElement)sender).Y;
+                    // Reset the location of the object (add to sender's renderTransform
+                    // newPosition minus currentElement's position
+                    var rt = ((UIElement)this.current.InputElement).RenderTransform;
+                    var offsetX = rt.Value.OffsetX;
+                    var offsetY = rt.Value.OffsetY;
+                    rt.SetValue(TranslateTransform.XProperty, offsetX + newX - current.X);
+                    rt.SetValue(TranslateTransform.YProperty, offsetY + newY - current.Y);
+                    // Update position of the mouse
+                    current.X = newX;
+                    current.Y = newY;
+
+                }
+            }
+
+        }
+
+        private void rect1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.current.InputElement = (IInputElement)sender;
+        }
+
+        private void rect2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if(movementControl.IsChecked==true)
+            this.current.InputElement = (IInputElement)sender;
+        }
+
+        private void StackPanel_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Border sp = sender as Border;
+            DoubleAnimation db = new DoubleAnimation();
+            DoubleAnimation db1 = new DoubleAnimation();
+            //db.From = 12;
+            db.To = 30;
+            db1.To = 1;
+            db.Duration = TimeSpan.FromSeconds(0.5);
+            db.AutoReverse = false;
+            db.RepeatBehavior = new RepeatBehavior(1);
+            sp.BeginAnimation(StackPanel.HeightProperty, db);
+            sp.BeginAnimation(StackPanel.OpacityProperty, db1);
+        }
+
+        private void StackPanel_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Border sp = sender as Border;
+            DoubleAnimation db = new DoubleAnimation();
+            DoubleAnimation db1 = new DoubleAnimation();
+            //db.From = 12;
+            db.To = 2;
+            db1.To = 0.2;
+            db.Duration = TimeSpan.FromSeconds(0.5);
+            db.AutoReverse = false;
+            db.RepeatBehavior = new RepeatBehavior(1);
+            sp.BeginAnimation(StackPanel.HeightProperty, db);
+            sp.BeginAnimation(StackPanel.OpacityProperty, db1);
+        }
+
+        private void OpenOrdersDataGirdSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+        }
+
+        private void BlockDGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (BlockDGrid.SelectedItems.Count > 1) BlockDGrid.RowDetailsVisibilityMode = DataGridRowDetailsVisibilityMode.Collapsed;
+            else BlockDGrid.RowDetailsVisibilityMode = DataGridRowDetailsVisibilityMode.VisibleWhenSelected;
+
+        }
+
+        
+    }
+}

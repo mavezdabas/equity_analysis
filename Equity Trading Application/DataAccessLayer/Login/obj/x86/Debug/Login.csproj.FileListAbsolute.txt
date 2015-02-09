@@ -1,0 +1,54 @@
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\bin\Debug\Login.exe.config
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\bin\Debug\Login.exe
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\bin\Debug\Login.pdb
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\bin\Debug\DataAccessLayer.dll
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\bin\Debug\PortfolioManager.exe
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\bin\Debug\Trader.exe
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\bin\Debug\WPFToolkit.dll
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\bin\Debug\DataAccessLayer.pdb
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\bin\Debug\PortfolioManager.pdb
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\bin\Debug\Trader.pdb
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\obj\x86\Debug\Login.csprojResolveAssemblyReference.cache
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\obj\x86\Debug\Views\ClientWindow.baml
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\obj\x86\Debug\Views\ForgotPasswordWindow.baml
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\obj\x86\Debug\Views\MainWindow.baml
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\obj\x86\Debug\Views\ClientWindow.g.cs
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\obj\x86\Debug\Views\ForgotPasswordWindow.g.cs
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\obj\x86\Debug\Views\MainWindow.g.cs
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\obj\x86\Debug\App.g.cs
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\obj\x86\Debug\Login_MarkupCompile.cache
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\obj\x86\Debug\Login.g.resources
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\obj\x86\Debug\Login.Properties.Resources.resources
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\obj\x86\Debug\Login.csproj.GenerateResource.Cache
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\obj\x86\Debug\Login.exe
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Login\obj\x86\Debug\Login.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\bin\Debug\Login.exe.config
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\bin\Debug\Login.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\bin\Debug\Login.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\bin\Debug\DataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\bin\Debug\PortfolioManager.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\bin\Debug\Trader.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\bin\Debug\WPFToolkit.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\bin\Debug\PortfolioManager.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\bin\Debug\Trader.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\Views\ClientWindow.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\Views\ForgotPasswordWindow.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\Views\ClientWindow.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\Views\ForgotPasswordWindow.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\Views\MainWindow.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\App.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\Login_MarkupCompile.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\Login_MarkupCompile.lref
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\Views\MainWindow.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\Login.g.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\Login.Properties.Resources.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\Login.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Login\obj\x86\Debug\Login.pdb

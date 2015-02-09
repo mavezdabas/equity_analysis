@@ -1,0 +1,58 @@
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\bin\Debug\ExecutionTraderMainWindow.exe.config
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\bin\Debug\ExecutionTraderMainWindow.exe
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\bin\Debug\ExecutionTraderMainWindow.pdb
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\bin\Debug\DataAccessLayer.dll
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\bin\Debug\WPFToolkit.dll
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\bin\Debug\DataAccessLayer.pdb
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\bin\Debug\WPFToolkit.pdb
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Helpers\ExpressionDark.baml
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Styles\CommonStyles.baml
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\App.baml
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\AddOrdersToBlockWindow.g.cs
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\CreateBlockWindow.g.cs
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\EditBlockView.g.cs
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\MainWindow.g.cs
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\App.g.cs
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\ExecutionTraderMainWindow_MarkupCompile.cache
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\ExecutionTraderMainWindow_MarkupCompile.lref
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\AddOrdersToBlockWindow.baml
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\CreateBlockWindow.baml
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\EditBlockView.baml
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\MainWindow.baml
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\ExecutionTraderMainWindow.g.resources
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\ExecutionTraderMainWindow.Properties.Resources.resources
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\ExecutionTraderMainWindow.exe
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\ExecutionTraderMainWindow.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\bin\Debug\ExecutionTraderMainWindow.exe.config
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\bin\Debug\ExecutionTraderMainWindow.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\bin\Debug\ExecutionTraderMainWindow.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\bin\Debug\DataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Helpers\ExpressionDark.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Styles\CommonStyles.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\App.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\AddOrdersToBlockWindow.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\CreateBlockWindow.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\EditBlockView.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\MainWindow.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\App.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\ExecutionTraderMainWindow_MarkupCompile.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\ExecutionTraderMainWindow_MarkupCompile.lref
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\AddOrdersToBlockWindow.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\CreateBlockWindow.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\EditBlockView.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\Views\MainWindow.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\ExecutionTraderMainWindow.g.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\ExecutionTraderMainWindow.Properties.Resources.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\ExecutionTraderMainWindow.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\ExecutionTraderMainWindow.pdb

@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ExecutionTraderDataAccessLayer
+{
+   
+        public interface IExecutionTraderDAL
+        {
+            #region Blocks
+            void CreateBlock(Block blockToBeCreated,List<Order> selectedOrders);
+            bool CheckSameSymbolAndSide(List<Order> orders);
+            void EditBlock(Block blockToBeEdited);
+            void DeleteBlock(Block blockToBeDeleted);
+            List<Block> DisplayBlocks();
+            Block GetBlockByBlockID(int blockId);
+            List<Block> GetBlocksBySecurityIDAndSide(int securityID, string side);
+            List<ExecutedBlock> DisplayExecutedBlocks();
+            int GetMaxBlockId();
+            void GetSymbolFromSecurityId(int securityId);
+            void GetStatusFromStatusId(int statusId);
+            void RemoveOrderFromBlock(Order order);
+            void SaveBlockDatabase(Block SelectedBlock);
+            #endregion
+
+            #region Orders
+            Order GetOrderByOrderID(int orderId);
+            void UpdateOrders(List<Order> orders);
+            List<Order> DisplayOrders();
+            List<Order> DisplayOpenOrders();
+            List<OrderAllocation> DisplayAllocatedOrders();
+            List<Block> GetFilteredBlocks(int blockID, int securityID, int blockStatus, string blockSide);
+            List<Order> GetFilteredOrders(int orderID, int securityID, string blockSide);
+            #endregion
+
+            #region ProposedBlocks
+            List<ProposedBlock> DisplayProposedBlocks();
+            void CreateProposedBlock(ProposedBlock proposedBlockToBeCreated);
+            void EditProposedBlock(ProposedBlock proposedBlockToBeEdited);
+            void DeleteProposedBlock(ProposedBlock proposedBlockToBeDeleted);
+            ProposedBlock GetProposedBlockByProposedBlockID(int proposedBlockId);
+            #endregion
+            List<Security> GetAllSecurities();
+        }
+    
+}

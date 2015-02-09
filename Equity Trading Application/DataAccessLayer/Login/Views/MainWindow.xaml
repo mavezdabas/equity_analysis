@@ -1,0 +1,44 @@
+﻿<Window x:Class="Login.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:w="clr-namespace:Login.Helpers"
+        Title="MainWindow" Height="743" Width="1150" WindowState="Maximized">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/blueback.jpg" Opacity="0.7"></ImageBrush>
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <Grid Name="mainGrid" Grid.Column="0">
+            <Grid.RowDefinitions>
+
+
+            </Grid.RowDefinitions>
+
+            <TextBox Name="username" Text="{Binding UserName}" FontSize="25" Width="300" Height="50" Margin="589,163,239,491">
+
+            </TextBox>
+
+
+            <TextBox Name="password" FontSize="25"  Text="{Binding Password}"  Margin="589,229,239,425" Width="300" Height="50">
+
+            </TextBox>
+
+            <StackPanel Name="forgotAndLogin" Width="300" Height="50" Margin="39,96,789,88" Grid.Row="1" Orientation="Horizontal"></StackPanel>
+
+            <Button Name="login" Content="Login" Width="150" Command="{Binding LoginCommand}" FontWeight="Bold" Background="Transparent" FontSize="15" Height="50" Margin="748,303,230,351"></Button>
+
+            <Button Name="forgot" Content="Forgot Password" Command="{Binding ForgotCommand}" FontWeight="Bold" Background="Transparent" FontSize="15" Width="161" Height="50" Margin="589,303,378,351"></Button>
+
+            <Grid Name="logo" Width="200" Height="200" Margin="251,153,677,351">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/Resources/Main.jpg"></ImageBrush>
+                </Grid.Background>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>

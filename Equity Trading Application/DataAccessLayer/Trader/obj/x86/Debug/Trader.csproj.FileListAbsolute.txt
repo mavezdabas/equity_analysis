@@ -1,0 +1,31 @@
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\bin\Debug\Trader.exe.config
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\bin\Debug\Trader.exe
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\bin\Debug\Trader.pdb
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\bin\Debug\DataAccessLayer.dll
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\bin\Debug\DataAccessLayer.pdb
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\obj\x86\Debug\Trader.csprojResolveAssemblyReference.cache
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\obj\x86\Debug\Views\MainWindow.baml
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\obj\x86\Debug\Views\MainWindow.g.cs
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\obj\x86\Debug\App.g.cs
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\obj\x86\Debug\Trader_MarkupCompile.cache
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\obj\x86\Debug\Trader.g.resources
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\obj\x86\Debug\Trader.Properties.Resources.resources
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\obj\x86\Debug\Trader.csproj.GenerateResource.Cache
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\obj\x86\Debug\Trader.exe
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\Trader\obj\x86\Debug\Trader.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\bin\Debug\Trader.exe.config
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\bin\Debug\Trader.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\bin\Debug\Trader.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\bin\Debug\DataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\obj\x86\Debug\Views\MainWindow.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\obj\x86\Debug\Views\MainWindow.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\obj\x86\Debug\App.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\obj\x86\Debug\Trader_MarkupCompile.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\obj\x86\Debug\Trader.g.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\obj\x86\Debug\Trader.Properties.Resources.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\obj\x86\Debug\Trader.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\Trader\obj\x86\Debug\Trader.pdb

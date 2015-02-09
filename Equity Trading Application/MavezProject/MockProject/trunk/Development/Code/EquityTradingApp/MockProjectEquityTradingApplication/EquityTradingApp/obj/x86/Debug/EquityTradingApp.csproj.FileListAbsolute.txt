@@ -1,0 +1,198 @@
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.exe
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.pdb
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\MainWindow.baml
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\MainWindow.g.cs
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\App.g.cs
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_MarkupCompile.cache
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.g.resources
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.Properties.Resources.resources
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.csproj.GenerateResource.Cache
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.exe
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.pdb
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ResetPassword.baml
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\BrokerMainPageWindow.g.cs
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ConfigurationWindow.g.cs
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\LoginWindow.g.cs
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\PasswordResetWindow.g.cs
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ResetPassword.g.cs
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_MarkupCompile.lref
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.csprojResolveAssemblyReference.cache
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.Net4.dll
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.exe.config
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoAllocationService.dll
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.dll
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\DataAccessLayer.dll
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoAllocationService.pdb
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\DataAccessLayer.pdb
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.xml
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_Content.g.cs
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\BrokerMainPageWindow.baml
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ConfigurationWindow.baml
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\LoginWindow.baml
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\PasswordResetWindow.baml
+D:\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.exe.config
+D:\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.Net4.dll
+D:\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.exe
+D:\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.pdb
+D:\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoAllocationService.dll
+D:\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.dll
+D:\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\DataAccessLayer.dll
+D:\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoAllocationService.pdb
+D:\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\DataAccessLayer.pdb
+D:\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.xml
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.csprojResolveAssemblyReference.cache
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\MainWindow.baml
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ResetPassword.baml
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\MainWindow.g.cs
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\BrokerMainPageWindow.g.cs
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ConfigurationWindow.g.cs
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\LoginWindow.g.cs
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\PasswordResetWindow.g.cs
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ResetPassword.g.cs
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\App.g.cs
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_Content.g.cs
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_MarkupCompile.cache
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_MarkupCompile.lref
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\BrokerMainPageWindow.baml
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ConfigurationWindow.baml
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\LoginWindow.baml
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\PasswordResetWindow.baml
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.g.resources
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.Properties.Resources.resources
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.csproj.GenerateResource.Cache
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.exe
+D:\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.pdb
+D:\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\log4net.dll
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.exe.config
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.exe
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.pdb
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.Net4.dll
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.exe
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.pdb
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoAllocationService.dll
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.dll
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\DataAccessLayer.dll
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoAllocationService.pdb
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\DataAccessLayer.pdb
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.xml
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.csprojResolveAssemblyReference.cache
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\MainWindow.baml
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ResetPassword.baml
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\MainWindow.g.cs
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\BrokerMainPageWindow.g.cs
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ConfigurationWindow.g.cs
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\LoginWindow.g.cs
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\PasswordResetWindow.g.cs
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ResetPassword.g.cs
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\App.g.cs
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_Content.g.cs
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_MarkupCompile.cache
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_MarkupCompile.lref
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\BrokerMainPageWindow.baml
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ConfigurationWindow.baml
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\LoginWindow.baml
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\PasswordResetWindow.baml
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.g.resources
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.Properties.Resources.resources
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.csproj.GenerateResource.Cache
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.Net4.dll
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.exe.config
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.exe
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.pdb
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoAllocationService.dll
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.dll
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\DataAccessLayer.dll
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoAllocationService.pdb
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\DataAccessLayer.pdb
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.xml
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\MainWindow.baml
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ResetPassword.baml
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\MainWindow.g.cs
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\BrokerMainPageWindow.g.cs
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ConfigurationWindow.g.cs
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\LoginWindow.g.cs
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\PasswordResetWindow.g.cs
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ResetPassword.g.cs
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\App.g.cs
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_Content.g.cs
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_MarkupCompile.cache
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_MarkupCompile.lref
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\BrokerMainPageWindow.baml
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ConfigurationWindow.baml
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\LoginWindow.baml
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\PasswordResetWindow.baml
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.g.resources
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.Properties.Resources.resources
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.exe
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.pdb
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.Net4.dll
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.exe
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.dll
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\DataAccessLayer.dll
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\DataAccessLayer.pdb
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.xml
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\MainWindow.baml
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ResetPassword.baml
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\MainWindow.g.cs
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\BrokerMainPageWindow.g.cs
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ConfigurationWindow.g.cs
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\LoginWindow.g.cs
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\PasswordResetWindow.g.cs
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ResetPassword.g.cs
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\App.g.cs
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_Content.g.cs
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_MarkupCompile.cache
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_MarkupCompile.lref
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\BrokerMainPageWindow.baml
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ConfigurationWindow.baml
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\LoginWindow.baml
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\PasswordResetWindow.baml
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.g.resources
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.Properties.Resources.resources
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.exe
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.pdb
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.exe.config
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.Net4.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.exe.config
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\EquityTradingApp.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\DataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\bin\Debug\AutoMapper.xml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\MainWindow.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ResetPassword.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\BrokerMainPageWindow.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ConfigurationWindow.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\LoginWindow.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\PasswordResetWindow.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ResetPassword.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\App.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_Content.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_MarkupCompile.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp_MarkupCompile.lref
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\BrokerMainPageWindow.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\ConfigurationWindow.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\LoginWindow.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\Views\PasswordResetWindow.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.g.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.Properties.Resources.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\EquityTradingApp\obj\x86\Debug\EquityTradingApp.pdb

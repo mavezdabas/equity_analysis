@@ -1,0 +1,16 @@
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\bin\Debug\TestPortfolio.dll.config
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\bin\Debug\TestPortfolio.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\bin\Debug\TestPortfolio.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\bin\Debug\DataAccessLayer.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\bin\Debug\DataAccessLayer.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\obj\Debug\ResolveAssemblyReference.cache
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\obj\Debug\TestPortfolio.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\obj\Debug\TestPortfolio.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\bin\Debug\TestPortfolio.dll.config
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\bin\Debug\TestPortfolio.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\bin\Debug\TestPortfolio.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\bin\Debug\DataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\obj\Debug\TestPortfolio.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\TestPortfolio\obj\Debug\TestPortfolio.pdb

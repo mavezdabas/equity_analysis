@@ -1,0 +1,47 @@
+﻿<Window x:Class="EquityTradingApp.Views.ConfigurationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:EquityTradingApp.ViewModels"
+        Title="Configuration Window" Height="350" Width="525">
+    
+    <Grid DataContext="{Binding }" Background="Aqua">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Content="Security Information"/>
+
+        <DataGrid x:Name="EquityGrid" Grid.RowSpan="2" Grid.Row="1" Grid.Column="0" Margin="10"
+                  ItemsSource="{Binding securities}"
+                  SelectedItem="{Binding Config}"/>
+
+        <Label Content="Configuration Information" Grid.Row="3"/>
+        
+        <DataGrid x:Name="ConfigurationGrid" Grid.RowSpan="2" Grid.Row="4" Grid.Column="0" Margin="10"
+                  ItemsSource="{Binding SecurityConfig}" 
+                  />
+        <StackPanel Grid.Column="1" Grid.RowSpan="6" DataContext="{Binding ElementName=ConfigurationGrid,Path=SelectedItem}">
+            <TextBox Margin="10" Text="{Binding SecurityID}"/>
+            <TextBox Margin="10" Text="{Binding MaxPriceSpread}"/>
+            <TextBox Margin="10" Text="{Binding MaxExecutionNumber}"/>
+            <TextBox Margin="10" Text="{Binding MaxExecutionInterval}"/>
+            <TextBox Margin="10" Text="{Binding FullyExecutedOrderProbability}"/>
+        </StackPanel>
+
+        <Button x:Name="btnSave" Grid.Row="7" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Save" Width="100" FontSize="20"
+                Command="{Binding SaveCommand,Mode=OneWay}"/>
+        <Button x:Name="btnCancel" Grid.Row="7" Grid.Column="1" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Cancel" Width="100" FontSize="20"
+                Command="{Binding CancelCommand,Mode=OneWay}"/>
+        
+    </Grid>
+</Window>

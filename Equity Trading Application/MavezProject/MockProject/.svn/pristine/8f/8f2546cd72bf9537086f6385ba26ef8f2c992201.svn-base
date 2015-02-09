@@ -1,0 +1,81 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.ServiceModel;
+using System.Text;
+using DataAccessLayer;
+using DataAccessLayer.DAL.ExecutionBrokerDAL;
+using System.Threading;
+
+namespace AutoAllocationService
+{
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "ExecuteBlockService" in both code and config file together.
+    public class ExecuteBlockService : IExecuteBlockService
+    {
+        public ConfirmationMessage ExecuteBlock(List<Block> blockList)
+        {
+            ConfirmationMessage classObject = new ConfirmationMessage();
+            Console.WriteLine("Confirmation Message");
+            if (blockList != null)
+            {
+                foreach (var block in blockList)
+                {
+                    classObject.Id = block.BlockID;
+                    classObject.TimeStamp = DateTime.Now;
+                    classObject.Message = "Blocks Successfully Recieved";
+                }
+
+            }
+            ExecutionOfBlock(blockList);
+            return classObject;
+
+        }
+        public void Polling()
+        {
+            //ExpireOpenBlock.ExpireOpenBlockThreadExecution();
+            //SecurityMarketPrice securityMarketPrice = new SecurityMarketPrice();
+            //securityMarketPrice.BackgroundUpdate();
+            ThreadStart ts1 = new ThreadStart(RecieveBlocksFromTable);
+            Thread ExpireOpenBlockThread = new Thread(ts1);
+            ExpireOpenBlockThread.IsBackground = true;
+            //ExpireOpenBlockThread.Start();
+            //ExpireOpenBlockThread.Join();
+
+            TimeSpan EndOfDayExpireThread = DateTime.Now.TimeOfDay;
+
+            while (EndOfDayExpireThread.Hours > 17 && EndOfDayExpireThread.Hours < 9)
+            {
+                EndOfDayExpireThread = DateTime.Now.TimeOfDay;
+                Thread.SpinWait(1000);
+            }
+            ExpireOpenBlockThread.Start();
+        }
+        public void RecieveBlocksFromTable()
+        {
+            IBlockDAL blockDAL = new BlockDAL();
+            List<Block> blockList = new List<Block>();
+            blockList = blockDAL.GetAllPartiallyExecutedBlock();
+            ExecutionOfBlock(blockList);
+        }
+
+        public void ExecutionOfBlock(List<Block> blockListToExecute)
+        {
+
+            CalculatingTradePrice CalculatingTradePriceObject = new CalculatingTradePrice();
+
+            List<ParameterToSend> ParameterObject = new List<ParameterToSend>();
+            try
+            {
+                ParameterObject = CalculatingTradePriceObject.BlockExecution(blockListToExecute);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception Ocurred:" + e.Message);
+            }
+
+            ProcessOrderExecution processOrderExecutionObject = new ProcessOrderExecution();
+            processOrderExecutionObject.BeginBlockExecutionProcess(ParameterObject);
+        }
+    }
+}

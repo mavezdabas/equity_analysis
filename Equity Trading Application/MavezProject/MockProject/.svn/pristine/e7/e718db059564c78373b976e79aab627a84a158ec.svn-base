@@ -1,0 +1,150 @@
+﻿<Window x:Class="EquityTradingApp.Views.BrokerMainPageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:EquityTradingApp.ViewModels"
+        Title="BrokerMainPageWindow" Height="768" Width="1024" WindowStartupLocation="CenterScreen"  ResizeMode="NoResize">
+    <!--<Window.Resources>
+        
+    </Window.Resources>
+    <Grid DataContext="{Binding }">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0">
+            <TextBlock.RenderTransform>
+                <TranslateTransform x:Name="translate" />
+            </TextBlock.RenderTransform>
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard RepeatBehavior="Forever">
+                            <DoubleAnimation 
+                                From="300" To="-300" 
+                                Storyboard.TargetName="translate" 
+                                Storyboard.TargetProperty="X"
+                                Duration="0:0:5" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+            Welcome Home, Broker. Have a nice day.
+        </TextBlock>
+
+        <DockPanel Grid.Row="1" >
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Service Configuration" Grid.Row="0" FontSize="18" FontWeight="Bold" DockPanel.Dock="Left" Command="{Binding SecurityConfigurationCommand, Mode=OneWay}" Width="190" Height="50" Grid.Column="0"/>
+                <Button Content="Execute Block" FontSize="18" Grid.Row="0" FontWeight="Bold" DockPanel.Dock="Right" Width="190" Height="50" Grid.Column="1"/>
+            </Grid>
+            
+        </DockPanel>
+<DataGrid Grid.Row="2" ItemsSource="{Binding ServiceConfigurationCollection}"/>
+    </Grid>
+</Window>-->
+    <Window.Resources>
+        <!--<local:BrokerMainPageViewModel x:Key="brokerViewModel"/>-->
+    </Window.Resources>
+    <Grid DataContext="{Binding }">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0">
+            <TextBlock.RenderTransform>
+                <TranslateTransform x:Name="translate" />
+            </TextBlock.RenderTransform>
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard RepeatBehavior="Forever">
+                            <DoubleAnimation 
+                                From="300" To="-300" 
+                                Storyboard.TargetName="translate" 
+                                Storyboard.TargetProperty="X"
+                                Duration="0:0:5" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+            Welcome Home, Broker. Have a nice day.
+        </TextBlock>
+
+        <DockPanel Grid.Row="1" >
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Service Configuration" Grid.Row="0" FontSize="18" FontWeight="Bold" DockPanel.Dock="Left" Command="{Binding SecurityCommand, Mode=OneWay}" Width="190" Height="50" Grid.Column="0"/>
+                <Button Content="Execute Block" FontSize="18" Grid.Row="0" FontWeight="Bold" DockPanel.Dock="Right" Width="190" Height="50" Grid.Column="1" Command="{Binding ExecuteBlockCommand, Mode=OneWay}"/>
+            </Grid>
+        </DockPanel>
+
+        <Grid Grid.Row="2" DataContext="{Binding }" Background="AliceBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Security Information"/>
+
+            <DataGrid x:Name="EquityGrid" Grid.RowSpan="2" Grid.Row="1" Grid.Column="0" Margin="10"
+                  ItemsSource="{Binding securities}"
+                  SelectedItem="{Binding Config}" />
+            <!--SelectionChanged="EquityGrid_SelectionChanged-->
+
+            <Label Content="Configuration Information" Grid.Row="3"/>
+
+            <DataGrid x:Name="ConfigurationGrid" Grid.RowSpan="2" Grid.Row="4" Margin="23,10,147,11"
+                  ItemsSource="{Binding SecurityConfig}" Grid.ColumnSpan="2" />
+            <StackPanel Grid.Column="1" Grid.RowSpan="6" DataContext="{Binding ElementName=ConfigurationGrid,Path=SelectedItem}">
+                <Label Height="20"/>
+                <Label Content="Security ID"/>
+                <TextBox Margin="5" Height="30" Text="{Binding SecurityID}"/>
+                <Label Height="20"/>
+                <Label Content="Max. Price Spread"/>
+                <TextBox Margin="5" Height="30" Text="{Binding MaxPriceSpread}"/>
+                <Label Height="20"/>
+                <Label Content="Max. Execution Number"/>
+                <TextBox Margin="5" Height="30" Text="{Binding MaxExecutionNumber}"/>
+                <Label Height="20"/>
+                <Label Content="Max. Execution Interval"/>
+                <TextBox Margin="5" Height="30" Text="{Binding MaxExecutionInterval}"/>
+                <Label Height="20"/>
+                <Label Content="Fully Executed Order Probability"/>
+                <TextBox Margin="5" Height="30" Text="{Binding FullyExecutedOrderProbability}"/>
+            </StackPanel>
+
+            <Button x:Name="btnSave" Grid.Row="7" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Save" Width="100" FontSize="20"
+                Command="{Binding SaveCommand,Mode=OneWay}"/>
+            <Button x:Name="btnCancel" Grid.Row="7" Grid.Column="0" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Center" Content="Cancel" Width="100" FontSize="20"
+                Command="{Binding CancelCommand,Mode=OneWay}"/>
+
+        </Grid>
+    </Grid>
+</Window>

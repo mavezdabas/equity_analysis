@@ -1,0 +1,16 @@
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WCFService\bin\Debug\WCFService.dll.config
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WCFService\bin\Debug\WCFService.dll
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WCFService\bin\Debug\WCFService.pdb
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WCFService\bin\Debug\DataAccessLayer.dll
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WCFService\bin\Debug\DataAccessLayer.pdb
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WCFService\obj\Debug\WCFService.csprojResolveAssemblyReference.cache
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WCFService\obj\Debug\WCFService.dll
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\WCFService\obj\Debug\WCFService.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WCFService\bin\Debug\WCFService.dll.config
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WCFService\bin\Debug\WCFService.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WCFService\bin\Debug\WCFService.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WCFService\bin\Debug\DataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WCFService\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WCFService\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WCFService\obj\Debug\WCFService.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\WCFService\obj\Debug\WCFService.pdb

@@ -1,0 +1,48 @@
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.dll.config
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.dll
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.pdb
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.dll
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.pdb
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\DataAccessLayer.dll
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\DataAccessLayer.pdb
+H:\Sapient Training\MyNotes\DotNet1\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.csprojResolveAssemblyReference.cache
+D:\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.dll.config
+D:\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.dll
+D:\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.pdb
+D:\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\DataAccessLayer.dll
+D:\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\DataAccessLayer.pdb
+D:\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.csprojResolveAssemblyReference.cache
+D:\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.dll
+D:\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.pdb
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.dll.config
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.dll
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.pdb
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\DataAccessLayer.dll
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\DataAccessLayer.pdb
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.csprojResolveAssemblyReference.cache
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.dll
+C:\Users\agoy12\Desktop\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.pdb
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.dll.config
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.dll
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.pdb
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\DataAccessLayer.dll
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\DataAccessLayer.pdb
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.dll
+C:\Users\aset11\Desktop\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.pdb
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.dll.config
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.dll
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.pdb
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\DataAccessLayer.dll
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\DataAccessLayer.pdb
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\ResolveAssemblyReference.cache
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.dll
+D:\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.dll.config
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\AutoAllocationService.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\DataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\EquityTradingApp\MockProjectEquityTradingApplication\AutoAllocationService\obj\Debug\AutoAllocationService.pdb

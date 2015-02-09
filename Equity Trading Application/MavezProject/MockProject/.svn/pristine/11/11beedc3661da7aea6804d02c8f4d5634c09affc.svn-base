@@ -1,0 +1,73 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler,Log4net"/>
+  </configSections>
+  <log4net>
+    <root>
+      <level value="ALL"/>
+      <appender-ref ref="FileAppender"/>
+    </root>
+    <appender name="FileAppender" type="log4net.Appender.FileAppender">
+      <file value="Log.txt"/>
+      <appendToFile value="true"/>
+      <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %level %logger - %message%newline"/>
+      </layout>
+      <!--<filter type="log4net.Filter.LevelRangeFilter">
+        <levelMin value="INFO"/>
+        <levelMax value="FATAL"/>
+      </filter>-->
+    </appender>
+  </log4net>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/>
+  </startup>
+  <connectionStrings>
+    <add name="EquityTradingDBEntities" connectionString="metadata=res://*/ModelEquityTrading.csdl|res://*/ModelEquityTrading.ssdl|res://*/ModelEquityTrading.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.\SqlExpress;initial catalog=EquityTradingDB;integrated security=True;pooling=False;multipleactiveresultsets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+    <system.serviceModel>
+        <bindings>
+            <wsHttpBinding>
+                <binding name="WSHttpBinding_ISecurityConfigurationDetails" />
+                <binding name="WSHttpBinding_IExecuteBlockService" closeTimeout="00:01:00"
+                    openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00"
+                    bypassProxyOnLocal="false" transactionFlow="false" hostNameComparisonMode="StrongWildcard"
+                    maxBufferPoolSize="524288" maxReceivedMessageSize="65536"
+                    messageEncoding="Text" textEncoding="utf-8" useDefaultWebProxy="true"
+                    allowCookies="false">
+                    <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384"
+                        maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+                    <reliableSession ordered="true" inactivityTimeout="00:10:00"
+                        enabled="false" />
+                    <security mode="Message">
+                        <transport clientCredentialType="Windows" proxyCredentialType="None"
+                            realm="" />
+                        <message clientCredentialType="Windows" negotiateServiceCredential="true"
+                            algorithmSuite="Default" />
+                    </security>
+                </binding>
+            </wsHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:8732/Design_Time_Addresses/AutoAllocationService/SecurityConfigurationDetails/"
+                binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_ISecurityConfigurationDetails"
+                contract="SecurityConfigurationDetailsServiceReference.ISecurityConfigurationDetails"
+                name="WSHttpBinding_ISecurityConfigurationDetails">
+                <identity>
+                    <dns value="localhost" />
+                </identity>
+            </endpoint>
+            <endpoint address="http://localhost:8732/Design_Time_Addresses/AutoAllocationService/ExecuteBlockService/"
+                binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IExecuteBlockService"
+                contract="ExecuteBlockServiceReference.IExecuteBlockService"
+                name="WSHttpBinding_IExecuteBlockService">
+                <identity>
+                    <dns value="localhost" />
+                </identity>
+            </endpoint>
+        </client>
+    </system.serviceModel>
+
+  </configuration>

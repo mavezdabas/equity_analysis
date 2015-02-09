@@ -1,0 +1,38 @@
+﻿<Window x:Class="EquityTradingApplication.Views.ViewEquityOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:EquityTradingApplication.content"
+        xmlns:helper="clr-namespace:EquityTradingApplication.Helpers"
+        xmlns:converters="clr-namespace:EquityTradingApplication.Converters"
+        Title="ViewEquityOrder" Height="600" Width="500">
+    <Window.Resources>
+        <helper:VisibilityConverter x:Key="vis"></helper:VisibilityConverter>
+        <converters:OrderViewBtnConverter x:Key="orderViewBtn"></converters:OrderViewBtnConverter>
+        
+    </Window.Resources>
+    <StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <local:OrderUserControl x:Name="ViewWindow" WindowName="View Order" IsReadOnlyForEditableField="True"  IsReadOnlyForEditableFieldsForOpenOrder="True" IsReadOnlyForNonEditableFields="True" IsEnabledForUserControlEditableFields="False" IsEnabledForUserControlNonEditableFields="False" Grid.Row="0" Visibility="{Binding ViewWindowVisible, Converter={StaticResource vis}}">
+            </local:OrderUserControl>
+            <local:OrderUserControl x:Name="EditWindow" IsReadOnlyForEditableFieldsForOpenOrder="False" IsReadOnlyForEditableField="False"  IsEnabledForUserControlEditableFields="True" IsEnabledForUserControlNonEditableFields="False" IsReadOnlyForNonEditableFields="True" WindowName="Edit Order" Grid.Row="0" Visibility="{Binding UpdateWindowVisible, Converter={StaticResource vis}}"></local:OrderUserControl>
+            <local:OrderUserControl x:Name="UpdateWindow" IsReadOnlyForEditableFieldsForOpenOrder="False" IsReadOnlyForEditableField="True"  IsEnabledForUserControlEditableFields="False" IsEnabledForUserControlNonEditableFields="False" IsReadOnlyForNonEditableFields="True" SaveButtonText="Amend" WindowName="Amend Order" Grid.Row="0" Visibility="{Binding AmendWindowVisible, Converter={StaticResource vis}}"></local:OrderUserControl>
+
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <Button Name="btnUpdate" Content="Edit" Command="{Binding UpdateCommand}" Visibility="{Binding UpdateButtonVisible, Converter={StaticResource vis}}" Margin="49,0,14,0" IsEnabled="{Binding Converter={StaticResource orderViewBtn}}"></Button>
+            <Button Grid.Column="1" Name="btnDelete" Content="Delete" Command="{Binding DeleteCommand}" Visibility="{Binding DeleteButtonVisible,  Converter={StaticResource vis}}" Margin="13,0,57,0"  IsEnabled="{Binding Converter={StaticResource orderViewBtn}}"></Button>
+
+        </Grid>
+
+    </StackPanel>
+</Window>

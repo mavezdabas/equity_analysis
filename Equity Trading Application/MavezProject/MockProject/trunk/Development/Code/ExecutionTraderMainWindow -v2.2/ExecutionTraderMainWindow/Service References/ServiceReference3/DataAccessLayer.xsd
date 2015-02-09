@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DataAccessLayer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataAccessLayer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfBlock">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Block" nillable="true" type="tns:Block" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBlock" nillable="true" type="tns:ArrayOfBlock" />
+  <xs:complexType name="Block">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BlockID" type="xs:int" />
+      <xs:element minOccurs="0" name="BlockSide" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BlockStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="ExecutedBlocks" nillable="true" type="tns:ArrayOfExecutedBlock" />
+      <xs:element minOccurs="0" name="ExecutedQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="LimitPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OpenQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderAllocations" nillable="true" type="tns:ArrayOfOrderAllocation" />
+      <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrder" />
+      <xs:element minOccurs="0" name="Security" nillable="true" type="tns:Security" />
+      <xs:element minOccurs="0" name="SecurityID" type="xs:int" />
+      <xs:element minOccurs="0" name="StopPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="TraderID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Block" nillable="true" type="tns:Block" />
+  <xs:complexType name="ArrayOfExecutedBlock">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExecutedBlock" nillable="true" type="tns:ExecutedBlock" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExecutedBlock" nillable="true" type="tns:ArrayOfExecutedBlock" />
+  <xs:complexType name="ExecutedBlock">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Block" nillable="true" type="tns:Block" />
+      <xs:element minOccurs="0" name="BlockID" type="xs:int" />
+      <xs:element minOccurs="0" name="ExecutedBlockID" type="xs:int" />
+      <xs:element minOccurs="0" name="ExecutedQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderAllocations" nillable="true" type="tns:ArrayOfOrderAllocation" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactionPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransactionTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExecutedBlock" nillable="true" type="tns:ExecutedBlock" />
+  <xs:complexType name="ArrayOfOrderAllocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderAllocation" nillable="true" type="tns:OrderAllocation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderAllocation" nillable="true" type="tns:ArrayOfOrderAllocation" />
+  <xs:complexType name="OrderAllocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllocatedQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="AllocationID" type="xs:int" />
+      <xs:element minOccurs="0" name="Block" nillable="true" type="tns:Block" />
+      <xs:element minOccurs="0" name="BlockID" type="xs:int" />
+      <xs:element minOccurs="0" name="ExecutedBlock" nillable="true" type="tns:ExecutedBlock" />
+      <xs:element minOccurs="0" name="ExecutionID" type="xs:int" />
+      <xs:element minOccurs="0" name="Order" nillable="true" type="tns:Order" />
+      <xs:element minOccurs="0" name="OrderID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactionFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransactionPrice" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderAllocation" nillable="true" type="tns:OrderAllocation" />
+  <xs:complexType name="Order">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AllocatedQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="Block" nillable="true" type="tns:Block" />
+      <xs:element minOccurs="0" name="BlockID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BookTime" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Client" nillable="true" type="tns:Client" />
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="LimitPrice" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ManagerID" type="xs:int" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notify" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OpenQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderAllocation" nillable="true" type="tns:OrderAllocation" />
+      <xs:element minOccurs="0" name="OrderID" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderQualifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Portfolio" nillable="true" type="tns:Portfolio" />
+      <xs:element minOccurs="0" name="PortfolioID" type="xs:int" />
+      <xs:element minOccurs="0" name="Security" nillable="true" type="tns:Security" />
+      <xs:element minOccurs="0" name="SecurityID" type="xs:int" />
+      <xs:element minOccurs="0" name="Side" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="tns:Status" />
+      <xs:element minOccurs="0" name="StatusID" type="xs:int" />
+      <xs:element minOccurs="0" name="StopPrice" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="TraderID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactionPrice" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransactionTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="User1" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Order" nillable="true" type="tns:Order" />
+  <xs:complexType name="Client">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrder" />
+      <xs:element minOccurs="0" name="Portfolios" nillable="true" type="tns:ArrayOfPortfolio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Client" nillable="true" type="tns:Client" />
+  <xs:complexType name="ArrayOfOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Order" nillable="true" type="tns:Order" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrder" nillable="true" type="tns:ArrayOfOrder" />
+  <xs:complexType name="ArrayOfPortfolio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Portfolio" nillable="true" type="tns:Portfolio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPortfolio" nillable="true" type="tns:ArrayOfPortfolio" />
+  <xs:complexType name="Portfolio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Client" nillable="true" type="tns:Client" />
+      <xs:element minOccurs="0" name="ClientID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrder" />
+      <xs:element minOccurs="0" name="PortfolioID" type="xs:int" />
+      <xs:element minOccurs="0" name="PortfolioName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Portfolio" nillable="true" type="tns:Portfolio" />
+  <xs:complexType name="Security">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Blocks" nillable="true" type="tns:ArrayOfBlock" />
+      <xs:element minOccurs="0" name="ExecutionQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="LastTradedPrice" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MarketPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrder" />
+      <xs:element minOccurs="0" name="ProposedBlocks" nillable="true" type="tns:ArrayOfProposedBlock" />
+      <xs:element minOccurs="0" name="SecurityConfigurationDetails" nillable="true" type="tns:ArrayOfSecurityConfigurationDetail" />
+      <xs:element minOccurs="0" name="SecurityID" type="xs:int" />
+      <xs:element minOccurs="0" name="SecurityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecuritySymbol" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Security" nillable="true" type="tns:Security" />
+  <xs:complexType name="ArrayOfProposedBlock">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProposedBlock" nillable="true" type="tns:ProposedBlock" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProposedBlock" nillable="true" type="tns:ArrayOfProposedBlock" />
+  <xs:complexType name="ProposedBlock">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BlockSide" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LimitPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ProposedBlockID" type="xs:int" />
+      <xs:element minOccurs="0" name="Security" nillable="true" type="tns:Security" />
+      <xs:element minOccurs="0" name="SecurityID" type="xs:int" />
+      <xs:element minOccurs="0" name="StopPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalQuantity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProposedBlock" nillable="true" type="tns:ProposedBlock" />
+  <xs:complexType name="ArrayOfSecurityConfigurationDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SecurityConfigurationDetail" nillable="true" type="tns:SecurityConfigurationDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSecurityConfigurationDetail" nillable="true" type="tns:ArrayOfSecurityConfigurationDetail" />
+  <xs:complexType name="SecurityConfigurationDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FullyExecutedOrderProbability" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxExecutionInterval" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="MaxExecutionNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxPriceSpread" type="xs:int" />
+      <xs:element minOccurs="0" name="Security" nillable="true" type="tns:Security" />
+      <xs:element minOccurs="0" name="SecurityConfigurationID" type="xs:int" />
+      <xs:element minOccurs="0" name="SecurityID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecurityConfigurationDetail" nillable="true" type="tns:SecurityConfigurationDetail" />
+  <xs:complexType name="Status">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrder" />
+      <xs:element minOccurs="0" name="StatusID" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Status" nillable="true" type="tns:Status" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DOB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrder" />
+      <xs:element minOccurs="0" name="Orders1" nillable="true" type="tns:ArrayOfOrder" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRole" nillable="true" type="tns:UserRole" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="UserRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RoleID" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Users" nillable="true" type="tns:ArrayOfUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserRole" nillable="true" type="tns:UserRole" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+</xs:schema>

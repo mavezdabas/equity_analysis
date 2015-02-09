@@ -1,0 +1,26 @@
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\BrokerSystem\bin\Debug\BrokerSystem.exe.config
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\BrokerSystem\bin\Debug\BrokerSystem.exe
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\BrokerSystem\bin\Debug\BrokerSystem.pdb
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Debug\MainWindow.baml
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Debug\MainWindow.g.cs
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Debug\App.g.cs
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Debug\BrokerSystem_MarkupCompile.cache
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Debug\BrokerSystem.g.resources
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Debug\BrokerSystem.Properties.Resources.resources
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Debug\BrokerSystem.csproj.GenerateResource.Cache
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Debug\BrokerSystem.exe
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\BrokerSystem\obj\x86\Debug\BrokerSystem.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\BrokerSystem\bin\Debug\BrokerSystem.exe.config
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\BrokerSystem\bin\Debug\BrokerSystem.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\BrokerSystem\bin\Debug\BrokerSystem.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\BrokerSystem\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\BrokerSystem\obj\x86\Debug\MainWindow.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\BrokerSystem\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\BrokerSystem\obj\x86\Debug\App.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\BrokerSystem\obj\x86\Debug\BrokerSystem_MarkupCompile.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\BrokerSystem\obj\x86\Debug\BrokerSystem.g.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\BrokerSystem\obj\x86\Debug\BrokerSystem.Properties.Resources.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\BrokerSystem\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\BrokerSystem\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\BrokerSystem\obj\x86\Debug\BrokerSystem.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\BrokerSystem\obj\x86\Debug\BrokerSystem.pdb

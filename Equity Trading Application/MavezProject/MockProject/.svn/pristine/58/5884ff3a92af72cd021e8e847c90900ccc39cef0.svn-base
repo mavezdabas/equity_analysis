@@ -1,0 +1,221 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using DataAccessLayer;
+using System.Collections.ObjectModel;
+using ExecutionTraderMainWindow.Model;
+using ExecutionTraderMainWindow.Helpers;
+using System.Windows.Input;
+using ExecutionTraderMainWindow.Commands;
+
+namespace ExecutionTraderMainWindow.ViewModel
+{
+    class AddOrdersToBlockViewModel
+    {
+        Action<string> popup;
+        Func<string, string, bool> confirm;
+        public ObservableCollection<BlockModel> blockList { get; set; }
+        ExecutionTraderDAL dalObject;
+        public event RequestCloseEventHandler RequestCloseDialog;
+        public List<OrderModel> SelectedOrders { get; set; }
+        public BlockModel selectedBlock { get; set; }
+        public BlockModel selectedBlockBackup { get; set; }
+
+        public AddOrdersToBlockViewModel()
+        {
+
+        }
+        public AddOrdersToBlockViewModel(Action<string> popup, Func<string, string, bool> confirm, List<OrderModel> orders, ObservableCollection<BlockModel> blocks)
+        {
+            this.popup = popup;
+            this.confirm = confirm;
+            SelectedOrders = new List<OrderModel>();
+            SelectedOrders = orders;
+            // var blockSide = GetBlockSide();
+            // var Security = GetBlockSecurity();
+            dalObject = new ExecutionTraderDAL();
+            blockList = new ObservableCollection<BlockModel>();
+
+            //foreach (var block in dalObject.GetBlocksBySecurityIDAndSide(Security.SecurityID, blockSide))
+            //{
+            //    blockList.Add(Converter.ConvertBlockToBlockModel(block));
+            //}
+
+            //foreach (var block in blocks)
+            //{
+            //    if (block.BlockId > 0)
+            //    {
+            //        if (block.BlockSide.Equals(orders[0].Side) && block.SecurityId == orders[0].SecurityId && block.BlockStatus.Equals(BlockStatusEnum.New.ToString()))
+            //            blockList.Add(block);
+            //    }
+            //    else break;
+
+            //}
+            blockList = blocks;
+
+
+        }
+        private SecurityModel GetBlockSecurity()
+        {
+            int firstBlockSecurity = SelectedOrders.First().SecurityId;
+            if (SelectedOrders.All(e => e.SecurityId == firstBlockSecurity))
+                return SelectedOrders.First().Security;
+            else return null;
+        }
+
+        private string GetBlockSide()
+        {
+            var firstBlockSide = SelectedOrders.First().Side;
+            if (SelectedOrders.All(e => e.Side == firstBlockSide))
+                return firstBlockSide;
+            else return string.Empty;
+
+        }
+
+        private ICommand saveCommand;
+        public ICommand SaveCommand
+        {
+            get
+            {
+                if (saveCommand == null)
+                    saveCommand = new RelayCommand(p => EnableSaveButton(), p => DoSave());
+                return saveCommand;
+            }
+        }
+
+        private bool EnableSaveButton()
+        {
+            if (selectedBlock != null) return true;
+            else return false;
+        }
+
+        private void DoSave()
+        {
+            if (SaveButtonMessageBox())
+            {
+                UpdateBlockIDForSelectedOrders();
+                AppendSelectedOrders();
+                UpdateSelectedBlockDetails();
+                dalObject.EditBlock(Converter.ConvertBlockModelToBlock(selectedBlock));
+                dalObject.UpdateOrders(Converter.ConvertOrderModelListToOrderList(SelectedOrders));
+
+                if (RequestCloseDialog != null)
+                    RequestCloseDialog(new RequestCloseEventArgs(true));
+            }
+        }
+
+        private bool SaveButtonMessageBox()
+        {
+            return confirm("Are you sure you want to Add to block?", "Confirm!");
+        }
+
+        private void UpdateBlockIDForSelectedOrders()
+        {
+            foreach (OrderModel orderModel in SelectedOrders)
+                orderModel.BlockId = selectedBlock.BlockId;
+        }
+
+        private void UpdateSelectedBlockDetails()
+        {
+            selectedBlock.StopPrice = GetStopPriceOfBlock();
+            selectedBlock.LimitPrice = GetLimitPriceOfBlock();
+            selectedBlock.TotalQuantity = GetTotalQuantityOfBlock();
+            selectedBlock.OpenQuantity = GetOpenQuantityOfBlock();
+        }
+
+        private ICommand cancelCommand;
+        public ICommand CancelCommand
+        {
+            get
+            {
+                if (cancelCommand == null)
+                    cancelCommand = new RelayCommand(p => DoCancel());
+                return cancelCommand;
+            }
+        }
+
+        private void DoCancel()
+        {
+            if (RequestCloseDialog != null)
+                RequestCloseDialog(new RequestCloseEventArgs(false));
+        }
+
+        public int GetTotalQuantityOfBlock()
+        {
+            int totalQuantity = 0;
+            if (selectedBlock.Orders.Count() != 0)
+            {
+                for (int i = 0; i < selectedBlock.Orders.Count; i++)
+                {
+                    totalQuantity = selectedBlock.Orders[i].TotalQuantity + totalQuantity;
+                }
+            }
+            return totalQuantity;
+
+
+        }
+        public void AppendSelectedOrders()
+        {
+            foreach (var order in SelectedOrders)
+            {
+                selectedBlock.Orders.Add(order);
+            }
+        }
+
+
+
+        public int GetOpenQuantityOfBlock()
+        {
+            int openQuantity = GetTotalQuantityOfBlock();
+            return openQuantity;
+
+        }
+
+        public decimal GetStopPriceOfBlock()
+        {
+            if (selectedBlock.Orders.First().Side == "Buy")
+            {
+                if (selectedBlock.StopPrice > selectedBlock.Orders.Max(o => (decimal)o.StopPrice))
+                {
+                    popup("Warning!! Newly added order(s) changes the Stop Price of the Block");
+                    return selectedBlock.Orders.Max(o => (decimal)o.StopPrice);
+                }
+                return selectedBlock.Orders.Max(o => (decimal)o.StopPrice);
+            }
+            else
+            {
+                if (selectedBlock.StopPrice < selectedBlock.Orders.Min(o => (decimal)o.StopPrice))
+                {
+                    popup("Warning!! Newly added order(s) changes the Stop Price of the Block");
+                    return selectedBlock.Orders.Min(o => (decimal)o.StopPrice);
+                }
+                return selectedBlock.Orders.Min(o => (decimal)o.StopPrice);
+            }
+        }
+
+        public decimal GetLimitPriceOfBlock()
+        {
+            if (selectedBlock.Orders.First().Side == "Buy")
+            {
+                if (selectedBlock.LimitPrice < selectedBlock.Orders.Min(o => (decimal)o.LimitPrice))
+                {
+                    popup("Warning!! Newly added order(s) changes the Limit Price of the Block");
+                    return selectedBlock.Orders.Min(o => (decimal)o.LimitPrice);
+                }
+                return selectedBlock.Orders.Min(o => (decimal)o.LimitPrice);
+            }
+            else
+            {
+                if (selectedBlock.LimitPrice > selectedBlock.Orders.Max(o => (decimal)o.LimitPrice))
+                {
+                    popup("Warning!! Newly added order(s) changes the Limit Price of the Block");
+                    return selectedBlock.Orders.Max(o => (decimal)o.LimitPrice);
+                }
+                return selectedBlock.Orders.Max(o => (decimal)o.LimitPrice);
+            }
+
+        }
+
+    }
+}

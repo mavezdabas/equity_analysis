@@ -1,0 +1,101 @@
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\AutoMapper.Net4.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\EquityTradingApplication.exe.config
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\EquityTradingApplication.exe
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\EquityTradingApplication.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\AutoAllocationService.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\AutoMapper.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\CustomControls.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\DataAccessLayer.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\ExecutionTraderMainWindow.exe
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\WPFToolkit.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\AutoAllocationService.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\CustomControls.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\DataAccessLayer.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\ExecutionTraderMainWindow.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\AutoMapper.xml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\WPFToolkit.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Contents\ApplicationStyles.baml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\GraphView.baml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\HomePageView.baml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\SymbolListView.baml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Contents\OrderUserControl.g.cs
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\CreateOrderView.g.cs
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\DeleteOrderView.g.cs
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\GraphView.g.cs
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\HomePageView.g.cs
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\ForgotPasswordView.g.cs
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\Login.g.cs
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\PortfolioView.g.cs
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\SymbolListView.g.cs
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\ViewEquityView.g.cs
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\App.g.cs
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\EquityTradingApplication_Content.g.cs
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\EquityTradingApplication_MarkupCompile.cache
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\EquityTradingApplication_MarkupCompile.lref
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Contents\OrderUserControl.baml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\CreateOrderView.baml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\DeleteOrderView.baml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\ForgotPasswordView.baml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\Login.baml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\PortfolioView.baml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\ViewEquityView.baml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\EquityTradingApplication.g.resources
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\EquityTradingApplication.Properties.Resources.resources
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\EquityTradingApplication.exe
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\EquityTradingApplication.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\AutoMapper.Net4.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\EquityTradingApplication.exe.config
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\EquityTradingApplication.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\EquityTradingApplication.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\AutoAllocationService.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\AutoMapper.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\CustomControls.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\DataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\ExecutionTraderMainWindow.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\AutoAllocationService.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\CustomControls.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\ExecutionTraderMainWindow.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\bin\Debug\AutoMapper.xml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Contents\ApplicationStyles.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\GraphView.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\HomePageView.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\SymbolListView.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Contents\OrderUserControl.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\DeleteOrderView.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\GraphView.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\HomePageView.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\ForgotPasswordView.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\Login.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\PortfolioView.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\SymbolListView.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\ViewEquityView.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\App.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\EquityTradingApplication_Content.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\EquityTradingApplication_MarkupCompile.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\EquityTradingApplication_MarkupCompile.lref
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Contents\OrderUserControl.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\DeleteOrderView.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\ForgotPasswordView.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\Login.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\PortfolioView.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Views\ViewEquityView.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\EquityTradingApplication.g.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\EquityTradingApplication.Properties.Resources.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\EquityTradingApplication.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\EquityTradingApplication.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Service References\CreateOrderView.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingApplication\obj\x86\Debug\Service References\CreateOrderView.baml

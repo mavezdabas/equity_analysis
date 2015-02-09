@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 14.375" name="MDM">
+  <DataContextMoniker Name="/MDMDataContext" />
+  <nestedChildShapes>
+    <classShape Id="88e72dc3-7846-4686-b05f-51b9be67786f" absoluteBounds="6.5, 10.125, 2, 2.7396264648437505">
+      <DataClassMoniker Name="/MDMDataContext/BusinessMapping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf3903e0-7038-45b2-ac03-2c2da37d1dd4" absoluteBounds="6.515, 10.585, 1.9700000000000002, 2.17962646484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eef014da-969e-47b1-be69-ecf1dc959a96" absoluteBounds="3.5, 8.875, 2, 2.2465844726562505">
+      <DataClassMoniker Name="/MDMDataContext/CommodityType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3196b1f8-6ed2-40f5-a0d4-20c97d40fa80" absoluteBounds="3.515, 9.335, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0e01f506-d8bf-4ffa-a5ea-222e2b4762e8" absoluteBounds="3.5, 3.875, 2, 1.5891951497395827">
+      <DataClassMoniker Name="/MDMDataContext/Currency" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29825e56-c09b-49bd-9a8e-7f1dd104e294" absoluteBounds="3.515, 4.335, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ef8e7e6-a846-4ed4-80a4-3b013a627e89" absoluteBounds="3.5, 6.375, 2, 1.5891951497395827">
+      <DataClassMoniker Name="/MDMDataContext/Location" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4df3e780-f764-4f3a-a785-a84b86bf4085" absoluteBounds="3.515, 6.835, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bae1cc52-20aa-4962-be6d-621dfb7d5d77" absoluteBounds="6.25, 4.875, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/MDMDataContext/Market" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fad392ad-e993-46fe-822b-c14dd4bbbc8d" absoluteBounds="6.265, 5.335, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2fc23a4c-c1b1-4305-ae5c-4ebfb73022ae" absoluteBounds="9, 7.5, 2, 1.2605004882812505">
+      <DataClassMoniker Name="/MDMDataContext/MarketCommodityMap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7a1c7815-1792-4aeb-9e6e-237bd9c50735" absoluteBounds="9.015, 7.96, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="795477fc-61fb-4604-9c4f-7d2eaa24a836" absoluteBounds="3.75, 13, 2, 1.0961531575520844">
+      <DataClassMoniker Name="/MDMDataContext/SourceSystem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="48c54e2f-f079-46e6-9baa-bf1d6109384c" absoluteBounds="3.765, 13.46, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 5.26044840494792); (6.25 : 5.26044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MDMDataContext/Currency/Currency_Market" />
+      <nodes>
+        <classShapeMoniker Id="0e01f506-d8bf-4ffa-a5ea-222e2b4762e8" />
+        <classShapeMoniker Id="bae1cc52-20aa-4962-be6d-621dfb7d5d77" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.99120198567708); (6.25 : 6.99120198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MDMDataContext/Location/Location_Market" />
+      <nodes>
+        <classShapeMoniker Id="1ef8e7e6-a846-4ed4-80a4-3b013a627e89" />
+        <classShapeMoniker Id="bae1cc52-20aa-4962-be6d-621dfb7d5d77" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.47439747265625); (10 : 9.47439747265625); (10 : 8.8862939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MDMDataContext/CommodityType/CommodityType_MarketCommodityMap" />
+      <nodes>
+        <classShapeMoniker Id="eef014da-969e-47b1-be69-ecf1dc959a96" />
+        <classShapeMoniker Id="2fc23a4c-c1b1-4305-ae5c-4ebfb73022ae" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 6.1874995); (10 : 6.1874995); (10 : 7.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MDMDataContext/Market/Market_MarketCommodityMap" />
+      <nodes>
+        <classShapeMoniker Id="bae1cc52-20aa-4962-be6d-621dfb7d5d77" />
+        <classShapeMoniker Id="2fc23a4c-c1b1-4305-ae5c-4ebfb73022ae" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 13.7180001744792); (7.5 : 13.7180001744792); (7.5 : 13.2420068359375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MDMDataContext/SourceSystem/SourceSystem_BusinessMapping" />
+      <nodes>
+        <classShapeMoniker Id="795477fc-61fb-4604-9c4f-7d2eaa24a836" />
+        <classShapeMoniker Id="88e72dc3-7846-4686-b05f-51b9be67786f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2f6fac7c-5fb3-427b-a9e5-85ae50c18afd" absoluteBounds="0.75, 6.75, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/MDMDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2378fc5-918a-4f3b-883a-95c81d9765fb" absoluteBounds="0.765, 7.21, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 8.83223714192708); (1.75 : 12.02435546875); (6.5 : 12.02435546875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MDMDataContext/User/User_BusinessMapping" />
+      <nodes>
+        <classShapeMoniker Id="2f6fac7c-5fb3-427b-a9e5-85ae50c18afd" />
+        <classShapeMoniker Id="88e72dc3-7846-4686-b05f-51b9be67786f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 8.83223714192708); (2.2812525 : 9.99829223632813); (3.5 : 9.99829223632813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MDMDataContext/User/User_CommodityType" />
+      <nodes>
+        <classShapeMoniker Id="2f6fac7c-5fb3-427b-a9e5-85ae50c18afd" />
+        <classShapeMoniker Id="eef014da-969e-47b1-be69-ecf1dc959a96" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 6.75); (1.75 : 4.66959757486979); (3.5 : 4.66959757486979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MDMDataContext/User/User_Currency" />
+      <nodes>
+        <classShapeMoniker Id="2f6fac7c-5fb3-427b-a9e5-85ae50c18afd" />
+        <classShapeMoniker Id="0e01f506-d8bf-4ffa-a5ea-222e2b4762e8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.35709757486979); (3.5 : 7.35709757486979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MDMDataContext/User/User_Location" />
+      <nodes>
+        <classShapeMoniker Id="2f6fac7c-5fb3-427b-a9e5-85ae50c18afd" />
+        <classShapeMoniker Id="1ef8e7e6-a846-4ed4-80a4-3b013a627e89" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 8.42946614583333); (7.25 : 8.42946614583333); (7.25 : 7.28593180338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MDMDataContext/User/User_Market" />
+      <nodes>
+        <classShapeMoniker Id="2f6fac7c-5fb3-427b-a9e5-85ae50c18afd" />
+        <classShapeMoniker Id="bae1cc52-20aa-4962-be6d-621dfb7d5d77" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

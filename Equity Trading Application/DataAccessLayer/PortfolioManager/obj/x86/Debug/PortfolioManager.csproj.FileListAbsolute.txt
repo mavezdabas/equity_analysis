@@ -1,0 +1,75 @@
+c:\users\js\documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\bin\Debug\PortfolioManager.exe
+c:\users\js\documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\bin\Debug\PortfolioManager.pdb
+c:\users\js\documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\MainWindow.baml
+c:\users\js\documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\MainWindow.g.cs
+c:\users\js\documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\App.g.cs
+c:\users\js\documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager_MarkupCompile.cache
+c:\users\js\documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.g.resources
+c:\users\js\documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.Properties.Resources.resources
+c:\users\js\documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.csproj.GenerateResource.Cache
+c:\users\js\documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.exe
+c:\users\js\documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.pdb
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\obj\x86\Debug\PortfolioManager.exe
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\obj\x86\Debug\PortfolioManager.pdb
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\bin\Debug\PortfolioManager.exe
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\bin\Debug\PortfolioManager.pdb
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\obj\x86\Debug\Views\MainWindow.baml
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\obj\x86\Debug\Views\MainWindow.g.cs
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\obj\x86\Debug\App.g.cs
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\obj\x86\Debug\PortfolioManager_MarkupCompile.cache
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\obj\x86\Debug\PortfolioManager.g.resources
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\obj\x86\Debug\PortfolioManager.Properties.Resources.resources
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\obj\x86\Debug\PortfolioManager.csproj.GenerateResource.Cache
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\bin\Debug\WPFToolkit.dll
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\bin\Debug\WPFToolkit.pdb
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\jsin47\Documents\Visual Studio 2010\PortfolioManager\obj\x86\Debug\PortfolioManager_MarkupCompile.lref
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\bin\Debug\PortfolioManager.exe.config
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\bin\Debug\PortfolioManager.exe
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\bin\Debug\PortfolioManager.pdb
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\bin\Debug\DataAccessLayer.dll
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\bin\Debug\DataAccessLayer.pdb
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.csprojResolveAssemblyReference.cache
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\Views\CreateOrder.baml
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\Views\UpdateOrder.baml
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\Views\CreateOrder.g.cs
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\Views\MainWindow.g.cs
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\Views\UpdateOrder.g.cs
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\App.g.cs
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager_MarkupCompile.cache
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager_MarkupCompile.lref
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\Views\MainWindow.baml
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.g.resources
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.Properties.Resources.resources
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.csproj.GenerateResource.Cache
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.exe
+C:\Users\abc\Documents\visual studio 2010\Projects\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\bin\Debug\PortfolioManager.exe.config
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\bin\Debug\PortfolioManager.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\bin\Debug\PortfolioManager.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\bin\Debug\DataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\bin\Debug\WPFToolkit.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\Views\CreateOrder.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\Views\UpdateOrder.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\Views\CreateOrder.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\Views\MainWindow.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\Views\UpdateOrder.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\App.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager_MarkupCompile.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager_MarkupCompile.lref
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\Views\MainWindow.baml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.g.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.Properties.Resources.resources
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.exe
+C:\Users\Mavez  S Dabas\Desktop\MockProject\New folder (2)\DataAccessLayer\PortfolioManager\obj\x86\Debug\PortfolioManager.pdb

@@ -1,0 +1,383 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using EquityTradingApplication.Helpers;
+using System.Windows.Input;
+using EquityTradingApplication.Commands;
+using DataAccessLayer;
+using AutoMapper;
+using EquityTradingApplication.ApplicationHelper;
+
+namespace EquityTradingApplication.ViewModels
+{
+    class CreateOrderViewModel : ViewModelBase, IUserControlViewModel
+    {
+        public event EquityTradingApplication.Helpers.CustomEventHelper.RequestCloseEventHandler RequestCloseDialog;
+        private OrderModel orderModel;
+        private SecurityModel securityModel;
+        private IPortfolioDAL portfolioDAL;
+        private IUserDAL userDAL;
+        public CreateOrderViewModel()
+        {
+
+            orderModel = new OrderModel();
+            securityModel = new SecurityModel();
+            portfolioDAL = new PortfolioDAL();
+            userDAL = new UserDAL();
+            //orderModel.OrderType = ListOrderTypes.First();
+            securitySymbolList = portfolioDAL.GetAllSecuritySymbols();
+            isSellSideSelected = false;
+            isAccountTypeMarginSelected = false;
+            isOrderQualifierGTDSelected = false;
+            Mapper.CreateMap<OrderModel, Order>();
+            //orderModel.PortfolioID = 1;
+            //orderModel.ClientID = 1;
+            orderModel.StatusID = (Int32)EnumStatus.New;
+            orderModel.PortfolioID = ApplicationState.GetValue<int>("portfolioId");
+            orderModel.ClientID = ApplicationState.GetValue<int>("clientId");
+            orderModel.ManagerID = ApplicationState.GetValue<int>("currentUserId"); //Aakanksha Adding here
+            //orderModel.ManagerID = 3;
+        }
+
+        
+
+        private string portfolioName;
+        public string PortfolioName
+        {
+            get
+            {
+                portfolioName = portfolioDAL.GetPortfolioNameByID(orderModel.PortfolioID);
+                return portfolioName;
+            }
+        }
+
+
+        private List<string> securitySymbolList;
+        public List<string> SecuritySymbolList
+        {
+            get
+            {
+                return securitySymbolList;
+            }
+        }
+
+        private bool isSellSideSelected;
+        public bool IsSellSideSelected
+        {
+            get
+            {
+                return isSellSideSelected;
+            }
+
+            set
+            {
+                isSellSideSelected = value;
+                RaisePropertyChanged("IsSellSideSelected");
+            }
+        }
+
+        private bool isAccountTypeMarginSelected;
+        public bool IsAccountTypeMarginSelected
+        {
+            get
+            {
+                return isAccountTypeMarginSelected;
+            }
+
+            set
+            {
+                isAccountTypeMarginSelected = value;
+                RaisePropertyChanged("IsAccountTypeMarginSelected");
+            }
+        }
+
+         private bool isOrderQualifierGTDSelected;
+         public bool IsOrderQualifierGTDSelected
+        {
+            get
+            {
+                return isOrderQualifierGTDSelected;
+            }
+
+            set
+            {
+                isOrderQualifierGTDSelected = value;
+                RaisePropertyChanged("IsOrderQualifierGTDSelected");
+            }
+        }
+
+        public string SecuritySymbol
+        {
+            get
+            {
+                return securityModel.SecuritySymbol;
+            }
+            set
+            {
+                securityModel.SecuritySymbol = value;
+                SecurityName = portfolioDAL.GetSecurityNameBySymbol(SecuritySymbol);
+                RaisePropertyChanged("SecuritySymbol");
+                
+            }
+        }
+
+        private ICommand lookUpCommand;
+        public ICommand LookupCommand
+        {
+            get
+            {
+                if (lookUpCommand == null)
+                    lookUpCommand = new RelayCommand(p => LookUpSymbol());
+                return lookUpCommand;
+                
+            }
+           
+        }
+
+        private void LookUpSymbol()
+        {
+            SymbolViewModel symbolViewModel = new SymbolViewModel();
+            symbolViewModel.SymbolEventHandler += new SymbolSelectionEventHelper.SymbolSelectionEventHandler(symbolViewModel_SymbolEventHandler);
+            ModelDialogService dialogService = new ModelDialogService();
+            dialogService.ShowDialog<SymbolViewModel>(ViewType.SymbolView, symbolViewModel, null);
+
+           
+        }
+
+        void symbolViewModel_SymbolEventHandler(SymbolSelectionEventHelper.SymbolSelectionEventArgs symbolSelectedEventArgs)
+        {
+            SecuritySymbol = symbolSelectedEventArgs.SecuritySymbol;
+           
+        }
+
+      
+
+        public string SecurityName
+        {
+            get
+            {
+               
+                return securityModel.SecurityName;
+            }
+            set
+            {
+                securityModel.SecurityName = value;
+                RaisePropertyChanged("SecurityName");
+                
+            }
+        }
+
+        private List<string> listOrderTypes;
+        public List<string> ListOrderTypes
+        {
+            get
+            {
+
+                Array orderTypesArray = Enum.GetValues(typeof(EnumOrderTypes));
+                listOrderTypes = new List<string>();
+                for (int i = 0; i < orderTypesArray.Length; i++)
+                {
+                    listOrderTypes.Add(orderTypesArray.GetValue(i).ToString());
+                }
+
+
+
+                return listOrderTypes;
+            }
+            
+        }
+
+        private List<string> listTraders;
+        public List<string> ListTraders
+        {
+            get
+            {
+                listTraders = userDAL.GetAllTraderNames();
+                return listTraders;
+            }
+            
+            
+        }
+
+        public int OpenQuantity
+        {
+            get
+            {
+                return orderModel.OpenQuantity;
+            }
+            set
+            {
+                orderModel.OpenQuantity = value;
+                RaisePropertyChanged("OpenQuantity");
+            }
+        }
+
+        public decimal? StopPrice
+        {
+            get
+            {
+                return orderModel.StopPrice;
+            }
+            set
+            {
+                orderModel.StopPrice = value;
+                RaisePropertyChanged("StopPrice");
+            }
+        }
+
+        public decimal? LimitPrice
+        {
+            get
+            {
+                return orderModel.LimitPrice;
+            }
+            set
+            {
+                orderModel.LimitPrice = value;
+                RaisePropertyChanged("LimitPrice");
+            }
+        }
+
+        public string Notes
+        {
+            get
+            {
+                return orderModel.Notes;
+            }
+            set
+            {
+                orderModel.Notes = value;
+                RaisePropertyChanged("Notes");
+            }
+        }
+
+        public bool? Notify
+        {
+            get
+            {
+                return orderModel.Notify;
+            }
+            set
+            {
+                orderModel.Notify = value;
+                RaisePropertyChanged("Notify");
+            }
+        }
+
+
+        public string OrderType
+        {
+            get
+            {
+                if (orderModel.OrderType == null)
+                   orderModel.OrderType= ListOrderTypes.FirstOrDefault();
+                return orderModel.OrderType;
+            }
+            set
+            {
+                orderModel.OrderType = value;
+                if(OrderType.Equals("Market"))
+                {
+                    StopPrice=null;
+                    LimitPrice=null;
+                }
+                
+                
+
+                RaisePropertyChanged("OrderType");
+
+            }
+        }
+
+        private ICommand saveCommand;
+        public ICommand SaveCommand
+        {
+            get {
+                if (saveCommand == null)
+                    saveCommand = new RelayCommand(p => SaveOrder());
+                return saveCommand;
+                }
+        }
+
+        private void SaveOrder()
+        {
+            if (IsSellSideSelected == false)
+                orderModel.Side = EnumSide.Buy.ToString();
+            else
+                orderModel.Side = EnumSide.Sell.ToString();
+            if (isAccountTypeMarginSelected == false)
+                orderModel.AccountType = EnumAccountType.Cash.ToString();
+            else
+                orderModel.AccountType = EnumAccountType.Margin.ToString();
+            if (isOrderQualifierGTDSelected == false)
+                orderModel.OrderQualifier = EnumOrderQualifier.GTC.ToString();
+            else
+                orderModel.OrderQualifier = EnumOrderQualifier.GTD.ToString();
+           
+            orderModel.SecurityID = portfolioDAL.GetSecurityIDByName(SecurityName);//Do IT
+            
+            Order orderDAO = Mapper.Map<OrderModel, Order>(orderModel);
+            portfolioDAL.InsertOrder(orderDAO);
+
+            if (RequestCloseDialog != null)
+                RequestCloseDialog(new EquityTradingApplication.Helpers.CustomEventHelper.RequestCloseEventArgs(false));
+
+            
+        }
+
+        private ICommand cancelCommand;
+        public ICommand CancelCommand
+        {
+            get
+            {
+                if (cancelCommand == null)
+                    cancelCommand = new RelayCommand(p => Cancel());
+                return cancelCommand;
+            }
+        }
+
+        private void Cancel()
+        {
+            if (RequestCloseDialog != null)
+                RequestCloseDialog(new EquityTradingApplication.Helpers.CustomEventHelper.RequestCloseEventArgs(false));
+        }
+
+
+        private string selectedTraderName;
+        string IUserControlViewModel.SelectedTraderName
+        {
+            get
+            {
+                selectedTraderName = userDAL.GetTraderNameByTraderID(orderModel.ManagerID);
+                return selectedTraderName;
+            }
+            set
+            {
+
+            }
+        }
+
+        private string status;
+        public string Status
+        {
+            get
+            {
+
+                status = EnumStatus.New.ToString();
+                return status;
+            }
+        }
+
+
+        public int OrderId
+        {
+            get 
+            { 
+                orderModel.OrderID= portfolioDAL.GetOrderID();
+                return orderModel.OrderID;
+            }
+        }
+
+    }
+}

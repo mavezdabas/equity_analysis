@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace EquityTradingApplication.Helpers
+{
+    public enum codes{NullCode};
+
+  public class ErrorCodeHashMap
+    {
+      public static ErrorCodeHashMap hashMap;
+      public Dictionary<codes, string> hash;
+      
+      private  ErrorCodeHashMap()
+      {
+          CreateHashMap(); 
+      }
+
+      private void CreateHashMap()
+      {
+          hash = new Dictionary<codes, string>();
+          hash.Add(codes.NullCode,"There are no items to display");
+      }
+
+      static public ErrorCodeHashMap GetInstance()
+      {
+          if (hashMap == null)
+              hashMap = new ErrorCodeHashMap();
+          return hashMap;
+      }
+    }
+}

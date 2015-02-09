@@ -1,0 +1,170 @@
+﻿<Window x:Class="ExecutionTrader.Views.MainWindowExecutionTrader"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:ExecutionTraderMainWindow.ViewModel"
+        Title="MainWindowExecutionTrader" Height="800" Width="1000" WindowState="Maximized" ResizeMode="NoResize">
+    <Window.Resources>
+        <vm:MainWindowExecutionTraderViewModel x:Key="ExecutionTraderViewModel"/>
+    </Window.Resources>
+    <Grid DataContext="{Binding Source={StaticResource ExecutionTraderViewModel}}">
+        <TabControl Margin="5" x:Name="ExecutionTrader">
+            <TabItem Header="Main"  x:Name="MainTab">
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="0.1*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="0.2*"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition  Width="20"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label Content="Filter" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right"/>
+                    <ComboBox Grid.Column="4" Width="200" HorizontalAlignment="Left" Grid.Row="0"/>
+                    <Label Content="Blocks" Grid.Row="1" VerticalAlignment="Bottom" Grid.Column="3"/>
+                    
+                    <DataGrid Grid.Row="2" Grid.ColumnSpan="3" x:Name="BlockDGrid" Grid.Column="3" 
+                              CanUserReorderColumns="True" CanUserResizeColumns="True" 
+                              CanUserResizeRows="False" CanUserSortColumns="True"
+                              ItemsSource="{Binding BlockList,Mode=OneWay}"
+                              IsReadOnly="True" SelectedItem="{Binding SelectedBlock}">
+
+                        <DataGrid.RowDetailsTemplate>
+                            <DataTemplate>
+                                <DataGrid Margin="50,0,0,0" x:Name="ObjectDetailsGrid"
+                              ItemsSource="{Binding Orders}"
+                              Foreground="Blue" RowBackground="LightYellow">
+                                </DataGrid>
+                            </DataTemplate>
+                        </DataGrid.RowDetailsTemplate>
+
+
+                        <!--<DataGrid.Columns>
+                            <DataGridTextColumn Header="Block ID"/>
+                            <DataGridTextColumn Header="Side"/>
+                            <DataGridTextColumn Header="Symbol"/>
+                            <DataGridTextColumn Header="Status"/>
+                            <DataGridTextColumn Header="Limit Price"/>
+                            <DataGridTextColumn Header="Stop Price"/>
+                            <DataGridTextColumn Header="Total Quantity"/>
+                            <DataGridTextColumn Header="Allocated Quantity"/>
+                            <DataGridTextColumn Header="Open Quantity"/>
+                        </DataGrid.Columns>-->
+                    </DataGrid>
+                    
+                    <Button Grid.Row="3" Content="Edit" Grid.Column="3" Margin="8"
+                            Command="{Binding OpenEditBlockViewCommand,Mode=OneWay}"/>
+                    <Button Grid.Row="3" Grid.Column="4" Content="Send For Execution" Margin="8"/>
+                    <Button Grid.Row="3" Grid.Column="5" Content="Delete" Margin="8"/>
+                    <Label Content="Executed Blocks" Grid.Row="4" Grid.Column="3" VerticalAlignment="Bottom" />
+                    
+                    <DataGrid x:Name="ExecutedBlocksDGrid" 
+                              Grid.Row="5" Grid.ColumnSpan="3" Grid.RowSpan="2"
+                              Grid.Column="3" AutoGenerateColumns="False" 
+                              CanUserReorderColumns="True" CanUserResizeColumns="True" 
+                              CanUserResizeRows="False" CanUserSortColumns="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Execution ID"/>
+                            <DataGridTextColumn Header="Block ID"/>
+                            <DataGridTextColumn Header="Side"/>
+                            <DataGridTextColumn Header="Symbol"/>
+                            <DataGridTextColumn Header="Status"/>
+                            <DataGridTextColumn Header="Executed Quantity"/>
+                            <DataGridTextColumn Header="Transaction Price"/>
+                            <DataGridTextColumn Header="Transaction Time"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    
+                    <Label Grid.Row="1" Content="Open Orders" VerticalAlignment="Bottom"/>
+                    
+                    
+                    <DataGrid Grid.Row="2" Grid.RowSpan="4" 
+                              Grid.ColumnSpan="2" x:Name="OpenOrderDGrid" 
+                              CanUserReorderColumns="True" 
+                              CanUserResizeColumns="True" 
+                              CanUserResizeRows="False" CanUserSortColumns="True"
+                              ItemsSource="{Binding OpenOrders,Mode=OneWay}">
+
+                        <!--<DataGrid.Columns>
+                            <DataGridTextColumn Header="OrderId"/>
+                            <DataGridTextColumn Header="Symbol"/>
+                            <DataGridTextColumn Header="Side"/>
+                            <DataGridTextColumn Header="Order Type"/>
+                            <DataGridTextColumn Header="Qualifier"/>
+                            <DataGridTextColumn Header="Status"/>
+                            <DataGridTextColumn Header="Account Type"/>
+                            <DataGridTextColumn Header="Total Quantity"/>
+                            <DataGridTextColumn Header="Open Quantity"/>
+                            <DataGridTextColumn Header="Allocated Quantity"/>
+                            <DataGridTextColumn Header="Stop Price"/>
+                            <DataGridTextColumn Header="Limit Price"/>
+                            <DataGridTextColumn Header="PortFolio Manager"/>
+                            <DataGridTextColumn Header="Book Time"/>
+                        </DataGrid.Columns>-->
+                    </DataGrid>
+
+
+                    <Button Content="Create Block" Grid.Row="6" Grid.Column="0" Margin="8" Command="{Binding OpenCreateBlockViewCommand,Mode=OneWay}"/>
+                    <Button Content="Add To Block" Grid.Row="6" Grid.Column="1" Margin="8"/>
+
+
+                </Grid>
+
+            </TabItem>
+            
+            <TabItem Header="Allocated Orders"  x:Name="AllocationTab">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="0.05*"/>
+                        <RowDefinition />
+                        <RowDefinition Height="0.1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="0.3*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label Content="Filter" HorizontalAlignment="Right"/>
+                    <ComboBox Grid.Column="1" Margin="4"/>
+                    
+                    <DataGrid Grid.ColumnSpan="2" x:Name="AllocationDGrid" Grid.Row="1" AutoGenerateColumns="False" CanUserReorderColumns="True" CanUserResizeColumns="True" 
+          CanUserResizeRows="False" CanUserSortColumns="True">
+                        <!--<DataGrid.Columns>
+                            <DataGridTextColumn Header="Allocation ID"/>
+                            <DataGridTextColumn Header="Execution ID"/>
+                            <DataGridTextColumn Header="Block ID"/>
+                            <DataGridTextColumn Header="Order ID"/>
+                            <DataGridTextColumn Header="Side"/>
+                            <DataGridTextColumn Header="Status"/>
+                            <DataGridTextColumn Header="Symbol"/>
+                            <DataGridTextColumn Header="Portfolio Manager"/>
+                            <DataGridTextColumn Header="Transaction Price"/>
+                            <DataGridTextColumn Header="Transaction Fee"/>
+                            <DataGridTextColumn Header="Allocated Quantity"/>
+                            <DataGridTextColumn Header="Open Quantity"/>
+                            <DataGridTextColumn Header="Total Quantity"/>
+                            <DataGridTextColumn Header="Account Type"/>
+                        </DataGrid.Columns>-->
+                    </DataGrid>
+                    
+                    
+                    <Button Content="Refresh" Grid.Row="2" Width="250" Grid.ColumnSpan="2" Margin="12"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MultiSelectComboBox">
+</Property><Property Name="Solution File" Value="C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\MultiSelectComboBox.sln">
+</Property><Property Name="Date" Value="Thursday, February 27, 2014">
+</Property><Property Name="Time" Value="11:15 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MultiSelectComboBox.sln" Description="File successfully backed up as C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\Backup\MultiSelectComboBox.sln">
+</Event><Event ErrorLevel="0" Project="MultiComboBox" Source="MultiSelectComboBox\MultiComboBox.csproj" Description="Project file successfully backed up as C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\Backup\MultiSelectComboBox\MultiComboBox.csproj">
+</Event><Event ErrorLevel="0" Project="MultiComboBox" Source="MultiSelectComboBox\MultiComboBox.cs" Description="File successfully backed up as C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\Backup\MultiSelectComboBox\MultiComboBox.cs">
+</Event><Event ErrorLevel="0" Project="MultiComboBox" Source="MultiSelectComboBox\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\Backup\MultiSelectComboBox\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="MultiComboBox" Source="MultiSelectComboBox\BindableListBox.cs" Description="File successfully backed up as C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\Backup\MultiSelectComboBox\BindableListBox.cs">
+</Event><Event ErrorLevel="0" Project="MultiComboBox" Source="MultiSelectComboBox\Themes\Generic.xaml" Description="File successfully backed up as C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\Backup\MultiSelectComboBox\Themes\Generic.xaml">
+</Event><Event ErrorLevel="0" Project="MultiComboBox" Source="MultiSelectComboBox\MultiComboBox.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="MultiComboBox" Source="MultiSelectComboBox\MultiComboBox.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TestApp" Source="TestApp\TestApp.csproj" Description="Project file successfully backed up as C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\Backup\TestApp\TestApp.csproj">
+</Event><Event ErrorLevel="0" Project="TestApp" Source="TestApp\TestApp.csproj.user" Description="Project user file successfully backed up as C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\Backup\TestApp\TestApp.csproj.user">
+</Event><Event ErrorLevel="0" Project="TestApp" Source="TestApp\App.xaml.cs" Description="File successfully backed up as C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\Backup\TestApp\App.xaml.cs">
+</Event><Event ErrorLevel="0" Project="TestApp" Source="TestApp\Window1.xaml.cs" Description="File successfully backed up as C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\Backup\TestApp\Window1.xaml.cs">
+</Event><Event ErrorLevel="0" Project="TestApp" Source="TestApp\DataSource.cs" Description="File successfully backed up as C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\Backup\TestApp\DataSource.cs">
+</Event><Event ErrorLevel="0" Project="TestApp" Source="TestApp\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\Backup\TestApp\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="TestApp" Source="TestApp\App.xaml" Description="File successfully backed up as C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\Backup\TestApp\App.xaml">
+</Event><Event ErrorLevel="0" Project="TestApp" Source="TestApp\Window1.xaml" Description="File successfully backed up as C:\Users\aaro24\Desktop\New folder (4)\MultiSelectComboBox\Backup\TestApp\Window1.xaml">
+</Event><Event ErrorLevel="0" Project="TestApp" Source="TestApp\TestApp.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TestApp" Source="TestApp\TestApp.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="MultiSelectComboBox.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MultiSelectComboBox.sln" Description="Converted">
+</Event></UpgradeLog>

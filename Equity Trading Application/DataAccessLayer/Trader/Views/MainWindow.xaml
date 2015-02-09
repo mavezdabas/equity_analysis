@@ -1,0 +1,85 @@
+﻿<Window x:Class="Trader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="700" Width="400" WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <DataGrid Name="updateGrid" Grid.Row="0"  SelectedItem="{Binding SelectedItemUpdate}" Grid.Column="0"  Visibility="{Binding Visible,Mode=TwoWay}" ItemsSource="{Binding UpdateBlockList,Mode=TwoWay}">
+        </DataGrid>
+
+        <StackPanel Name="updateButtons" Grid.Row="0" Grid.Column="1" Margin="10,0,0,0" Visibility="{Binding Visible}" Orientation="Horizontal">
+            <Button Name="doneUpdating" Command="{Binding DoneUpdatingCommand}" Content="DONE UPDATING" Width="100" Height="50" HorizontalAlignment="Left" Background="LightGreen" Margin="10,0,0,0" ></Button>
+            <Button Name="cancelUpdating" Command="{Binding CancelUpdatingCommand}" Content="CANCEL UPDATING" Width="100" Height="50" HorizontalAlignment="Left" Background="Red" Margin="10,0,0,0" ></Button>
+        </StackPanel>
+
+        <Grid Name="leftGrid" Grid.Column="0" Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <DataGrid Name="orders" Grid.Row="0" Margin="5" ItemsSource="{Binding ListToDisplay}" IsReadOnly="True">
+                <DataGrid.Resources>
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="IsSelected"
+                                         Value="{Binding IsSelected}" />
+                    </Style>
+                </DataGrid.Resources>
+            </DataGrid>
+
+            <Button Name="btnCreate" Content="CREATE" Command="{Binding CreateCommand}" Grid.Row="1" Margin="20" Width="100" HorizontalAlignment="Center" Background="LightGreen">
+
+            </Button>
+
+        </Grid>
+
+
+        <Grid Name="rightGrid" Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="1.5*"/>
+            </Grid.RowDefinitions>
+
+            <DataGrid Name="blocks" Grid.Row="0" SelectedItem="{Binding SelectedRow}" IsReadOnly="True" SelectionMode="Extended" RowDetailsVisibilityMode="VisibleWhenSelected" ItemsSource="{Binding ListToDisplayBlocks}">
+                <DataGrid.RowDetailsTemplate>
+                    <DataTemplate>
+                        <!--<TextBlock Text="{Binding Path=DataContext.X,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}" />-->
+                        <DataGrid Margin="5" ItemsSource="{Binding Path=DataContext.Details,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"></DataGrid>
+                    </DataTemplate>
+                </DataGrid.RowDetailsTemplate>
+
+                <DataGrid.Resources>
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="IsSelected"
+                                         Value="{Binding IsSelected}" />
+                    </Style>
+                </DataGrid.Resources>
+
+            </DataGrid>
+
+            <StackPanel Grid.Row="1" Name="buttons" Orientation="Horizontal">
+                <Button Name="update" Content="UPDATE" Background="LightBlue" Margin="100,0,5,0" Width="100" Height="50" Command="{Binding UpdateCommand}"></Button>
+                <Button Name="delete" Content="DELETE" Background="Red" Margin="100,0,5,0" Width="100" Command="{Binding DeleteCommand}" Height="50"></Button>
+                <Button Name="sendForExecution" Background="LightBlue" Content="SEND" Margin="100,0,5,0" Width="100" Height="50" Command="{Binding SendCommand}"></Button>
+            </StackPanel>
+
+            <DataGrid Name="executesBlocks" Grid.Row="2" ItemsSource="{Binding ExecutedBlocks,Mode=TwoWay}">
+
+            </DataGrid>
+
+
+        </Grid>
+
+    </Grid>
+</Window>

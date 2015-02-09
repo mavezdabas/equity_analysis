@@ -1,0 +1,297 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace DataAccessLayer
+{
+    public class PortfolioDAL:IPortfolioDAL
+    {
+
+        #region Lists
+        public List<Order> GetAllOrders()
+        {
+           
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var list = (from orders in ctx.Orders
+                            select orders).ToList();
+                return list;
+            }
+        }
+
+        public List<Security> GetAllSecurities()
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var list = (from securities in ctx.Securities
+                            select securities).ToList();
+                return list;
+            }
+        }
+
+        public List<Client> GetAllClients()
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var clients = (from c in ctx.Clients
+                               select c).ToList();
+                return clients;
+            }
+        }
+
+        public List<Order> GetAllOrdersByPortfolioID(int id)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var orders = (from o in ctx.Orders
+                              where o.PortfolioID == id
+                              select o).ToList();
+                return orders;
+            }
+        }
+        #endregion
+
+        public Order GetOrderByID(int id)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var order = (from orders in ctx.Orders
+                            where orders.OrderID == id
+                            select orders).FirstOrDefault();
+                return order;
+            }
+        }
+
+        public void InsertOrder(Order orderToInsert)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                ctx.Orders.AddObject(orderToInsert);
+                ctx.SaveChanges();
+            }
+        }
+
+        public void UpdateOrder(Order orderToUpdate)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                ctx.Orders.Attach(orderToUpdate);
+                ctx.ObjectStateManager.ChangeObjectState(orderToUpdate, System.Data.EntityState.Modified);
+                ctx.SaveChanges();
+                ctx.Orders.Detach(orderToUpdate);
+            }
+        }
+
+        public void DeleteOrder(Order orderToDelete)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                ctx.Orders.Attach(orderToDelete);
+                ctx.ObjectStateManager.ChangeObjectState(orderToDelete, System.Data.EntityState.Deleted);
+               // ctx.Orders.DeleteObject(orderToDelete);
+                ctx.SaveChanges();
+            }
+           
+        }
+
+        public Client GetClientByID(int id)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var client = (from c in ctx.Clients
+                                where c.ClientID == id
+                                select c).FirstOrDefault();
+                return client;
+            }
+        }
+
+        public string GetClientNameByID(int id)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var clientName = (from c in ctx.Clients
+                              where c.ClientID == id
+                              select c.ClientName).FirstOrDefault();
+                return clientName;
+            }
+        }
+
+        public Security GetSecurityByID(int id)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var security = (from s in ctx.Securities
+                                  where s.SecurityID == id
+                                  select s).FirstOrDefault();
+                return security;
+            }
+        }
+
+        public string GetSecurityNameByID(int id)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var securityName = (from s in ctx.Securities
+                                where s.SecurityID == id
+                                select s.SecurityName).FirstOrDefault();
+                return securityName;
+            }
+        }
+
+        public Portfolio GetPortfolioByID(int id)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var portfolio = (from p in ctx.Portfolios
+                                    where p.PortfolioID == id
+                                    select p).FirstOrDefault();
+                return portfolio;
+            }
+        }
+
+        public string GetPortfolioNameByID(int id)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var portfolioName = (from p in ctx.Portfolios
+                                 where p.PortfolioID == id
+                                 select p.PortfolioName).FirstOrDefault();
+                return portfolioName;
+            }
+        }
+
+        public Status GetStatusByID(int id)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var status = (from s in ctx.Status
+                                     where s.StatusID == id
+                                     select s).FirstOrDefault();
+                return status;
+            }
+        }
+
+        public string GetStatusNameByID(int id)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var statusName = (from s in ctx.Status
+                              where s.StatusID == id
+                              select s.StatusName).FirstOrDefault();
+                return statusName;
+            }
+        }
+
+      
+        public Portfolio GetPortfolioByClientID(int id)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var portfolio = (from p in ctx.Portfolios
+                                where p.ClientID == id
+                                select p).FirstOrDefault();
+                return portfolio;
+            }
+        }
+
+        
+
+        public Client GetClientByName(string name)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var client = (from c in ctx.Clients
+                              where c.ClientName == name
+                              select c).FirstOrDefault();
+                return client;
+            }
+        }
+
+        public string GetSecurityNameBySymbol(string securitySymbol)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var securityName = (from security in ctx.Securities
+                                    where security.SecuritySymbol == securitySymbol
+                                    select security.SecurityName).FirstOrDefault();
+                return securityName;
+            }
+        }
+
+
+
+        public int GetSecurityIDByName(string name)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+               
+                var securityName = (from security in ctx.Securities
+                                    where security.SecurityName == name
+                                    select security.SecurityID).FirstOrDefault();
+                return securityName;
+            }
+        }
+
+
+
+
+
+        public List<string> GetAllSecuritySymbols()
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var securitySymbols = (from security in ctx.Securities
+                                       select security.SecuritySymbol).ToList();
+                return securitySymbols;
+            }
+        }
+
+        public int GetOrderID()
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var orders = (from order in ctx.Orders
+                               select order).ToList();
+
+                if (orders.Count>0)
+                {
+                    int orderId = (from o in ctx.Orders
+                                   select o.OrderID).Max();
+                    return orderId + 1;
+                }
+                else
+                    return 1;
+            }
+        }
+
+
+        public int GetStatusIdByName(string name)
+        {
+            using (EquityTradingDBEntities ctx = new EquityTradingDBEntities())
+            {
+                var id = (from s in ctx.Status
+                          where s.StatusName == name
+                          select s.StatusID).FirstOrDefault();
+                return id;
+            }
+        
+        }
+
+        public int GetAllocatedQuantityBySecurityID(int securityId, int portfolioId)
+        {
+            using(EquityTradingDBEntities ctx=new EquityTradingDBEntities())
+            {
+                if (ctx.Orders.Any(c => c.SecurityID == securityId))
+                {
+                    var quantity = (from order in ctx.Orders
+                                    where order.PortfolioID == portfolioId && order.SecurityID == securityId
+                                    select order.AllocatedQuantity).Sum();
+                    return quantity;
+                }
+                else
+                    return 0;
+            }
+        }
+    }
+}

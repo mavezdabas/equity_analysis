@@ -1,0 +1,153 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows.Input;
+using EquityTradingApplication.Commands;
+using System.Windows.Media;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using EquityTradingApplication.Helpers;
+using DataAccessLayer;
+using AutoMapper;
+using EquityTradingApplication.ApplicationHelper;
+
+
+namespace EquityTradingApplication.ViewModels
+{
+    public class HomePageViewModel:ViewModelBase
+    {
+        ClientInfo clientObj= new ClientInfo();
+      //  public event Action openSapientWindow;
+        private IPortfolioDAL dalObject;
+        IModelDialogService dialogService;
+        public List<ClientInfo> Brushes;
+        public event Action RequestCloseDialog;
+        private ExceptionHandler ex;
+        private ClientModel selectedClient;
+
+        public ClientModel SelectedClient
+        {
+            get { return selectedClient; }
+            set { selectedClient = value; }
+        }
+        
+
+        private ICommand openSapientPortfolio;
+        public ICommand OpenSapientPortfolio
+        {
+            get {
+                if (openSapientPortfolio == null)
+                    openSapientPortfolio = new RelayCommand(p => OpenSapient(p));
+                return openSapientPortfolio;
+            }
+        }
+        
+        private void OpenSapient(object obj) 
+        {
+           
+            var res = obj as ClientInfo;
+            ClientModel clientModel= Mapper.Map<Client,ClientModel>(dalObject.GetClientByName(res.ClientName));
+            ApplicationState.SetValue("clientId", clientModel.ClientID);    //Aakanksha Arora
+            PortfolioViewModel port = new PortfolioViewModel(clientModel);
+            if (RequestCloseDialog != null)
+                RequestCloseDialog();
+            dialogService.ShowDialog<PortfolioViewModel>(ViewType.PortfolioView, port, null);
+        }
+
+
+        public HomePageViewModel()
+        {
+            Mapper.CreateMap<Client, ClientModel>();
+            Brushes = new List<ClientInfo>();
+            dialogService = new ModelDialogService();
+            dalObject = new PortfolioDAL();
+            LoadClientImages();
+        }
+
+        private void LoadClientImages()
+        {
+            try
+            {
+                if (dalObject != null)
+                {
+                    foreach (var item in dalObject.GetAllClients())
+                    {
+
+                        //  for (int i = 0; i < 4; i++)
+                        // {
+                        switch (item.ClientName)
+                        {
+                            case "Sapient":
+
+                                ImageBrush brush = new ImageBrush();
+                                Image image = new Image();
+                                image.Source = new BitmapImage(
+                                    new Uri("C:\\Users\\Mavez  S Dabas\\Desktop\\MockProject\\MavezProject\\MockProject\\trunk\\Development\\Code\\PortfolioManager\\DataAccessLayer\\EquityTradingApplication\\Resources\\Sapient.jpeg"));
+
+
+                                Brushes.Add(new ClientInfo()
+                               {
+                                   Image = image.Source,
+                                   ClientName = item.ClientName,
+                                   OpenCommand = OpenSapientPortfolio
+
+
+                               });
+                                break;
+
+                            case "Google":
+                                ImageBrush brush1 = new ImageBrush();
+                                Image image1 = new Image();
+                                image1.Source = new BitmapImage(
+                                    new Uri("C:\\Users\\Mavez  S Dabas\\Desktop\\MockProject\\MavezProject\\MockProject\\trunk\\Development\\Code\\PortfolioManager\\DataAccessLayer\\EquityTradingApplication\\Resources\\Google.jpg"));
+                                Brushes.Add(new ClientInfo()
+                                {
+                                    Image = image1.Source,
+                                    ClientName = item.ClientName,
+                                    OpenCommand = OpenSapientPortfolio
+                                });
+                                break;
+
+                            case "Microsoft":
+                                ImageBrush brush2 = new ImageBrush();
+                                Image image2 = new Image();
+                                image2.Source = new BitmapImage(
+                                    new Uri("C:\\Users\\Mavez  S Dabas\\Desktop\\MockProject\\MavezProject\\MockProject\\trunk\\Development\\Code\\PortfolioManager\\DataAccessLayer\\EquityTradingApplication\\Resources\\Microsoft.jpg"));
+                                Brushes.Add(new ClientInfo()
+                                {
+                                    Image = image2.Source,
+                                    ClientName = item.ClientName,
+                                    OpenCommand = OpenSapientPortfolio
+                                });
+                                break;
+
+                            case "Apple":
+                                ImageBrush brush3 = new ImageBrush();
+                                Image image3 = new Image();
+                                image3.Source = new BitmapImage(
+                                    new Uri("C:\\Users\\Mavez  S Dabas\\Desktop\\MockProject\\MavezProject\\MockProject\\trunk\\Development\\Code\\PortfolioManager\\DataAccessLayer\\EquityTradingApplication\\Resources\\Apple.jpg"));
+                                Brushes.Add(new ClientInfo()
+                                {
+                                    Image = image3.Source,
+                                    ClientName = item.ClientName,
+                                    OpenCommand = OpenSapientPortfolio
+                                });
+                                break;
+
+
+                            default:
+                                break;
+                        }
+
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                ex = new ExceptionHandler(codes.GenericException);
+            }
+        }
+    }
+}

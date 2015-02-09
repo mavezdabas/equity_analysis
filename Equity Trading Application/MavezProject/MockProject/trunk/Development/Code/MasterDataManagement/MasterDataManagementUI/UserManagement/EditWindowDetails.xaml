@@ -1,0 +1,58 @@
+﻿<Window x:Class="MasterDataManagementUI.UserManagement.EditWindowDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+
+        Loaded="Edit_Window_Loaded" Title="Edit Details Of User" Height="500" Width="391" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+
+    <Grid Width="489" Style="{StaticResource gridBackground}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="119*" />
+            <ColumnDefinition Width="370*" />
+        </Grid.ColumnDefinitions>
+        <!--<StackPanel Grid.Column="1" >-->
+        <!--<Image Source="/AddUserWindow;component/Images/imagesCAII8OBB.jpg" Opacity="0.7" ImageFailed="Image_ImageFailed" />-->
+        <Image Grid.ColumnSpan="2" Height="50" Width="300" HorizontalAlignment="Center" Margin="26,0,163,411"/>
+
+
+
+        <TextBox  Grid.Column="1" Margin="6,56,137,0" x:Name="LoginID" FontSize="12" Text="{Binding LoginId}" Height="25" VerticalAlignment="Top" />
+
+        <TextBox  Grid.Column="1" Margin="6,102,136,346" x:Name="Username" FontSize="12" Text="{Binding Name}"/>
+        <TextBox  Visibility="Hidden" Grid.Column="1" Margin="6,143,136,293" x:Name="Password" FontSize="12"  Height="25" Text="{Binding Password}"/>
+        <DatePicker Visibility="Hidden" Grid.Column="1" x:Name="DOB" Margin="6,189,135,247" Height="25" Text="{Binding DateOfBirth}" />
+        <DatePicker  Visibility="Hidden" Grid.Column="1" x:Name="DOJ" Margin="6,231,136,205" Height="25" Text="{Binding DateOfJoining}"/>
+
+        <!--<TextBox  Grid.Column="1" Margin="18,273,136,163" x:Name="Role" FontSize="12" Height="25" />-->
+        <Button  Grid.Column="1" Content="Cancel" Click="Button_Click_Cancel" FontWeight="ExtraBold" FontSize="12" Width="80" Height="20" Margin="89,201,201,240" IsCancel="True" />
+        <!--<TextBox Margin="10" x:Name="DasteOfBirth" FontSize="12" Height="25" />
+            <TextBox Margin="10" x:Name="DateOfJoining" FontSize="12"  Height="25"/>-->
+        <!--</StackPanel>
+        <StackPanel Grid.Column="0">-->
+        <TextBlock Text="User Details" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Grid.Column="1" Margin="33,12,201,422" Width="136" />
+        <TextBlock HorizontalAlignment="Center" FontWeight="ExtraBold" Margin="14,63,57,-43" FontSize="12" Text="LoginID"/>
+
+        <TextBlock HorizontalAlignment="Center" FontWeight="ExtraBold" Margin="14,111,37,-91" FontSize="12" Text="Name*"/>
+        <TextBlock Visibility="Hidden" HorizontalAlignment="Center" FontWeight="ExtraBold" Margin="13,156,40,-136" FontSize="12" Text="Password*"/>
+        <TextBlock HorizontalAlignment="Center" FontWeight="ExtraBold" Margin="14,200,20,-180" FontSize="12"  Visibility="Hidden" Text="Date of Birth*"/>
+        <TextBlock HorizontalAlignment="Center" FontWeight="ExtraBold" Margin="13,242,8,-222" FontSize="12" Visibility="Hidden" Text="Date of Joining*"/>
+        <TextBlock HorizontalAlignment="Center" FontWeight="ExtraBold" Margin="25,142,59,-122" FontSize="12" Text="Role*"/>
+        <Label x:Name="ErrorBlock" Foreground="Red" Margin="9,364,83,72" Grid.ColumnSpan="2" />
+        <TextBlock Text="*Mandatory Fields" Foreground="Red" Margin="12,405,0,39" />
+        <Button x:Name="SaveBtn" Content="Save" FontSize="12" FontWeight="ExtraBold" Height="20" Width="80" Click="Button_Click" Margin="26,201,13,240" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="7,83,0,0" Name="lblError" VerticalAlignment="Top" Width="254" Foreground="Red" Grid.Column="1" />
+        <ComboBox Margin="7,140,136,301" x:Name="cmbUserRole" ItemsSource="{Binding}" SelectedItem="{Binding Role}" Grid.Column="1" />
+
+
+
+
+
+
+
+        <!--</StackPanel>-->
+    </Grid>
+</Window>
+
+

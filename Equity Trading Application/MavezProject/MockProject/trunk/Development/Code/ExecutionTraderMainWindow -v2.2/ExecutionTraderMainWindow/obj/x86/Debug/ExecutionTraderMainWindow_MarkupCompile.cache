@@ -1,0 +1,20 @@
+﻿ExecutionTraderMainWindow
+
+
+winexe
+C#
+.cs
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\obj\x86\Debug\
+ExecutionTraderMainWindow
+none
+false
+DEBUG;TRACE
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderMainWindow\App.xaml
+6-2096848091
+
+351669667075
+2080273314
+Helpers\ExpressionDark.xaml;Styles\CommonStyles.xaml;Views\AddOrdersToBlockWindow.xaml;Views\CreateBlockWindow.xaml;Views\EditBlockView.xaml;Views\MainWindow.xaml;
+
+False
+

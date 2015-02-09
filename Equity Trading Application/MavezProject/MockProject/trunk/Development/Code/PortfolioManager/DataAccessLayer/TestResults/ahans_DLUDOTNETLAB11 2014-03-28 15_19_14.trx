@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="cb887424-779b-4c11-a294-c045be06d494" name="ahans@DLUDOTNETLAB11 2014-03-28 15:19:14" runUser="SAPIENT\ahans" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="1d8e7d6a-b1d4-4bee-bb22-b457cd09af5e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="ahans_DLUDOTNETLAB11 2014-03-28 15_19_14">
+      <DeploymentItem filename="C:\Users\ahans\Desktop\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-03-28T15:19:14.7704197+05:30" queuing="2014-03-28T15:19:20.0459472+05:30" start="2014-03-28T15:19:20.0759502+05:30" finish="2014-03-28T15:19:20.7720198+05:30" />
+  <ResultSummary outcome="Failed">
+    <Counters total="17" executed="17" passed="7" error="0" failed="5" timeout="0" aborted="0" inconclusive="5" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetSecurityNameByIDTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="e83d32c8-2424-d3dc-1816-43051dc58f65">
+      <Execution id="f96fe164-cc84-4755-961f-5dde97a732d9" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetSecurityNameByIDTest" />
+    </UnitTest>
+    <UnitTest name="GetSecurityNameByIDTest1" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="88a7a2c8-6a84-651b-9534-b4142c1ab5bb">
+      <Execution id="0c6f55be-f6f5-41a1-9470-8833e4a58157" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetSecurityNameByIDTest1" />
+    </UnitTest>
+    <UnitTest name="GetAllOrdersTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="46349237-52c5-df9e-a369-b9d1ffa9bca5">
+      <Execution id="66221881-eeed-4242-873d-2ea177793f40" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetAllOrdersTest" />
+    </UnitTest>
+    <UnitTest name="GetClientByIDTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="5c69526e-c64e-fbbf-93df-9cab5f290c3d">
+      <Execution id="61df9c30-2c67-4235-ab7e-c6701efe67bc" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetClientByIDTest" />
+    </UnitTest>
+    <UnitTest name="GetAllSecuritiesTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="16fea1bc-77dd-18f9-c382-0fa9e25b17d5">
+      <Execution id="f5300f7d-dd29-42dc-b8ce-c00ea8e88416" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetAllSecuritiesTest" />
+    </UnitTest>
+    <UnitTest name="GetStatusNameByIDTest1" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="532bd635-fb23-4f17-7953-f513d34e899a">
+      <Execution id="b1bfa188-5c2b-445e-99f6-cac9310d03a0" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetStatusNameByIDTest1" />
+    </UnitTest>
+    <UnitTest name="GetPortfolioNameByIDTest1" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="610f8de5-afee-ff98-ad9c-2aed83158209">
+      <Execution id="2d1f4655-b6fc-4e90-a5dd-88990475b3e4" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetPortfolioNameByIDTest1" />
+    </UnitTest>
+    <UnitTest name="GetPortfolioByIDTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="705dfc40-81be-6571-ca82-4fef62591d17">
+      <Execution id="07966980-4eb8-40a5-8338-0af2ee961968" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetPortfolioByIDTest" />
+    </UnitTest>
+    <UnitTest name="GetOrderByIDTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="c03a139b-a29c-d9ca-b79c-01c6c08a4739">
+      <Execution id="18a45af9-e282-4e8d-815d-9b0c5d7d5f63" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetOrderByIDTest" />
+    </UnitTest>
+    <UnitTest name="DeleteOrderTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="c0a5455f-ae0b-0bca-976d-15db9a38057c">
+      <Execution id="2dd1903a-db82-4da3-a595-3608a8556ab7" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteOrderTest" />
+    </UnitTest>
+    <UnitTest name="UpdateOrderTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="59ba269d-96bd-39d4-f297-0bdc0659566b">
+      <Execution id="20717378-d446-4e73-9921-37d8a751b57e" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateOrderTest" />
+    </UnitTest>
+    <UnitTest name="GetStatusByIDTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="77c7bd12-e4f5-dcda-084b-14b7265044e6">
+      <Execution id="eb8ddebe-ec68-4998-8607-cbd954caaf9a" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetStatusByIDTest" />
+    </UnitTest>
+    <UnitTest name="GetStatusNameByIDTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="b5538dba-90b0-d1ef-67a1-3e79c9e68190">
+      <Execution id="8d9c3ee1-5be4-4730-94ad-61dc73f0d5cc" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetStatusNameByIDTest" />
+    </UnitTest>
+    <UnitTest name="InsertOrderTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="529ffe80-9ea8-18de-6813-b2e4ce660e20">
+      <Execution id="268f8c21-478f-4526-926a-865bba22e464" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InsertOrderTest" />
+    </UnitTest>
+    <UnitTest name="GetPortfolioNameByIDTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="71f72818-b222-468e-a03b-8cff12d4dd73">
+      <Execution id="0e6e132a-f11d-4598-a544-d2caa2190003" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetPortfolioNameByIDTest" />
+    </UnitTest>
+    <UnitTest name="GetClientNameByIDTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="5ff5278b-ff5e-b1ea-fd2f-80355d69e6f4">
+      <Execution id="6ddd891f-1cf4-4a01-a89a-21b5a65b94f5" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetClientNameByIDTest" />
+    </UnitTest>
+    <UnitTest name="GetSecurityByIDTest" storage="c:\users\ahans\desktop\dataaccesslayer\testportfolio\bin\debug\testportfolio.dll" id="37c80459-83f7-119b-5a58-56a6145799ae">
+      <Execution id="d43f7106-4ca4-494e-8d4c-56ae7e1c920d" />
+      <TestMethod codeBase="C:/Users/ahans/Desktop/DataAccessLayer/TestPortfolio/bin/Debug/TestPortfolio.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestPortfolio.PortfolioDALTest, TestPortfolio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetSecurityByIDTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="16fea1bc-77dd-18f9-c382-0fa9e25b17d5" executionId="f5300f7d-dd29-42dc-b8ce-c00ea8e88416" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37c80459-83f7-119b-5a58-56a6145799ae" executionId="d43f7106-4ca4-494e-8d4c-56ae7e1c920d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="46349237-52c5-df9e-a369-b9d1ffa9bca5" executionId="66221881-eeed-4242-873d-2ea177793f40" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="529ffe80-9ea8-18de-6813-b2e4ce660e20" executionId="268f8c21-478f-4526-926a-865bba22e464" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="532bd635-fb23-4f17-7953-f513d34e899a" executionId="b1bfa188-5c2b-445e-99f6-cac9310d03a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="59ba269d-96bd-39d4-f297-0bdc0659566b" executionId="20717378-d446-4e73-9921-37d8a751b57e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5c69526e-c64e-fbbf-93df-9cab5f290c3d" executionId="61df9c30-2c67-4235-ab7e-c6701efe67bc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5ff5278b-ff5e-b1ea-fd2f-80355d69e6f4" executionId="6ddd891f-1cf4-4a01-a89a-21b5a65b94f5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="610f8de5-afee-ff98-ad9c-2aed83158209" executionId="2d1f4655-b6fc-4e90-a5dd-88990475b3e4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="705dfc40-81be-6571-ca82-4fef62591d17" executionId="07966980-4eb8-40a5-8338-0af2ee961968" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="71f72818-b222-468e-a03b-8cff12d4dd73" executionId="0e6e132a-f11d-4598-a544-d2caa2190003" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="77c7bd12-e4f5-dcda-084b-14b7265044e6" executionId="eb8ddebe-ec68-4998-8607-cbd954caaf9a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="88a7a2c8-6a84-651b-9534-b4142c1ab5bb" executionId="0c6f55be-f6f5-41a1-9470-8833e4a58157" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b5538dba-90b0-d1ef-67a1-3e79c9e68190" executionId="8d9c3ee1-5be4-4730-94ad-61dc73f0d5cc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c03a139b-a29c-d9ca-b79c-01c6c08a4739" executionId="18a45af9-e282-4e8d-815d-9b0c5d7d5f63" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c0a5455f-ae0b-0bca-976d-15db9a38057c" executionId="2dd1903a-db82-4da3-a595-3608a8556ab7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e83d32c8-2424-d3dc-1816-43051dc58f65" executionId="f96fe164-cc84-4755-961f-5dde97a732d9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f5300f7d-dd29-42dc-b8ce-c00ea8e88416" testId="16fea1bc-77dd-18f9-c382-0fa9e25b17d5" testName="GetAllSecuritiesTest" computerName="DLUDOTNETLAB11" duration="00:00:00.1540472" startTime="2014-03-28T15:19:20.0999526+05:30" endTime="2014-03-28T15:19:20.4389865+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f5300f7d-dd29-42dc-b8ce-c00ea8e88416">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;System.Collections.Generic.List`1[DataAccessLayer.Security]&gt;. Actual:&lt;System.Collections.Generic.List`1[DataAccessLayer.Security]&gt;. </Message>
+          <StackTrace>   at TestPortfolio.PortfolioDALTest.GetAllSecuritiesTest() in C:\Users\ahans\Desktop\DataAccessLayer\TestPortfolio\PortfolioDALTest.cs:line 108
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d43f7106-4ca4-494e-8d4c-56ae7e1c920d" testId="37c80459-83f7-119b-5a58-56a6145799ae" testName="GetSecurityByIDTest" computerName="DLUDOTNETLAB11" duration="00:00:00.0065080" startTime="2014-03-28T15:19:20.4409867+05:30" endTime="2014-03-28T15:19:20.4589885+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d43f7106-4ca4-494e-8d4c-56ae7e1c920d">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. Verify the correctness of this test method.</Message>
+          <StackTrace>   at TestPortfolio.PortfolioDALTest.GetSecurityByIDTest() in C:\Users\ahans\Desktop\DataAccessLayer\TestPortfolio\PortfolioDALTest.cs:line 223
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="66221881-eeed-4242-873d-2ea177793f40" testId="46349237-52c5-df9e-a369-b9d1ffa9bca5" testName="GetAllOrdersTest" computerName="DLUDOTNETLAB11" duration="00:00:00.0448654" startTime="2014-03-28T15:19:20.4689895+05:30" endTime="2014-03-28T15:19:20.5209947+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="66221881-eeed-4242-873d-2ea177793f40">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;(null)&gt;. Actual:&lt;System.Collections.Generic.List`1[DataAccessLayer.Order]&gt;. </Message>
+          <StackTrace>   at TestPortfolio.PortfolioDALTest.GetAllOrdersTest() in C:\Users\ahans\Desktop\DataAccessLayer\TestPortfolio\PortfolioDALTest.cs:line 78
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="268f8c21-478f-4526-926a-865bba22e464" testId="529ffe80-9ea8-18de-6813-b2e4ce660e20" testName="InsertOrderTest" computerName="DLUDOTNETLAB11" duration="00:00:00.0058004" startTime="2014-03-28T15:19:20.5259952+05:30" endTime="2014-03-28T15:19:20.5339960+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="268f8c21-478f-4526-926a-865bba22e464">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestPortfolio.PortfolioDALTest.InsertOrderTest threw exception: 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: entity</Message>
+          <StackTrace>    at System.Data.Objects.ObjectContext.AddObject(String entitySetName, Object entity)
+   at System.Data.Objects.ObjectSet`1.AddObject(TEntity entity)
+   at DataAccessLayer.PortfolioDAL.InsertOrder(Order orderToInsert) in C:\Users\ahans\Desktop\DataAccessLayer\DataAccessLayer\PortfolioDAL.cs:line 51
+   at TestPortfolio.PortfolioDALTest.InsertOrderTest() in C:\Users\ahans\Desktop\DataAccessLayer\TestPortfolio\PortfolioDALTest.cs:line 277
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b1bfa188-5c2b-445e-99f6-cac9310d03a0" testId="532bd635-fb23-4f17-7953-f513d34e899a" testName="GetStatusNameByIDTest1" computerName="DLUDOTNETLAB11" duration="00:00:00.0044641" startTime="2014-03-28T15:19:20.5389965+05:30" endTime="2014-03-28T15:19:20.5459972+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b1bfa188-5c2b-445e-99f6-cac9310d03a0">
+    </UnitTestResult>
+    <UnitTestResult executionId="20717378-d446-4e73-9921-37d8a751b57e" testId="59ba269d-96bd-39d4-f297-0bdc0659566b" testName="UpdateOrderTest" computerName="DLUDOTNETLAB11" duration="00:00:00.0024059" startTime="2014-03-28T15:19:20.5479974+05:30" endTime="2014-03-28T15:19:20.5519978+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="20717378-d446-4e73-9921-37d8a751b57e">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestPortfolio.PortfolioDALTest.UpdateOrderTest threw exception: 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: entity</Message>
+          <StackTrace>    at System.Data.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   at System.Data.Objects.ObjectSet`1.Attach(TEntity entity)
+   at DataAccessLayer.PortfolioDAL.UpdateOrder(Order orderToUpdate) in C:\Users\ahans\Desktop\DataAccessLayer\DataAccessLayer\PortfolioDAL.cs:line 60
+   at TestPortfolio.PortfolioDALTest.UpdateOrderTest() in C:\Users\ahans\Desktop\DataAccessLayer\TestPortfolio\PortfolioDALTest.cs:line 316
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="61df9c30-2c67-4235-ab7e-c6701efe67bc" testId="5c69526e-c64e-fbbf-93df-9cab5f290c3d" testName="GetClientByIDTest" computerName="DLUDOTNETLAB11" duration="00:00:00.0149166" startTime="2014-03-28T15:19:20.5539980+05:30" endTime="2014-03-28T15:19:20.5750001+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="61df9c30-2c67-4235-ab7e-c6701efe67bc">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. Verify the correctness of this test method.</Message>
+          <StackTrace>   at TestPortfolio.PortfolioDALTest.GetClientByIDTest() in C:\Users\ahans\Desktop\DataAccessLayer\TestPortfolio\PortfolioDALTest.cs:line 124
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6ddd891f-1cf4-4a01-a89a-21b5a65b94f5" testId="5ff5278b-ff5e-b1ea-fd2f-80355d69e6f4" testName="GetClientNameByIDTest" computerName="DLUDOTNETLAB11" duration="00:00:00.0030133" startTime="2014-03-28T15:19:20.5790005+05:30" endTime="2014-03-28T15:19:20.5850011+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6ddd891f-1cf4-4a01-a89a-21b5a65b94f5">
+    </UnitTestResult>
+    <UnitTestResult executionId="2d1f4655-b6fc-4e90-a5dd-88990475b3e4" testId="610f8de5-afee-ff98-ad9c-2aed83158209" testName="GetPortfolioNameByIDTest1" computerName="DLUDOTNETLAB11" duration="00:00:00.0037240" startTime="2014-03-28T15:19:20.5870013+05:30" endTime="2014-03-28T15:19:20.5930019+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2d1f4655-b6fc-4e90-a5dd-88990475b3e4">
+    </UnitTestResult>
+    <UnitTestResult executionId="07966980-4eb8-40a5-8338-0af2ee961968" testId="705dfc40-81be-6571-ca82-4fef62591d17" testName="GetPortfolioByIDTest" computerName="DLUDOTNETLAB11" duration="00:00:00.0151853" startTime="2014-03-28T15:19:20.5950021+05:30" endTime="2014-03-28T15:19:20.6130039+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="07966980-4eb8-40a5-8338-0af2ee961968">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. Verify the correctness of this test method.</Message>
+          <StackTrace>   at TestPortfolio.PortfolioDALTest.GetPortfolioByIDTest() in C:\Users\ahans\Desktop\DataAccessLayer\TestPortfolio\PortfolioDALTest.cs:line 181
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0e6e132a-f11d-4598-a544-d2caa2190003" testId="71f72818-b222-468e-a03b-8cff12d4dd73" testName="GetPortfolioNameByIDTest" computerName="DLUDOTNETLAB11" duration="00:00:00.0017903" startTime="2014-03-28T15:19:20.6140040+05:30" endTime="2014-03-28T15:19:20.6220048+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0e6e132a-f11d-4598-a544-d2caa2190003">
+    </UnitTestResult>
+    <UnitTestResult executionId="eb8ddebe-ec68-4998-8607-cbd954caaf9a" testId="77c7bd12-e4f5-dcda-084b-14b7265044e6" testName="GetStatusByIDTest" computerName="DLUDOTNETLAB11" duration="00:00:00.0134449" startTime="2014-03-28T15:19:20.6240050+05:30" endTime="2014-03-28T15:19:20.6400066+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eb8ddebe-ec68-4998-8607-cbd954caaf9a">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. Verify the correctness of this test method.</Message>
+          <StackTrace>   at TestPortfolio.PortfolioDALTest.GetStatusByIDTest() in C:\Users\ahans\Desktop\DataAccessLayer\TestPortfolio\PortfolioDALTest.cs:line 267
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0c6f55be-f6f5-41a1-9470-8833e4a58157" testId="88a7a2c8-6a84-651b-9534-b4142c1ab5bb" testName="GetSecurityNameByIDTest1" computerName="DLUDOTNETLAB11" duration="00:00:00.0036764" startTime="2014-03-28T15:19:20.6450071+05:30" endTime="2014-03-28T15:19:20.6510077+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c6f55be-f6f5-41a1-9470-8833e4a58157">
+    </UnitTestResult>
+    <UnitTestResult executionId="8d9c3ee1-5be4-4730-94ad-61dc73f0d5cc" testId="b5538dba-90b0-d1ef-67a1-3e79c9e68190" testName="GetStatusNameByIDTest" computerName="DLUDOTNETLAB11" duration="00:00:00.0027200" startTime="2014-03-28T15:19:20.6530079+05:30" endTime="2014-03-28T15:19:20.6930119+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8d9c3ee1-5be4-4730-94ad-61dc73f0d5cc">
+    </UnitTestResult>
+    <UnitTestResult executionId="18a45af9-e282-4e8d-815d-9b0c5d7d5f63" testId="c03a139b-a29c-d9ca-b79c-01c6c08a4739" testName="GetOrderByIDTest" computerName="DLUDOTNETLAB11" duration="00:00:00.0043392" startTime="2014-03-28T15:19:20.6950121+05:30" endTime="2014-03-28T15:19:20.7040130+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="18a45af9-e282-4e8d-815d-9b0c5d7d5f63">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. Verify the correctness of this test method.</Message>
+          <StackTrace>   at TestPortfolio.PortfolioDALTest.GetOrderByIDTest() in C:\Users\ahans\Desktop\DataAccessLayer\TestPortfolio\PortfolioDALTest.cs:line 166
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2dd1903a-db82-4da3-a595-3608a8556ab7" testId="c0a5455f-ae0b-0bca-976d-15db9a38057c" testName="DeleteOrderTest" computerName="DLUDOTNETLAB11" duration="00:00:00.0025883" startTime="2014-03-28T15:19:20.7060132+05:30" endTime="2014-03-28T15:19:20.7120138+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2dd1903a-db82-4da3-a595-3608a8556ab7">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestPortfolio.PortfolioDALTest.DeleteOrderTest threw exception: 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: entity</Message>
+          <StackTrace>    at System.Data.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   at System.Data.Objects.ObjectSet`1.Attach(TEntity entity)
+   at DataAccessLayer.PortfolioDAL.DeleteOrder(Order orderToDelete) in C:\Users\ahans\Desktop\DataAccessLayer\DataAccessLayer\PortfolioDAL.cs:line 71
+   at TestPortfolio.PortfolioDALTest.DeleteOrderTest() in C:\Users\ahans\Desktop\DataAccessLayer\TestPortfolio\PortfolioDALTest.cs:line 90
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f96fe164-cc84-4755-961f-5dde97a732d9" testId="e83d32c8-2424-d3dc-1816-43051dc58f65" testName="GetSecurityNameByIDTest" computerName="DLUDOTNETLAB11" duration="00:00:00.0018471" startTime="2014-03-28T15:19:20.7140140+05:30" endTime="2014-03-28T15:19:20.7210147+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f96fe164-cc84-4755-961f-5dde97a732d9">
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1,0 +1,82 @@
+﻿<Window x:Class="ExecutionTraderMainWindow.Views.CreateBlockWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:ExecutionTraderMainWindow.ViewModel"
+        
+        Title="CreateBlockWindow" Height="700" Width="900">
+    <Window.Resources>
+        <!--<vm:CreateBlockWindowViewModel x:Key="viewModel"/>-->
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.15*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid Grid.ColumnSpan="2" ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Block ID"/>
+            <Label Grid.Column="1" Content="Side"/>
+            <Label Grid.Column="2" Content="Symbol"/>
+            <Label Grid.Column="3" Content="Status"/>
+            <Label Grid.Column="4" Content="Limit Price"/>
+            <Label Grid.Column="5" Content="Stop Price"/>
+            <Label Grid.Column="6" Content="Total Quantity"/>
+            <Label Grid.Column="7" Content="Executed Quantity"/>
+            <Label Grid.Column="8" Content="Open Quantity"/>
+            <TextBlock x:Name="BlockId" Grid.Row="1" Text="{Binding blockModel,Path=BlockId}"/>
+            <TextBlock x:Name="BlockSide" Grid.Row="1" Grid.Column="1" Text="{Binding blockModel,Path= BlockSide}"/>
+            <TextBlock x:Name="SecuritySymbol" Grid.Row="1" Grid.Column="2" Text="{Binding blockModel.security,Path=SecuritySymbol}">
+            
+            </TextBlock>
+            <TextBlock x:Name="BlockStatus" Grid.Row="1" Grid.Column="3" Text="{Binding blockModel,Path=BlockStatus}"/>
+            <TextBlock x:Name="LimitPrice" Grid.Row="1" Grid.Column="4" Text="{Binding blockModel,Path=LimitPrice}"/>
+            <TextBlock x:Name="StopPrice" Grid.Row="1" Grid.Column="5" Text="{Binding blockModel,Path=StopPrice}"/>
+            <TextBlock x:Name="TotalQuantity" Grid.Row="1" Grid.Column="6" Text="{Binding blockModel,Path=TotalQuantity}"/>
+            <TextBlock x:Name="ExecutedQuantity" Grid.Row="1" Grid.Column="7" Text="{Binding blockModel,Path=ExecutedQuantity}"/>
+            <TextBlock x:Name="OpenQuantity" Grid.Row="1" Grid.Column="8" Text="{Binding blockModel,Path=OpenQuantity}"/>
+        </Grid>
+
+        <DataGrid x:Name="dGridViewOrder" Grid.ColumnSpan="2" Margin="10" ItemsSource="{Binding SelectedOrders}" Grid.Row="1" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="OrderId" Binding="{Binding OrderId}"/>
+                <!--<DataGridTextColumn x:Name="symbol" Header="Symbol" Binding="{Binding Security.SecuritySymbol}"/>
+                <DataGridTextColumn Header="Side" Binding="{Binding Side}"/>-->
+                <DataGridTextColumn Header="Order Type" Binding="{Binding OrderType}"/>
+                <DataGridTextColumn Header="Qualifier" Binding="{Binding OrderQualifier}"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status.StatusName}"/>
+                <DataGridTextColumn Header="Account Type" Binding="{Binding AccountType}"/>
+                <DataGridTextColumn Header="Total Quantity" Binding="{Binding TotalQuantity}"/>
+                <DataGridTextColumn Header="Open Quantity" Binding="{Binding OpenQuantity}"/>
+                <DataGridTextColumn Header="Allocated Quantity" Binding="{Binding AllocatedQuantity}"/>
+                <DataGridTextColumn Header="Stop Price" Binding="{Binding StopPrice}"/>
+                <DataGridTextColumn Header="Limit Price" Binding="{Binding LimitPrice}"/>
+                <DataGridTextColumn Header="PortFolio Manager" Binding="{Binding Manager.Name}"/>
+                <!--<DataGridTextColumn Header="Book Time"/>-->
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnSave" Grid.Row="2" Content="Save" Margin="10" Width="100" Command="{Binding SaveCommand,Mode=OneWay}"/>
+        <Button x:Name="btnCancel" Grid.Row="2" Grid.Column="1" Content="Cancel" Margin="10" Width="100" Command="{Binding CancelCommand,Mode=OneWay}"/>
+    </Grid>
+
+</Window>

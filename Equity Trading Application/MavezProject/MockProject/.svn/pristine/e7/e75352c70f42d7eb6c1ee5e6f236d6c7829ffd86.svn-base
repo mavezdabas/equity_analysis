@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace EquityTradingApplication.Helpers
+{
+    public class DataForGraph
+    {
+        public static List<StockInfo> GetData(string SearchText)
+        {
+            var measurements = new List<StockInfo>();
+            var startDate = DateTime.Now;
+            var r = new Random();
+
+            for (int i = 0; i < 1; i++)
+            {
+                measurements.Add(new StockInfo() { Id = i, MarketPrice = r.Next(34, 4440), Time = startDate.AddMinutes(1) });
+            }
+            measurements.Sort((m1, m2) => m1.Time.CompareTo(m2.Time));
+            return measurements;
+        }
+
+        public static List<StockInfo> GetUpdateData(DateTime dateTime,string SearchText)
+        {
+            var measurements = new List<StockInfo>();
+            var r = new Random();
+
+            for (int i = 0; i < 1; i++)
+            {
+                measurements.Add(new StockInfo() { Id = i, Time = dateTime.AddMinutes(1), MarketPrice = r.Next(34, 4440) });
+            }
+            return measurements;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <connectionStrings>
+    <add name="EquityTradingDBEntities" connectionString="metadata=res://*/ModelEquityTrading.csdl|res://*/ModelEquityTrading.ssdl|res://*/ModelEquityTrading.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.\SqlExpress;initial catalog=EquityTradingDB;integrated security=True;pooling=False;multipleactiveresultsets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+</configuration>

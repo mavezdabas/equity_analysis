@@ -1,0 +1,12 @@
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderDataAccessLayer\bin\Debug\ExecutionTraderDataAccessLayer.dll.config
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderDataAccessLayer\bin\Debug\ExecutionTraderDataAccessLayer.dll
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderDataAccessLayer\bin\Debug\ExecutionTraderDataAccessLayer.pdb
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderDataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderDataAccessLayer\obj\Debug\ExecutionTraderDataAccessLayer.dll
+D:\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderDataAccessLayer\obj\Debug\ExecutionTraderDataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderDataAccessLayer\bin\Debug\ExecutionTraderDataAccessLayer.dll.config
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderDataAccessLayer\bin\Debug\ExecutionTraderDataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderDataAccessLayer\bin\Debug\ExecutionTraderDataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderDataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderDataAccessLayer\obj\Debug\ExecutionTraderDataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\ExecutionTraderMainWindow -v2.2\ExecutionTraderDataAccessLayer\obj\Debug\ExecutionTraderDataAccessLayer.pdb

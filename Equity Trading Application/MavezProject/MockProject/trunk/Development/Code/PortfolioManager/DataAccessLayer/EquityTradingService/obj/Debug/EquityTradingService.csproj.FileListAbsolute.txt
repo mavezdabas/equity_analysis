@@ -1,0 +1,22 @@
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\AutoMapper.Net4.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\EquityTradingService.dll.config
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\EquityTradingService.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\EquityTradingService.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\AutoMapper.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\DataAccessLayer.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\DataAccessLayer.pdb
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\AutoMapper.xml
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\obj\Debug\ResolveAssemblyReference.cache
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\obj\Debug\EquityTradingService.dll
+D:\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\obj\Debug\EquityTradingService.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\AutoMapper.Net4.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\EquityTradingService.dll.config
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\EquityTradingService.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\EquityTradingService.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\AutoMapper.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\DataAccessLayer.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\bin\Debug\AutoMapper.xml
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\obj\Debug\EquityTradingService.dll
+C:\Users\Mavez  S Dabas\Desktop\MockProject\MavezProject\MockProject\trunk\Development\Code\PortfolioManager\DataAccessLayer\EquityTradingService\obj\Debug\EquityTradingService.pdb

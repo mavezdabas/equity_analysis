@@ -1,0 +1,1125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EquityTradingDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="EquityTradingDBModelStoreContainer">
+          <EntitySet Name="AllocationMethods" EntityType="EquityTradingDBModel.Store.AllocationMethods" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Blocks" EntityType="EquityTradingDBModel.Store.Blocks" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Clients" EntityType="EquityTradingDBModel.Store.Clients" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ExecutedBlocks" EntityType="EquityTradingDBModel.Store.ExecutedBlocks" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OrderAllocations" EntityType="EquityTradingDBModel.Store.OrderAllocations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Orders" EntityType="EquityTradingDBModel.Store.Orders" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Portfolios" EntityType="EquityTradingDBModel.Store.Portfolios" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProposedBlocks" EntityType="EquityTradingDBModel.Store.ProposedBlocks" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Securities" EntityType="EquityTradingDBModel.Store.Securities" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SecurityConfigurationDetails" EntityType="EquityTradingDBModel.Store.SecurityConfigurationDetails" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Status" EntityType="EquityTradingDBModel.Store.Status" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserRoles" EntityType="EquityTradingDBModel.Store.UserRoles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="EquityTradingDBModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Blocks_Securities" Association="EquityTradingDBModel.Store.FK_Blocks_Securities">
+            <End Role="Securities" EntitySet="Securities" />
+            <End Role="Blocks" EntitySet="Blocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExecutedBlocks_Blocks" Association="EquityTradingDBModel.Store.FK_ExecutedBlocks_Blocks">
+            <End Role="Blocks" EntitySet="Blocks" />
+            <End Role="ExecutedBlocks" EntitySet="ExecutedBlocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderAllocations_Blocks" Association="EquityTradingDBModel.Store.FK_OrderAllocations_Blocks">
+            <End Role="Blocks" EntitySet="Blocks" />
+            <End Role="OrderAllocations" EntitySet="OrderAllocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderAllocations_ExecutedBlocks" Association="EquityTradingDBModel.Store.FK_OrderAllocations_ExecutedBlocks">
+            <End Role="ExecutedBlocks" EntitySet="ExecutedBlocks" />
+            <End Role="OrderAllocations" EntitySet="OrderAllocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderAllocations_Orders" Association="EquityTradingDBModel.Store.FK_OrderAllocations_Orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderAllocations" EntitySet="OrderAllocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Blocks" Association="EquityTradingDBModel.Store.FK_Orders_Blocks">
+            <End Role="Blocks" EntitySet="Blocks" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Client" Association="EquityTradingDBModel.Store.FK_Orders_Client">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Portfolio" Association="EquityTradingDBModel.Store.FK_Orders_Portfolio">
+            <End Role="Portfolios" EntitySet="Portfolios" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Securities" Association="EquityTradingDBModel.Store.FK_Orders_Securities">
+            <End Role="Securities" EntitySet="Securities" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Status" Association="EquityTradingDBModel.Store.FK_Orders_Status">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_User" Association="EquityTradingDBModel.Store.FK_Orders_User">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_User1" Association="EquityTradingDBModel.Store.FK_Orders_User1">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Portfolio_Client" Association="EquityTradingDBModel.Store.FK_Portfolio_Client">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="Portfolios" EntitySet="Portfolios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProposedBlocks_Securities" Association="EquityTradingDBModel.Store.FK_ProposedBlocks_Securities">
+            <End Role="Securities" EntitySet="Securities" />
+            <End Role="ProposedBlocks" EntitySet="ProposedBlocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SecurityConfigurationDetails_Securities" Association="EquityTradingDBModel.Store.FK_SecurityConfigurationDetails_Securities">
+            <End Role="Securities" EntitySet="Securities" />
+            <End Role="SecurityConfigurationDetails" EntitySet="SecurityConfigurationDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserRole" Association="EquityTradingDBModel.Store.FK_User_UserRole">
+            <End Role="UserRoles" EntitySet="UserRoles" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AllocationMethods">
+          <Key>
+            <PropertyRef Name="MethodID" />
+          </Key>
+          <Property Name="MethodID" Type="int" Nullable="false" />
+          <Property Name="MethodName" Type="nchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Blocks">
+          <Key>
+            <PropertyRef Name="BlockID" />
+          </Key>
+          <Property Name="BlockID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TraderID" Type="int" Nullable="false" />
+          <Property Name="SecurityID" Type="int" Nullable="false" />
+          <Property Name="BlockSide" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="BlockStatus" Type="int" Nullable="false" />
+          <Property Name="LimitPrice" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="StopPrice" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="TotalQuantity" Type="int" Nullable="false" />
+          <Property Name="ExecutedQuantity" Type="int" Nullable="false" />
+          <Property Name="OpenQuantity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="ClientID" />
+          </Key>
+          <Property Name="ClientID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClientName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ExecutedBlocks">
+          <Key>
+            <PropertyRef Name="ExecutedBlockID" />
+          </Key>
+          <Property Name="ExecutedBlockID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlockID" Type="int" Nullable="false" />
+          <Property Name="ExecutedQuantity" Type="int" Nullable="false" />
+          <Property Name="TransactionPrice" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="TransactionTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderAllocations">
+          <Key>
+            <PropertyRef Name="AllocationID" />
+          </Key>
+          <Property Name="AllocationID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ExecutionID" Type="int" Nullable="false" />
+          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="BlockID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="AllocatedQuantity" Type="int" Nullable="false" />
+          <Property Name="TransactionFee" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="TransactionPrice" Type="decimal" Nullable="false" Scale="2" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SecurityID" Type="int" Nullable="false" />
+          <Property Name="Side" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="OrderType" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="OrderQualifier" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TraderID" Type="int" />
+          <Property Name="ManagerID" Type="int" Nullable="false" />
+          <Property Name="TotalQuantity" Type="int" Nullable="false" />
+          <Property Name="OpenQuantity" Type="int" Nullable="false" />
+          <Property Name="AllocatedQuantity" Type="int" Nullable="false" />
+          <Property Name="StopPrice" Type="decimal" Scale="2" />
+          <Property Name="LimitPrice" Type="decimal" Scale="2" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="500" />
+          <Property Name="Notify" Type="bit" />
+          <Property Name="ClientID" Type="int" Nullable="false" />
+          <Property Name="PortfolioID" Type="int" Nullable="false" />
+          <Property Name="StatusID" Type="int" Nullable="false" />
+          <Property Name="BlockID" Type="int" />
+          <Property Name="BookTime" Type="binary" MaxLength="8" />
+          <Property Name="TransactionPrice" Type="decimal" Scale="2" />
+          <Property Name="TransactionTime" Type="datetime" />
+          <Property Name="AccountType" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Portfolios">
+          <Key>
+            <PropertyRef Name="PortfolioID" />
+          </Key>
+          <Property Name="PortfolioID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PortfolioName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ClientID" Type="int" />
+        </EntityType>
+        <EntityType Name="ProposedBlocks">
+          <Key>
+            <PropertyRef Name="ProposedBlockID" />
+          </Key>
+          <Property Name="ProposedBlockID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SecurityID" Type="int" Nullable="false" />
+          <Property Name="BlockSide" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LimitPrice" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="StopPrice" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="TotalQuantity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Securities">
+          <Key>
+            <PropertyRef Name="SecurityID" />
+          </Key>
+          <Property Name="SecurityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SecurityName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="SecuritySymbol" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastTradedPrice" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="SecurityConfigurationDetails">
+          <Key>
+            <PropertyRef Name="MaxPriceSpread" />
+            <PropertyRef Name="MaxExecutionNumber" />
+            <PropertyRef Name="MaxExecutionInterval" />
+            <PropertyRef Name="FullyExecutedOrderProbability" />
+            <PropertyRef Name="SecurityID" />
+          </Key>
+          <Property Name="MaxPriceSpread" Type="int" Nullable="false" />
+          <Property Name="MaxExecutionNumber" Type="int" Nullable="false" />
+          <Property Name="MaxExecutionInterval" Type="binary" Nullable="false" MaxLength="8" />
+          <Property Name="FullyExecutedOrderProbability" Type="int" Nullable="false" />
+          <Property Name="SecurityID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="StatusID" />
+          </Key>
+          <Property Name="StatusID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StatusName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserRoles">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Blocks_Securities">
+          <End Role="Securities" Type="EquityTradingDBModel.Store.Securities" Multiplicity="1" />
+          <End Role="Blocks" Type="EquityTradingDBModel.Store.Blocks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Securities">
+              <PropertyRef Name="SecurityID" />
+            </Principal>
+            <Dependent Role="Blocks">
+              <PropertyRef Name="SecurityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExecutedBlocks_Blocks">
+          <End Role="Blocks" Type="EquityTradingDBModel.Store.Blocks" Multiplicity="1" />
+          <End Role="ExecutedBlocks" Type="EquityTradingDBModel.Store.ExecutedBlocks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Blocks">
+              <PropertyRef Name="BlockID" />
+            </Principal>
+            <Dependent Role="ExecutedBlocks">
+              <PropertyRef Name="BlockID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderAllocations_Blocks">
+          <End Role="Blocks" Type="EquityTradingDBModel.Store.Blocks" Multiplicity="1" />
+          <End Role="OrderAllocations" Type="EquityTradingDBModel.Store.OrderAllocations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Blocks">
+              <PropertyRef Name="BlockID" />
+            </Principal>
+            <Dependent Role="OrderAllocations">
+              <PropertyRef Name="BlockID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderAllocations_ExecutedBlocks">
+          <End Role="ExecutedBlocks" Type="EquityTradingDBModel.Store.ExecutedBlocks" Multiplicity="1" />
+          <End Role="OrderAllocations" Type="EquityTradingDBModel.Store.OrderAllocations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ExecutedBlocks">
+              <PropertyRef Name="ExecutedBlockID" />
+            </Principal>
+            <Dependent Role="OrderAllocations">
+              <PropertyRef Name="ExecutionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderAllocations_Orders">
+          <End Role="Orders" Type="EquityTradingDBModel.Store.Orders" Multiplicity="1" />
+          <End Role="OrderAllocations" Type="EquityTradingDBModel.Store.OrderAllocations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="OrderAllocations">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Blocks">
+          <End Role="Blocks" Type="EquityTradingDBModel.Store.Blocks" Multiplicity="0..1" />
+          <End Role="Orders" Type="EquityTradingDBModel.Store.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Blocks">
+              <PropertyRef Name="BlockID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="BlockID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Client">
+          <End Role="Clients" Type="EquityTradingDBModel.Store.Clients" Multiplicity="1" />
+          <End Role="Orders" Type="EquityTradingDBModel.Store.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="ClientID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Portfolio">
+          <End Role="Portfolios" Type="EquityTradingDBModel.Store.Portfolios" Multiplicity="1" />
+          <End Role="Orders" Type="EquityTradingDBModel.Store.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Portfolios">
+              <PropertyRef Name="PortfolioID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="PortfolioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Securities">
+          <End Role="Securities" Type="EquityTradingDBModel.Store.Securities" Multiplicity="1" />
+          <End Role="Orders" Type="EquityTradingDBModel.Store.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Securities">
+              <PropertyRef Name="SecurityID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="SecurityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Status">
+          <End Role="Status" Type="EquityTradingDBModel.Store.Status" Multiplicity="1" />
+          <End Role="Orders" Type="EquityTradingDBModel.Store.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="StatusID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="StatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_User">
+          <End Role="Users" Type="EquityTradingDBModel.Store.Users" Multiplicity="1" />
+          <End Role="Orders" Type="EquityTradingDBModel.Store.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="ManagerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_User1">
+          <End Role="Users" Type="EquityTradingDBModel.Store.Users" Multiplicity="0..1" />
+          <End Role="Orders" Type="EquityTradingDBModel.Store.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="TraderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Portfolio_Client">
+          <End Role="Clients" Type="EquityTradingDBModel.Store.Clients" Multiplicity="0..1" />
+          <End Role="Portfolios" Type="EquityTradingDBModel.Store.Portfolios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="ClientID" />
+            </Principal>
+            <Dependent Role="Portfolios">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProposedBlocks_Securities">
+          <End Role="Securities" Type="EquityTradingDBModel.Store.Securities" Multiplicity="1" />
+          <End Role="ProposedBlocks" Type="EquityTradingDBModel.Store.ProposedBlocks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Securities">
+              <PropertyRef Name="SecurityID" />
+            </Principal>
+            <Dependent Role="ProposedBlocks">
+              <PropertyRef Name="SecurityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SecurityConfigurationDetails_Securities">
+          <End Role="Securities" Type="EquityTradingDBModel.Store.Securities" Multiplicity="1" />
+          <End Role="SecurityConfigurationDetails" Type="EquityTradingDBModel.Store.SecurityConfigurationDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Securities">
+              <PropertyRef Name="SecurityID" />
+            </Principal>
+            <Dependent Role="SecurityConfigurationDetails">
+              <PropertyRef Name="SecurityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserRole">
+          <End Role="UserRoles" Type="EquityTradingDBModel.Store.UserRoles" Multiplicity="1" />
+          <End Role="Users" Type="EquityTradingDBModel.Store.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRoles">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EquityTradingDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="EquityTradingDBEntities" annotation:LazyLoadingEnabled="false">
+          <EntitySet Name="AllocationMethods" EntityType="EquityTradingDBModel.AllocationMethod" />
+          <EntitySet Name="Blocks" EntityType="EquityTradingDBModel.Block" />
+          <EntitySet Name="Clients" EntityType="EquityTradingDBModel.Client" />
+          <EntitySet Name="ExecutedBlocks" EntityType="EquityTradingDBModel.ExecutedBlock" />
+          <EntitySet Name="OrderAllocations" EntityType="EquityTradingDBModel.OrderAllocation" />
+          <EntitySet Name="Orders" EntityType="EquityTradingDBModel.Order" />
+          <EntitySet Name="Portfolios" EntityType="EquityTradingDBModel.Portfolio" />
+          <EntitySet Name="ProposedBlocks" EntityType="EquityTradingDBModel.ProposedBlock" />
+          <EntitySet Name="Securities" EntityType="EquityTradingDBModel.Security" />
+          <EntitySet Name="SecurityConfigurationDetails" EntityType="EquityTradingDBModel.SecurityConfigurationDetail" />
+          <EntitySet Name="Status" EntityType="EquityTradingDBModel.Status" />
+          <EntitySet Name="UserRoles" EntityType="EquityTradingDBModel.UserRole" />
+          <EntitySet Name="Users" EntityType="EquityTradingDBModel.User" />
+          <AssociationSet Name="FK_Blocks_Securities" Association="EquityTradingDBModel.FK_Blocks_Securities">
+            <End Role="Securities" EntitySet="Securities" />
+            <End Role="Blocks" EntitySet="Blocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExecutedBlocks_Blocks" Association="EquityTradingDBModel.FK_ExecutedBlocks_Blocks">
+            <End Role="Blocks" EntitySet="Blocks" />
+            <End Role="ExecutedBlocks" EntitySet="ExecutedBlocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderAllocations_Blocks" Association="EquityTradingDBModel.FK_OrderAllocations_Blocks">
+            <End Role="Blocks" EntitySet="Blocks" />
+            <End Role="OrderAllocations" EntitySet="OrderAllocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Blocks" Association="EquityTradingDBModel.FK_Orders_Blocks">
+            <End Role="Blocks" EntitySet="Blocks" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Client" Association="EquityTradingDBModel.FK_Orders_Client">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Portfolio_Client" Association="EquityTradingDBModel.FK_Portfolio_Client">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="Portfolios" EntitySet="Portfolios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderAllocations_ExecutedBlocks" Association="EquityTradingDBModel.FK_OrderAllocations_ExecutedBlocks">
+            <End Role="ExecutedBlocks" EntitySet="ExecutedBlocks" />
+            <End Role="OrderAllocations" EntitySet="OrderAllocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderAllocations_Orders" Association="EquityTradingDBModel.FK_OrderAllocations_Orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderAllocations" EntitySet="OrderAllocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Portfolio" Association="EquityTradingDBModel.FK_Orders_Portfolio">
+            <End Role="Portfolios" EntitySet="Portfolios" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Securities" Association="EquityTradingDBModel.FK_Orders_Securities">
+            <End Role="Securities" EntitySet="Securities" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Status" Association="EquityTradingDBModel.FK_Orders_Status">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_User" Association="EquityTradingDBModel.FK_Orders_User">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_User1" Association="EquityTradingDBModel.FK_Orders_User1">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProposedBlocks_Securities" Association="EquityTradingDBModel.FK_ProposedBlocks_Securities">
+            <End Role="Securities" EntitySet="Securities" />
+            <End Role="ProposedBlocks" EntitySet="ProposedBlocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SecurityConfigurationDetails_Securities" Association="EquityTradingDBModel.FK_SecurityConfigurationDetails_Securities">
+            <End Role="Securities" EntitySet="Securities" />
+            <End Role="SecurityConfigurationDetails" EntitySet="SecurityConfigurationDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserRole" Association="EquityTradingDBModel.FK_User_UserRole">
+            <End Role="UserRoles" EntitySet="UserRoles" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AllocationMethod">
+          <Key>
+            <PropertyRef Name="MethodID" />
+          </Key>
+          <Property Name="MethodID" Type="Int32" Nullable="false" />
+          <Property Name="MethodName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="Block">
+          <Key>
+            <PropertyRef Name="BlockID" />
+          </Key>
+          <Property Name="BlockID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TraderID" Type="Int32" Nullable="false" />
+          <Property Name="SecurityID" Type="Int32" Nullable="false" />
+          <Property Name="BlockSide" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BlockStatus" Type="Int32" Nullable="false" />
+          <Property Name="LimitPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="StopPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="TotalQuantity" Type="Int32" Nullable="false" />
+          <Property Name="ExecutedQuantity" Type="Int32" Nullable="false" />
+          <Property Name="OpenQuantity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Security" Relationship="EquityTradingDBModel.FK_Blocks_Securities" FromRole="Blocks" ToRole="Securities" />
+          <NavigationProperty Name="ExecutedBlocks" Relationship="EquityTradingDBModel.FK_ExecutedBlocks_Blocks" FromRole="Blocks" ToRole="ExecutedBlocks" />
+          <NavigationProperty Name="OrderAllocations" Relationship="EquityTradingDBModel.FK_OrderAllocations_Blocks" FromRole="Blocks" ToRole="OrderAllocations" />
+          <NavigationProperty Name="Orders" Relationship="EquityTradingDBModel.FK_Orders_Blocks" FromRole="Blocks" ToRole="Orders" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ClientID" />
+          </Key>
+          <Property Name="ClientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Orders" Relationship="EquityTradingDBModel.FK_Orders_Client" FromRole="Clients" ToRole="Orders" />
+          <NavigationProperty Name="Portfolios" Relationship="EquityTradingDBModel.FK_Portfolio_Client" FromRole="Clients" ToRole="Portfolios" />
+        </EntityType>
+        <EntityType Name="ExecutedBlock">
+          <Key>
+            <PropertyRef Name="ExecutedBlockID" />
+          </Key>
+          <Property Name="ExecutedBlockID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlockID" Type="Int32" Nullable="false" />
+          <Property Name="ExecutedQuantity" Type="Int32" Nullable="false" />
+          <Property Name="TransactionPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="TransactionTime" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Block" Relationship="EquityTradingDBModel.FK_ExecutedBlocks_Blocks" FromRole="ExecutedBlocks" ToRole="Blocks" />
+          <NavigationProperty Name="OrderAllocations" Relationship="EquityTradingDBModel.FK_OrderAllocations_ExecutedBlocks" FromRole="ExecutedBlocks" ToRole="OrderAllocations" />
+        </EntityType>
+        <EntityType Name="OrderAllocation">
+          <Key>
+            <PropertyRef Name="AllocationID" />
+          </Key>
+          <Property Name="AllocationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ExecutionID" Type="Int32" Nullable="false" />
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="BlockID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="AllocatedQuantity" Type="Int32" Nullable="false" />
+          <Property Name="TransactionFee" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="TransactionPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <NavigationProperty Name="Block" Relationship="EquityTradingDBModel.FK_OrderAllocations_Blocks" FromRole="OrderAllocations" ToRole="Blocks" />
+          <NavigationProperty Name="ExecutedBlock" Relationship="EquityTradingDBModel.FK_OrderAllocations_ExecutedBlocks" FromRole="OrderAllocations" ToRole="ExecutedBlocks" />
+          <NavigationProperty Name="Order" Relationship="EquityTradingDBModel.FK_OrderAllocations_Orders" FromRole="OrderAllocations" ToRole="Orders" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SecurityID" Type="Int32" Nullable="false" />
+          <Property Name="Side" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OrderType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OrderQualifier" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TraderID" Type="Int32" />
+          <Property Name="ManagerID" Type="Int32" Nullable="false" />
+          <Property Name="TotalQuantity" Type="Int32" Nullable="false" />
+          <Property Name="OpenQuantity" Type="Int32" Nullable="false" />
+          <Property Name="AllocatedQuantity" Type="Int32" Nullable="false" />
+          <Property Name="StopPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="LimitPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Notes" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Notify" Type="Boolean" />
+          <Property Name="ClientID" Type="Int32" Nullable="false" />
+          <Property Name="PortfolioID" Type="Int32" Nullable="false" />
+          <Property Name="StatusID" Type="Int32" Nullable="false" />
+          <Property Name="BlockID" Type="Int32" />
+          <Property Name="BookTime" Type="Binary" MaxLength="8" FixedLength="true" />
+          <Property Name="TransactionPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TransactionTime" Type="DateTime" />
+          <Property Name="AccountType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Block" Relationship="EquityTradingDBModel.FK_Orders_Blocks" FromRole="Orders" ToRole="Blocks" />
+          <NavigationProperty Name="Client" Relationship="EquityTradingDBModel.FK_Orders_Client" FromRole="Orders" ToRole="Clients" />
+          <NavigationProperty Name="OrderAllocations" Relationship="EquityTradingDBModel.FK_OrderAllocations_Orders" FromRole="Orders" ToRole="OrderAllocations" />
+          <NavigationProperty Name="Portfolio" Relationship="EquityTradingDBModel.FK_Orders_Portfolio" FromRole="Orders" ToRole="Portfolios" />
+          <NavigationProperty Name="Security" Relationship="EquityTradingDBModel.FK_Orders_Securities" FromRole="Orders" ToRole="Securities" />
+          <NavigationProperty Name="Status" Relationship="EquityTradingDBModel.FK_Orders_Status" FromRole="Orders" ToRole="Status" />
+          <NavigationProperty Name="User" Relationship="EquityTradingDBModel.FK_Orders_User" FromRole="Orders" ToRole="Users" />
+          <NavigationProperty Name="User1" Relationship="EquityTradingDBModel.FK_Orders_User1" FromRole="Orders" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Portfolio">
+          <Key>
+            <PropertyRef Name="PortfolioID" />
+          </Key>
+          <Property Name="PortfolioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PortfolioName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ClientID" Type="Int32" />
+          <NavigationProperty Name="Client" Relationship="EquityTradingDBModel.FK_Portfolio_Client" FromRole="Portfolios" ToRole="Clients" />
+          <NavigationProperty Name="Orders" Relationship="EquityTradingDBModel.FK_Orders_Portfolio" FromRole="Portfolios" ToRole="Orders" />
+        </EntityType>
+        <EntityType Name="ProposedBlock">
+          <Key>
+            <PropertyRef Name="ProposedBlockID" />
+          </Key>
+          <Property Name="ProposedBlockID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SecurityID" Type="Int32" Nullable="false" />
+          <Property Name="BlockSide" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LimitPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="StopPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="TotalQuantity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Security" Relationship="EquityTradingDBModel.FK_ProposedBlocks_Securities" FromRole="ProposedBlocks" ToRole="Securities" />
+        </EntityType>
+        <EntityType Name="Security">
+          <Key>
+            <PropertyRef Name="SecurityID" />
+          </Key>
+          <Property Name="SecurityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SecurityName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="SecuritySymbol" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastTradedPrice" Type="Decimal" Precision="18" Scale="2" />
+          <NavigationProperty Name="Blocks" Relationship="EquityTradingDBModel.FK_Blocks_Securities" FromRole="Securities" ToRole="Blocks" />
+          <NavigationProperty Name="Orders" Relationship="EquityTradingDBModel.FK_Orders_Securities" FromRole="Securities" ToRole="Orders" />
+          <NavigationProperty Name="ProposedBlocks" Relationship="EquityTradingDBModel.FK_ProposedBlocks_Securities" FromRole="Securities" ToRole="ProposedBlocks" />
+          <NavigationProperty Name="SecurityConfigurationDetails" Relationship="EquityTradingDBModel.FK_SecurityConfigurationDetails_Securities" FromRole="Securities" ToRole="SecurityConfigurationDetails" />
+        </EntityType>
+        <EntityType Name="SecurityConfigurationDetail">
+          <Key>
+            <PropertyRef Name="MaxPriceSpread" />
+            <PropertyRef Name="MaxExecutionNumber" />
+            <PropertyRef Name="MaxExecutionInterval" />
+            <PropertyRef Name="FullyExecutedOrderProbability" />
+            <PropertyRef Name="SecurityID" />
+          </Key>
+          <Property Name="MaxPriceSpread" Type="Int32" Nullable="false" />
+          <Property Name="MaxExecutionNumber" Type="Int32" Nullable="false" />
+          <Property Name="MaxExecutionInterval" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" />
+          <Property Name="FullyExecutedOrderProbability" Type="Int32" Nullable="false" />
+          <Property Name="SecurityID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Security" Relationship="EquityTradingDBModel.FK_SecurityConfigurationDetails_Securities" FromRole="SecurityConfigurationDetails" ToRole="Securities" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="StatusID" />
+          </Key>
+          <Property Name="StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StatusName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Orders" Relationship="EquityTradingDBModel.FK_Orders_Status" FromRole="Status" ToRole="Orders" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Users" Relationship="EquityTradingDBModel.FK_User_UserRole" FromRole="UserRoles" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Orders" Relationship="EquityTradingDBModel.FK_Orders_User" FromRole="Users" ToRole="Orders" />
+          <NavigationProperty Name="Orders1" Relationship="EquityTradingDBModel.FK_Orders_User1" FromRole="Users" ToRole="Orders" />
+          <NavigationProperty Name="UserRole" Relationship="EquityTradingDBModel.FK_User_UserRole" FromRole="Users" ToRole="UserRoles" />
+        </EntityType>
+        <Association Name="FK_Blocks_Securities">
+          <End Role="Securities" Type="EquityTradingDBModel.Security" Multiplicity="1" />
+          <End Role="Blocks" Type="EquityTradingDBModel.Block" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Securities">
+              <PropertyRef Name="SecurityID" />
+            </Principal>
+            <Dependent Role="Blocks">
+              <PropertyRef Name="SecurityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExecutedBlocks_Blocks">
+          <End Role="Blocks" Type="EquityTradingDBModel.Block" Multiplicity="1" />
+          <End Role="ExecutedBlocks" Type="EquityTradingDBModel.ExecutedBlock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Blocks">
+              <PropertyRef Name="BlockID" />
+            </Principal>
+            <Dependent Role="ExecutedBlocks">
+              <PropertyRef Name="BlockID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderAllocations_Blocks">
+          <End Role="Blocks" Type="EquityTradingDBModel.Block" Multiplicity="1" />
+          <End Role="OrderAllocations" Type="EquityTradingDBModel.OrderAllocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Blocks">
+              <PropertyRef Name="BlockID" />
+            </Principal>
+            <Dependent Role="OrderAllocations">
+              <PropertyRef Name="BlockID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Blocks">
+          <End Role="Blocks" Type="EquityTradingDBModel.Block" Multiplicity="0..1" />
+          <End Role="Orders" Type="EquityTradingDBModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Blocks">
+              <PropertyRef Name="BlockID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="BlockID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Client">
+          <End Role="Clients" Type="EquityTradingDBModel.Client" Multiplicity="1" />
+          <End Role="Orders" Type="EquityTradingDBModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="ClientID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Portfolio_Client">
+          <End Role="Clients" Type="EquityTradingDBModel.Client" Multiplicity="0..1" />
+          <End Role="Portfolios" Type="EquityTradingDBModel.Portfolio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="ClientID" />
+            </Principal>
+            <Dependent Role="Portfolios">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderAllocations_ExecutedBlocks">
+          <End Role="ExecutedBlocks" Type="EquityTradingDBModel.ExecutedBlock" Multiplicity="1" />
+          <End Role="OrderAllocations" Type="EquityTradingDBModel.OrderAllocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ExecutedBlocks">
+              <PropertyRef Name="ExecutedBlockID" />
+            </Principal>
+            <Dependent Role="OrderAllocations">
+              <PropertyRef Name="ExecutionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderAllocations_Orders">
+          <End Role="Orders" Type="EquityTradingDBModel.Order" Multiplicity="1" />
+          <End Role="OrderAllocations" Type="EquityTradingDBModel.OrderAllocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="OrderAllocations">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Portfolio">
+          <End Role="Portfolios" Type="EquityTradingDBModel.Portfolio" Multiplicity="1" />
+          <End Role="Orders" Type="EquityTradingDBModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Portfolios">
+              <PropertyRef Name="PortfolioID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="PortfolioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Securities">
+          <End Role="Securities" Type="EquityTradingDBModel.Security" Multiplicity="1" />
+          <End Role="Orders" Type="EquityTradingDBModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Securities">
+              <PropertyRef Name="SecurityID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="SecurityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Status">
+          <End Role="Status" Type="EquityTradingDBModel.Status" Multiplicity="1" />
+          <End Role="Orders" Type="EquityTradingDBModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="StatusID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="StatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_User">
+          <End Role="Users" Type="EquityTradingDBModel.User" Multiplicity="1" />
+          <End Role="Orders" Type="EquityTradingDBModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="ManagerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_User1">
+          <End Role="Users" Type="EquityTradingDBModel.User" Multiplicity="0..1" />
+          <End Role="Orders" Type="EquityTradingDBModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="TraderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProposedBlocks_Securities">
+          <End Role="Securities" Type="EquityTradingDBModel.Security" Multiplicity="1" />
+          <End Role="ProposedBlocks" Type="EquityTradingDBModel.ProposedBlock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Securities">
+              <PropertyRef Name="SecurityID" />
+            </Principal>
+            <Dependent Role="ProposedBlocks">
+              <PropertyRef Name="SecurityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SecurityConfigurationDetails_Securities">
+          <End Role="Securities" Type="EquityTradingDBModel.Security" Multiplicity="1" />
+          <End Role="SecurityConfigurationDetails" Type="EquityTradingDBModel.SecurityConfigurationDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Securities">
+              <PropertyRef Name="SecurityID" />
+            </Principal>
+            <Dependent Role="SecurityConfigurationDetails">
+              <PropertyRef Name="SecurityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserRole">
+          <End Role="UserRoles" Type="EquityTradingDBModel.UserRole" Multiplicity="1" />
+          <End Role="Users" Type="EquityTradingDBModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRoles">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EquityTradingDBModelStoreContainer" CdmEntityContainer="EquityTradingDBEntities">
+          <EntitySetMapping Name="AllocationMethods"><EntityTypeMapping TypeName="EquityTradingDBModel.AllocationMethod"><MappingFragment StoreEntitySet="AllocationMethods">
+            <ScalarProperty Name="MethodID" ColumnName="MethodID" />
+            <ScalarProperty Name="MethodName" ColumnName="MethodName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Blocks"><EntityTypeMapping TypeName="EquityTradingDBModel.Block"><MappingFragment StoreEntitySet="Blocks">
+            <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+            <ScalarProperty Name="TraderID" ColumnName="TraderID" />
+            <ScalarProperty Name="SecurityID" ColumnName="SecurityID" />
+            <ScalarProperty Name="BlockSide" ColumnName="BlockSide" />
+            <ScalarProperty Name="BlockStatus" ColumnName="BlockStatus" />
+            <ScalarProperty Name="LimitPrice" ColumnName="LimitPrice" />
+            <ScalarProperty Name="StopPrice" ColumnName="StopPrice" />
+            <ScalarProperty Name="TotalQuantity" ColumnName="TotalQuantity" />
+            <ScalarProperty Name="ExecutedQuantity" ColumnName="ExecutedQuantity" />
+            <ScalarProperty Name="OpenQuantity" ColumnName="OpenQuantity" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Clients"><EntityTypeMapping TypeName="EquityTradingDBModel.Client"><MappingFragment StoreEntitySet="Clients">
+            <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+            <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ExecutedBlocks"><EntityTypeMapping TypeName="EquityTradingDBModel.ExecutedBlock"><MappingFragment StoreEntitySet="ExecutedBlocks">
+            <ScalarProperty Name="ExecutedBlockID" ColumnName="ExecutedBlockID" />
+            <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+            <ScalarProperty Name="ExecutedQuantity" ColumnName="ExecutedQuantity" />
+            <ScalarProperty Name="TransactionPrice" ColumnName="TransactionPrice" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="TransactionTime" ColumnName="TransactionTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="OrderAllocations"><EntityTypeMapping TypeName="EquityTradingDBModel.OrderAllocation"><MappingFragment StoreEntitySet="OrderAllocations">
+            <ScalarProperty Name="AllocationID" ColumnName="AllocationID" />
+            <ScalarProperty Name="ExecutionID" ColumnName="ExecutionID" />
+            <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+            <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="AllocatedQuantity" ColumnName="AllocatedQuantity" />
+            <ScalarProperty Name="TransactionFee" ColumnName="TransactionFee" />
+            <ScalarProperty Name="TransactionPrice" ColumnName="TransactionPrice" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Orders"><EntityTypeMapping TypeName="EquityTradingDBModel.Order"><MappingFragment StoreEntitySet="Orders">
+            <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+            <ScalarProperty Name="SecurityID" ColumnName="SecurityID" />
+            <ScalarProperty Name="Side" ColumnName="Side" />
+            <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+            <ScalarProperty Name="OrderQualifier" ColumnName="OrderQualifier" />
+            <ScalarProperty Name="TraderID" ColumnName="TraderID" />
+            <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+            <ScalarProperty Name="TotalQuantity" ColumnName="TotalQuantity" />
+            <ScalarProperty Name="OpenQuantity" ColumnName="OpenQuantity" />
+            <ScalarProperty Name="AllocatedQuantity" ColumnName="AllocatedQuantity" />
+            <ScalarProperty Name="StopPrice" ColumnName="StopPrice" />
+            <ScalarProperty Name="LimitPrice" ColumnName="LimitPrice" />
+            <ScalarProperty Name="Notes" ColumnName="Notes" />
+            <ScalarProperty Name="Notify" ColumnName="Notify" />
+            <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+            <ScalarProperty Name="PortfolioID" ColumnName="PortfolioID" />
+            <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+            <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+            <ScalarProperty Name="BookTime" ColumnName="BookTime" />
+            <ScalarProperty Name="TransactionPrice" ColumnName="TransactionPrice" />
+            <ScalarProperty Name="TransactionTime" ColumnName="TransactionTime" />
+            <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Portfolios"><EntityTypeMapping TypeName="EquityTradingDBModel.Portfolio"><MappingFragment StoreEntitySet="Portfolios">
+            <ScalarProperty Name="PortfolioID" ColumnName="PortfolioID" />
+            <ScalarProperty Name="PortfolioName" ColumnName="PortfolioName" />
+            <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProposedBlocks"><EntityTypeMapping TypeName="EquityTradingDBModel.ProposedBlock"><MappingFragment StoreEntitySet="ProposedBlocks">
+            <ScalarProperty Name="ProposedBlockID" ColumnName="ProposedBlockID" />
+            <ScalarProperty Name="SecurityID" ColumnName="SecurityID" />
+            <ScalarProperty Name="BlockSide" ColumnName="BlockSide" />
+            <ScalarProperty Name="LimitPrice" ColumnName="LimitPrice" />
+            <ScalarProperty Name="StopPrice" ColumnName="StopPrice" />
+            <ScalarProperty Name="TotalQuantity" ColumnName="TotalQuantity" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Securities"><EntityTypeMapping TypeName="EquityTradingDBModel.Security"><MappingFragment StoreEntitySet="Securities">
+            <ScalarProperty Name="SecurityID" ColumnName="SecurityID" />
+            <ScalarProperty Name="SecurityName" ColumnName="SecurityName" />
+            <ScalarProperty Name="SecuritySymbol" ColumnName="SecuritySymbol" />
+            <ScalarProperty Name="LastTradedPrice" ColumnName="LastTradedPrice" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SecurityConfigurationDetails"><EntityTypeMapping TypeName="EquityTradingDBModel.SecurityConfigurationDetail"><MappingFragment StoreEntitySet="SecurityConfigurationDetails">
+            <ScalarProperty Name="MaxPriceSpread" ColumnName="MaxPriceSpread" />
+            <ScalarProperty Name="MaxExecutionNumber" ColumnName="MaxExecutionNumber" />
+            <ScalarProperty Name="MaxExecutionInterval" ColumnName="MaxExecutionInterval" />
+            <ScalarProperty Name="FullyExecutedOrderProbability" ColumnName="FullyExecutedOrderProbability" />
+            <ScalarProperty Name="SecurityID" ColumnName="SecurityID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Status"><EntityTypeMapping TypeName="EquityTradingDBModel.Status"><MappingFragment StoreEntitySet="Status">
+            <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+            <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="UserRoles"><EntityTypeMapping TypeName="EquityTradingDBModel.UserRole"><MappingFragment StoreEntitySet="UserRoles">
+            <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+            <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Users"><EntityTypeMapping TypeName="EquityTradingDBModel.User"><MappingFragment StoreEntitySet="Users">
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="UserName" ColumnName="UserName" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModelEquityTrading">
+        <EntityTypeShape EntityType="EquityTradingDBModel.AllocationMethod" Width="1.5" PointX="5.75" PointY="0.75" Height="1.2636116536458335" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquityTradingDBModel.Block" Width="1.5" PointX="3" PointY="4.625" Height="3.2357796223958317" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquityTradingDBModel.Client" Width="1.5" PointX="3" PointY="1.75" Height="1.5923063151041665" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquityTradingDBModel.ExecutedBlock" Width="1.5" PointX="5.25" PointY="5.125" Height="2.2496956380208335" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquityTradingDBModel.OrderAllocation" Width="1.5" PointX="7.5" PointY="4.875" Height="2.7427376302083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquityTradingDBModel.Order" Width="1.5" PointX="5.25" PointY="8.5" Height="5.865336914062496" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquityTradingDBModel.Portfolio" Width="1.5" PointX="3" PointY="15.125" Height="1.7566536458333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquityTradingDBModel.ProposedBlock" Width="1.5" PointX="3" PointY="8.625" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquityTradingDBModel.Security" Width="1.5" PointX="0.75" PointY="7.875" Height="2.2496956380208317" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquityTradingDBModel.SecurityConfigurationDetail" Width="1.5" PointX="3" PointY="11.5" Height="1.9210009765624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquityTradingDBModel.Status" Width="1.5" PointX="3" PointY="17.625" Height="1.4279589843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquityTradingDBModel.UserRole" Width="1.5" PointX="0.75" PointY="20.125" Height="1.4279589843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquityTradingDBModel.User" Width="1.5" PointX="3" PointY="19.75" Height="2.2496956380208388" IsExpanded="true" />
+        <AssociationConnector Association="EquityTradingDBModel.FK_Blocks_Securities" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="7.875" />
+          <ConnectorPoint PointX="1.5" PointY="6.2428898111979159" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="6.242889811197915" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="6.2428898111979159" />
+          <ConnectorPoint PointX="3" PointY="6.2428898111979159" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_ExecutedBlocks_Blocks" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="6.2498478190104167" />
+          <ConnectorPoint PointX="4.979166666666667" PointY="6.2498478190104159" />
+          <ConnectorPoint PointX="5.145833333333333" PointY="6.2498478190104167" />
+          <ConnectorPoint PointX="5.25" PointY="6.2498478190104167" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_OrderAllocations_Blocks" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="4.96875" />
+          <ConnectorPoint PointX="4.979166666666667" PointY="4.9687499999999991" />
+          <ConnectorPoint PointX="5.145833333333333" PointY="4.96875" />
+          <ConnectorPoint PointX="7.5" PointY="4.96875" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_Orders_Blocks" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="7.8607796223958317" />
+          <ConnectorPoint PointX="4.875" PointY="8.2357796223958317" />
+          <ConnectorPoint PointX="4.875" PointY="8.1238471538461532" />
+          <ConnectorPoint PointX="5.0035744349011217" PointY="8.2524215887472732" />
+          <ConnectorPoint PointX="5.1214255650988791" PointY="8.3702727189450314" />
+          <ConnectorPoint PointX="5.2511528461538459" PointY="8.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_Orders_Client" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="3.2799976227964738" />
+          <ConnectorPoint PointX="5.0625" PointY="3.8424976227964738" />
+          <ConnectorPoint PointX="5.0625" PointY="11.432668457031248" />
+          <ConnectorPoint PointX="5.25" PointY="11.432668457031248" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_Portfolio_Client" ManuallyRouted="false">
+          <ConnectorPoint PointX="3" PointY="3.3423063151041665" />
+          <ConnectorPoint PointX="2.625" PointY="3.7173063151041665" />
+          <ConnectorPoint PointX="2.625" PointY="14.748847153846153" />
+          <ConnectorPoint PointX="3.0011528461538459" PointY="15.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_OrderAllocations_ExecutedBlocks" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="6.2498478190104167" />
+          <ConnectorPoint PointX="7.5" PointY="6.2498478190104167" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_OrderAllocations_Orders" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="11.432668457031248" />
+          <ConnectorPoint PointX="8.25" PointY="11.432668457031248" />
+          <ConnectorPoint PointX="8.25" PointY="7.6177376302083317" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_Orders_Portfolio" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="16.003326822916666" />
+          <ConnectorPoint PointX="5.3072879166666675" PointY="16.003326822916666" />
+          <ConnectorPoint PointX="5.4739545833333336" PointY="16.003326822916666" />
+          <ConnectorPoint PointX="5.5104141666666671" PointY="16.003326822916666" />
+          <ConnectorPoint PointX="5.6770808333333331" PointY="16.003326822916666" />
+          <ConnectorPoint PointX="6" PointY="16.003326822916666" />
+          <ConnectorPoint PointX="6" PointY="14.365336914062496" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_Orders_Securities" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="8.53125" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="8.53125" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="8.53125" />
+          <ConnectorPoint PointX="4.979166666666667" PointY="8.53125" />
+          <ConnectorPoint PointX="5.145833333333333" PointY="8.53125" />
+          <ConnectorPoint PointX="5.25" PointY="8.53125" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_Orders_Status" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="18.3389794921875" />
+          <ConnectorPoint PointX="5.3072879166666675" PointY="18.3389794921875" />
+          <ConnectorPoint PointX="5.4739545833333336" PointY="18.3389794921875" />
+          <ConnectorPoint PointX="5.5937475" PointY="18.3389794921875" />
+          <ConnectorPoint PointX="5.5937475" PointY="14.365336914062496" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_Orders_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="20.874847819010419" />
+          <ConnectorPoint PointX="6.4062525" PointY="20.874847819010419" />
+          <ConnectorPoint PointX="6.4062525" PointY="14.365336914062496" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_Orders_User1" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="20.281171409505209" />
+          <ConnectorPoint PointX="5.3906212500000006" PointY="20.281171409505209" />
+          <ConnectorPoint PointX="5.3906212500000006" PointY="14.365336914062496" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_ProposedBlocks_Securities" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="9.3748478190104159" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="9.3748478190104159" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="9.3748478190104159" />
+          <ConnectorPoint PointX="3" PointY="9.3748478190104159" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_SecurityConfigurationDetails_Securities" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="10.124695638020832" />
+          <ConnectorPoint PointX="1.5" PointY="12.46050048828125" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="12.46050048828125" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="12.46050048828125" />
+          <ConnectorPoint PointX="3" PointY="12.46050048828125" />
+        </AssociationConnector>
+        <AssociationConnector Association="EquityTradingDBModel.FK_User_UserRole" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="20.8389794921875" />
+          <ConnectorPoint PointX="3" PointY="20.8389794921875" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MockProjectDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MockProjectDBModelStoreContainer">
+    <EntitySet Name="Block" EntityType="MockProjectDBModel.Store.Block" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Client" EntityType="MockProjectDBModel.Store.Client" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Order" EntityType="MockProjectDBModel.Store.Order" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Portfolio" EntityType="MockProjectDBModel.Store.Portfolio" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Role" EntityType="MockProjectDBModel.Store.Role" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Status" EntityType="MockProjectDBModel.Store.Status" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Stock" EntityType="MockProjectDBModel.Store.Stock" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="MockProjectDBModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Client_Portfolio" Association="MockProjectDBModel.Store.FK_Client_Portfolio">
+      <End Role="Portfolio" EntitySet="Portfolio" />
+      <End Role="Client" EntitySet="Client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Block" Association="MockProjectDBModel.Store.FK_Order_Block">
+      <End Role="Block" EntitySet="Block" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Status" Association="MockProjectDBModel.Store.FK_Order_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Stock" Association="MockProjectDBModel.Store.FK_Order_Stock">
+      <End Role="Stock" EntitySet="Stock" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Role" Association="MockProjectDBModel.Store.FK_User_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Block">
+    <Key>
+      <PropertyRef Name="BlockID" />
+    </Key>
+    <Property Name="BlockID" Type="int" Nullable="false" />
+    <Property Name="Side" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalQuantity" Type="int" />
+    <Property Name="OpenQuantity" Type="int" />
+    <Property Name="AllocatedQuantity" Type="int" />
+    <Property Name="StopPrice" Type="decimal" Scale="2" />
+    <Property Name="LimitPrice" Type="decimal" Scale="2" />
+    <Property Name="Orders" Type="text" />
+    <Property Name="StatusId" Type="int" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="Client_ID" />
+    </Key>
+    <Property Name="Client_ID" Type="int" Nullable="false" />
+    <Property Name="ClientName" Type="nvarchar" MaxLength="50" />
+    <Property Name="P_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="int" Nullable="false" />
+    <Property Name="Side" Type="nvarchar" MaxLength="50" />
+    <Property Name="BlockID" Type="int" />
+    <Property Name="StockID" Type="int" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="Qualifier" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="OwnedQuantity" Type="int" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="50" />
+    <Property Name="LimitPrice" Type="decimal" Scale="2" />
+    <Property Name="StopPrice" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="Portfolio">
+    <Key>
+      <PropertyRef Name="P_ID" />
+    </Key>
+    <Property Name="P_ID" Type="int" Nullable="false" />
+    <Property Name="P_Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="int" Nullable="false" />
+    <Property Name="StatusName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="StockID" />
+    </Key>
+    <Property Name="StockID" Type="int" Nullable="false" />
+    <Property Name="StockSymbol" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MarketPrice" Type="decimal" Scale="2" />
+    <Property Name="High" Type="decimal" Scale="2" />
+    <Property Name="Low" Type="decimal" Scale="2" />
+    <Property Name="EPS" Type="decimal" Scale="2" />
+    <Property Name="PERatio" Type="decimal" Scale="2" />
+    <Property Name="Exchange" Type="varchar" MaxLength="50" />
+    <Property Name="PreviousClose" Type="decimal" Scale="2" />
+    <Property Name="Change" Type="decimal" Scale="2" />
+    <Property Name="ChangePercent" Type="decimal" Scale="2" />
+    <Property Name="StockName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="VerificationKey" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Client_Portfolio">
+    <End Role="Portfolio" Type="MockProjectDBModel.Store.Portfolio" Multiplicity="0..1" />
+    <End Role="Client" Type="MockProjectDBModel.Store.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Portfolio">
+        <PropertyRef Name="P_ID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="P_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Block">
+    <End Role="Block" Type="MockProjectDBModel.Store.Block" Multiplicity="0..1" />
+    <End Role="Order" Type="MockProjectDBModel.Store.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Block">
+        <PropertyRef Name="BlockID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="BlockID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Status">
+    <End Role="Status" Type="MockProjectDBModel.Store.Status" Multiplicity="0..1" />
+    <End Role="Order" Type="MockProjectDBModel.Store.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Stock">
+    <End Role="Stock" Type="MockProjectDBModel.Store.Stock" Multiplicity="0..1" />
+    <End Role="Order" Type="MockProjectDBModel.Store.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stock">
+        <PropertyRef Name="StockID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="StockID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Role">
+    <End Role="Role" Type="MockProjectDBModel.Store.Role" Multiplicity="0..1" />
+    <End Role="User" Type="MockProjectDBModel.Store.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
